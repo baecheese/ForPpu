@@ -19,8 +19,9 @@ class AddTableViewCell: UITableViewCell {
 
 class AddTableViewController: UITableViewController, UITextFieldDelegate {
 
-    let dataCenter = DataCenter.sharedInstance
+    let dataRepository = DataRepository.sharedInstance
     var cell = AddTableViewCell()
+    let cardID = SharedMemoryContext.getCardID() as! Int
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +42,14 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     func clickSaveButton() {
-        print("cardID : \(SharedMemoryContext.getCardID()) , cardName : \(cardName), cardNumber : \(cardNumber)")
+        cell.info.endEditing(true)
+//        dataRepository.set(cardID: cardID, cardName: cardName, cardNumber: cardNumber)
+        let defaults = UserDefaults(suiteName: GroupKeys().suiteName)
+        defaults?.setValue("testValue", forKey: "test")
+        
+//        let main = UINavigationController().viewControllers.first as! MainTableViewController
+//        main.tableView.reloadData()
+        navigationController?.popViewController(animated: true)
     }
     
     
@@ -77,9 +85,8 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     }
 
     private func haveInfo() -> Bool {
-        let cardID = SharedMemoryContext.getCardID() as! Int
-        if nil != dataCenter.get(cardID: cardID) {
-            let savedCardInfo = dataCenter.get(cardID: cardID)
+        if nil != dataRepository.get(cardID: cardID) {
+            let savedCardInfo = dataRepository.get(cardID: cardID)
             cardInfo.append((savedCardInfo?.0)!)
             cardInfo.append((savedCardInfo?.1)!)
             return true

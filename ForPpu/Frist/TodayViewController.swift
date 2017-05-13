@@ -9,11 +9,22 @@
 import UIKit
 import NotificationCenter
 
+/** 위젯에 넘기는 용으로 쓰는 것 */
+struct GroupKeys {
+    let suiteName = "group.com.baecheese.ForPpu"
+    let cardID = "cardID"
+    let cardName = "cardName"
+    let cardNumber = "cardNumber"
+    let image = "barCodeImage"
+}
+
 class TodayViewController: UIViewController, NCWidgetProviding {
-        
+    
+    let userDefault = UserDefaults(suiteName: GroupKeys().suiteName)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view from its nib.
+        print("\(userDefault?.value(forKey: "test"))")
     }
     
     override func didReceiveMemoryWarning() {
