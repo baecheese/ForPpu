@@ -8,20 +8,91 @@
 
 /* Begin PBXBuildFile section */
 		032FD94E1EC6ED6400F488E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD94D1EC6ED6400F488E9 /* AppDelegate.swift */; };
-		032FD9501EC6ED6400F488E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD94F1EC6ED6400F488E9 /* ViewController.swift */; };
 		032FD9531EC6ED6400F488E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032FD9511EC6ED6400F488E9 /* Main.storyboard */; };
 		032FD9551EC6ED6400F488E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 032FD9541EC6ED6400F488E9 /* Assets.xcassets */; };
 		032FD9581EC6ED6400F488E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032FD9561EC6ED6400F488E9 /* LaunchScreen.storyboard */; };
+		032FD9601EC6EDF000F488E9 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD95F1EC6EDF000F488E9 /* MainTableViewController.swift */; };
+		032FD9621EC6F08A00F488E9 /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9611EC6F08A00F488E9 /* AddTableViewController.swift */; };
+		032FD96A1EC6F69100F488E9 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032FD9691EC6F69100F488E9 /* NotificationCenter.framework */; };
+		032FD96D1EC6F69100F488E9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD96C1EC6F69100F488E9 /* TodayViewController.swift */; };
+		032FD9701EC6F69100F488E9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032FD96E1EC6F69100F488E9 /* MainInterface.storyboard */; };
+		032FD9741EC6F69100F488E9 /* Frist.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 032FD9671EC6F69100F488E9 /* Frist.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		032FD97E1EC6F69E00F488E9 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032FD9691EC6F69100F488E9 /* NotificationCenter.framework */; };
+		032FD9811EC6F69E00F488E9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9801EC6F69E00F488E9 /* TodayViewController.swift */; };
+		032FD9841EC6F69E00F488E9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032FD9821EC6F69E00F488E9 /* MainInterface.storyboard */; };
+		032FD9881EC6F69E00F488E9 /* Second.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 032FD97D1EC6F69E00F488E9 /* Second.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		032FD9911EC6F6AE00F488E9 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032FD9691EC6F69100F488E9 /* NotificationCenter.framework */; };
+		032FD9941EC6F6AE00F488E9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9931EC6F6AE00F488E9 /* TodayViewController.swift */; };
+		032FD9971EC6F6AE00F488E9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032FD9951EC6F6AE00F488E9 /* MainInterface.storyboard */; };
+		032FD99B1EC6F6AE00F488E9 /* Third.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 032FD9901EC6F6AE00F488E9 /* Third.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		032FD9A01EC6F81700F488E9 /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD99F1EC6F81700F488E9 /* DataCenter.swift */; };
+		032FD9A21EC6FD2900F488E9 /* SharedMemoryContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		032FD9721EC6F69100F488E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 032FD9421EC6ED6400F488E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 032FD9661EC6F69100F488E9;
+			remoteInfo = Frist;
+		};
+		032FD9861EC6F69E00F488E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 032FD9421EC6ED6400F488E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 032FD97C1EC6F69E00F488E9;
+			remoteInfo = Second;
+		};
+		032FD9991EC6F6AE00F488E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 032FD9421EC6ED6400F488E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 032FD98F1EC6F6AE00F488E9;
+			remoteInfo = Third;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		032FD9781EC6F69100F488E9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				032FD9881EC6F69E00F488E9 /* Second.appex in Embed App Extensions */,
+				032FD99B1EC6F6AE00F488E9 /* Third.appex in Embed App Extensions */,
+				032FD9741EC6F69100F488E9 /* Frist.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		032FD94A1EC6ED6400F488E9 /* ForPpu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForPpu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		032FD94D1EC6ED6400F488E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		032FD94F1EC6ED6400F488E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		032FD9521EC6ED6400F488E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		032FD9541EC6ED6400F488E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		032FD9571EC6ED6400F488E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		032FD9591EC6ED6400F488E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		032FD95F1EC6EDF000F488E9 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		032FD9611EC6F08A00F488E9 /* AddTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
+		032FD9671EC6F69100F488E9 /* Frist.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Frist.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		032FD9691EC6F69100F488E9 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		032FD96C1EC6F69100F488E9 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		032FD96F1EC6F69100F488E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		032FD9711EC6F69100F488E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		032FD97D1EC6F69E00F488E9 /* Second.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Second.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		032FD9801EC6F69E00F488E9 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		032FD9831EC6F69E00F488E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		032FD9851EC6F69E00F488E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		032FD9901EC6F6AE00F488E9 /* Third.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Third.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		032FD9931EC6F6AE00F488E9 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		032FD9961EC6F6AE00F488E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		032FD9981EC6F6AE00F488E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		032FD99F1EC6F81700F488E9 /* DataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
+		032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedMemoryContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +103,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		032FD9641EC6F69100F488E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				032FD96A1EC6F69100F488E9 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		032FD97A1EC6F69E00F488E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				032FD97E1EC6F69E00F488E9 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		032FD98D1EC6F6AE00F488E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				032FD9911EC6F6AE00F488E9 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -39,6 +134,10 @@
 			isa = PBXGroup;
 			children = (
 				032FD94C1EC6ED6400F488E9 /* ForPpu */,
+				032FD96B1EC6F69100F488E9 /* Frist */,
+				032FD97F1EC6F69E00F488E9 /* Second */,
+				032FD9921EC6F6AE00F488E9 /* Third */,
+				032FD9681EC6F69100F488E9 /* Frameworks */,
 				032FD94B1EC6ED6400F488E9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +146,9 @@
 			isa = PBXGroup;
 			children = (
 				032FD94A1EC6ED6400F488E9 /* ForPpu.app */,
+				032FD9671EC6F69100F488E9 /* Frist.appex */,
+				032FD97D1EC6F69E00F488E9 /* Second.appex */,
+				032FD9901EC6F6AE00F488E9 /* Third.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,13 +157,54 @@
 			isa = PBXGroup;
 			children = (
 				032FD94D1EC6ED6400F488E9 /* AppDelegate.swift */,
-				032FD94F1EC6ED6400F488E9 /* ViewController.swift */,
+				032FD95F1EC6EDF000F488E9 /* MainTableViewController.swift */,
+				032FD9611EC6F08A00F488E9 /* AddTableViewController.swift */,
+				032FD99F1EC6F81700F488E9 /* DataCenter.swift */,
+				032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */,
 				032FD9511EC6ED6400F488E9 /* Main.storyboard */,
 				032FD9541EC6ED6400F488E9 /* Assets.xcassets */,
 				032FD9561EC6ED6400F488E9 /* LaunchScreen.storyboard */,
 				032FD9591EC6ED6400F488E9 /* Info.plist */,
 			);
 			path = ForPpu;
+			sourceTree = "<group>";
+		};
+		032FD9681EC6F69100F488E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				032FD9691EC6F69100F488E9 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		032FD96B1EC6F69100F488E9 /* Frist */ = {
+			isa = PBXGroup;
+			children = (
+				032FD96C1EC6F69100F488E9 /* TodayViewController.swift */,
+				032FD96E1EC6F69100F488E9 /* MainInterface.storyboard */,
+				032FD9711EC6F69100F488E9 /* Info.plist */,
+			);
+			path = Frist;
+			sourceTree = "<group>";
+		};
+		032FD97F1EC6F69E00F488E9 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				032FD9801EC6F69E00F488E9 /* TodayViewController.swift */,
+				032FD9821EC6F69E00F488E9 /* MainInterface.storyboard */,
+				032FD9851EC6F69E00F488E9 /* Info.plist */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		032FD9921EC6F6AE00F488E9 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				032FD9931EC6F6AE00F488E9 /* TodayViewController.swift */,
+				032FD9951EC6F6AE00F488E9 /* MainInterface.storyboard */,
+				032FD9981EC6F6AE00F488E9 /* Info.plist */,
+			);
+			path = Third;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,15 +217,70 @@
 				032FD9461EC6ED6400F488E9 /* Sources */,
 				032FD9471EC6ED6400F488E9 /* Frameworks */,
 				032FD9481EC6ED6400F488E9 /* Resources */,
+				032FD9781EC6F69100F488E9 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				032FD9731EC6F69100F488E9 /* PBXTargetDependency */,
+				032FD9871EC6F69E00F488E9 /* PBXTargetDependency */,
+				032FD99A1EC6F6AE00F488E9 /* PBXTargetDependency */,
 			);
 			name = ForPpu;
 			productName = ForPpu;
 			productReference = 032FD94A1EC6ED6400F488E9 /* ForPpu.app */;
 			productType = "com.apple.product-type.application";
+		};
+		032FD9661EC6F69100F488E9 /* Frist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 032FD9751EC6F69100F488E9 /* Build configuration list for PBXNativeTarget "Frist" */;
+			buildPhases = (
+				032FD9631EC6F69100F488E9 /* Sources */,
+				032FD9641EC6F69100F488E9 /* Frameworks */,
+				032FD9651EC6F69100F488E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Frist;
+			productName = Frist;
+			productReference = 032FD9671EC6F69100F488E9 /* Frist.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		032FD97C1EC6F69E00F488E9 /* Second */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 032FD9891EC6F69E00F488E9 /* Build configuration list for PBXNativeTarget "Second" */;
+			buildPhases = (
+				032FD9791EC6F69E00F488E9 /* Sources */,
+				032FD97A1EC6F69E00F488E9 /* Frameworks */,
+				032FD97B1EC6F69E00F488E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Second;
+			productName = Second;
+			productReference = 032FD97D1EC6F69E00F488E9 /* Second.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		032FD98F1EC6F6AE00F488E9 /* Third */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 032FD99C1EC6F6AE00F488E9 /* Build configuration list for PBXNativeTarget "Third" */;
+			buildPhases = (
+				032FD98C1EC6F6AE00F488E9 /* Sources */,
+				032FD98D1EC6F6AE00F488E9 /* Frameworks */,
+				032FD98E1EC6F6AE00F488E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Third;
+			productName = Third;
+			productReference = 032FD9901EC6F6AE00F488E9 /* Third.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +293,21 @@
 				ORGANIZATIONNAME = baecheese;
 				TargetAttributes = {
 					032FD9491EC6ED6400F488E9 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 3Z5E8777P2;
+						ProvisioningStyle = Automatic;
+					};
+					032FD9661EC6F69100F488E9 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 3Z5E8777P2;
+						ProvisioningStyle = Automatic;
+					};
+					032FD97C1EC6F69E00F488E9 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 3Z5E8777P2;
+						ProvisioningStyle = Automatic;
+					};
+					032FD98F1EC6F6AE00F488E9 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 3Z5E8777P2;
 						ProvisioningStyle = Automatic;
@@ -115,6 +328,9 @@
 			projectRoot = "";
 			targets = (
 				032FD9491EC6ED6400F488E9 /* ForPpu */,
+				032FD9661EC6F69100F488E9 /* Frist */,
+				032FD97C1EC6F69E00F488E9 /* Second */,
+				032FD98F1EC6F6AE00F488E9 /* Third */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +346,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		032FD9651EC6F69100F488E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				032FD9701EC6F69100F488E9 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		032FD97B1EC6F69E00F488E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				032FD9841EC6F69E00F488E9 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		032FD98E1EC6F6AE00F488E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				032FD9971EC6F6AE00F488E9 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,12 +377,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				032FD9501EC6ED6400F488E9 /* ViewController.swift in Sources */,
+				032FD9A21EC6FD2900F488E9 /* SharedMemoryContext.swift in Sources */,
+				032FD9601EC6EDF000F488E9 /* MainTableViewController.swift in Sources */,
 				032FD94E1EC6ED6400F488E9 /* AppDelegate.swift in Sources */,
+				032FD9A01EC6F81700F488E9 /* DataCenter.swift in Sources */,
+				032FD9621EC6F08A00F488E9 /* AddTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		032FD9631EC6F69100F488E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				032FD96D1EC6F69100F488E9 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		032FD9791EC6F69E00F488E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				032FD9811EC6F69E00F488E9 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		032FD98C1EC6F6AE00F488E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				032FD9941EC6F6AE00F488E9 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		032FD9731EC6F69100F488E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 032FD9661EC6F69100F488E9 /* Frist */;
+			targetProxy = 032FD9721EC6F69100F488E9 /* PBXContainerItemProxy */;
+		};
+		032FD9871EC6F69E00F488E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 032FD97C1EC6F69E00F488E9 /* Second */;
+			targetProxy = 032FD9861EC6F69E00F488E9 /* PBXContainerItemProxy */;
+		};
+		032FD99A1EC6F6AE00F488E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 032FD98F1EC6F6AE00F488E9 /* Third */;
+			targetProxy = 032FD9991EC6F6AE00F488E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		032FD9511EC6ED6400F488E9 /* Main.storyboard */ = {
@@ -159,6 +444,30 @@
 				032FD9571EC6ED6400F488E9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		032FD96E1EC6F69100F488E9 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				032FD96F1EC6F69100F488E9 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		032FD9821EC6F69E00F488E9 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				032FD9831EC6F69E00F488E9 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		032FD9951EC6F6AE00F488E9 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				032FD9961EC6F6AE00F488E9 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -262,6 +571,7 @@
 		032FD95D1EC6ED6400F488E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3Z5E8777P2;
 				INFOPLIST_FILE = ForPpu/Info.plist;
@@ -275,12 +585,91 @@
 		032FD95E1EC6ED6400F488E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3Z5E8777P2;
 				INFOPLIST_FILE = ForPpu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.ForPpu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		032FD9761EC6F69100F488E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				INFOPLIST_FILE = Frist/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.ForPpu.Frist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		032FD9771EC6F69100F488E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				INFOPLIST_FILE = Frist/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.ForPpu.Frist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		032FD98A1EC6F69E00F488E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				INFOPLIST_FILE = Second/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.ForPpu.Second;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		032FD98B1EC6F69E00F488E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				INFOPLIST_FILE = Second/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.ForPpu.Second;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		032FD99D1EC6F6AE00F488E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				INFOPLIST_FILE = Third/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.ForPpu.Third;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		032FD99E1EC6F6AE00F488E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				INFOPLIST_FILE = Third/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.ForPpu.Third;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -302,6 +691,30 @@
 			buildConfigurations = (
 				032FD95D1EC6ED6400F488E9 /* Debug */,
 				032FD95E1EC6ED6400F488E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		032FD9751EC6F69100F488E9 /* Build configuration list for PBXNativeTarget "Frist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				032FD9761EC6F69100F488E9 /* Debug */,
+				032FD9771EC6F69100F488E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		032FD9891EC6F69E00F488E9 /* Build configuration list for PBXNativeTarget "Second" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				032FD98A1EC6F69E00F488E9 /* Debug */,
+				032FD98B1EC6F69E00F488E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		032FD99C1EC6F6AE00F488E9 /* Build configuration list for PBXNativeTarget "Third" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				032FD99D1EC6F6AE00F488E9 /* Debug */,
+				032FD99E1EC6F6AE00F488E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
