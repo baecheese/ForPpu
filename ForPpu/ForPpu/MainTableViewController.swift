@@ -22,9 +22,11 @@ class MainTableViewCell: UITableViewCell {
 class MainTableViewController: UITableViewController {
 
     let cardInfo = CardInfo()
+    let dataCenter = DataCenter.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,6 +44,10 @@ class MainTableViewController: UITableViewController {
         return cardInfo.list[section]
     }
 
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20.0
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -73,7 +79,7 @@ class MainTableViewController: UITableViewController {
     }
     
     func moveEditPage(section:Int) {
-        SharedMemoryContext.set(key: "listNumber", setValue: section)
+        SharedMemoryContext.setCardID(setValue: section)
         let addPage = self.storyboard?.instantiateViewController(withIdentifier: "AddTableViewController") as! AddTableViewController
         self.navigationController?.pushViewController(addPage, animated: true)
     }

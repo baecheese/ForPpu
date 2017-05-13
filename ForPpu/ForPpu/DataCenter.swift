@@ -18,9 +18,21 @@ class DataCenter: NSObject {
     
     static let sharedInstance:DataCenter = DataCenter()
 
-    // key: cardID value: (cardName, cardNumber)
-    func setCardInfo(cardID:Int, cardName:String, cardNumber:String) {
-        
+    func set(cardID:Int, cardName:String, cardNumber:String) {
+        defaults.set((cardName, cardNumber), forKey: "\(cardID)")
+    }
+    
+    /** key: cardID value: (cardName, cardNumber)? */
+    func setAndGet(cardID:Int, cardName:String, cardNumber:String) -> (String, String)? {
+        defaults.set((cardName, cardNumber), forKey: "\(cardID)")
+        return get(cardID: cardID)
+    }
+    
+    func get(cardID:Int) -> (String, String)? {
+        if defaults.value(forKey: "\(cardID)") == nil {
+            return nil
+        }
+        return defaults.value(forKey: "\(cardID)") as? (String, String)
     }
     
 }

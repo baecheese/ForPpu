@@ -73,18 +73,40 @@
         <scene sceneID="e4o-9r-uVd">
             <objects>
                 <tableViewController storyboardIdentifier="AddTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="G4m-Ub-ALt" customClass="AddTableViewController" customModule="ForPpu" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fFQ-Gi-cfN">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="59" sectionHeaderHeight="28" sectionFooterHeight="28" id="fFQ-Gi-cfN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Add" id="NMx-W2-guG">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Add" rowHeight="59" id="NMx-W2-guG" customClass="AddTableViewCell" customModule="ForPpu" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="59"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NMx-W2-guG" id="L1B-4W-gFS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgt-2w-f8T">
+                                            <rect key="frame" x="30" y="12" width="315" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="41V-Rc-DFn"/>
+                                            </constraints>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="G4m-Ub-ALt" id="b6M-Tj-yIL"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="sgt-2w-f8T" firstAttribute="leading" secondItem="L1B-4W-gFS" secondAttribute="leading" constant="30" id="VpB-F8-yY7"/>
+                                        <constraint firstAttribute="trailing" secondItem="sgt-2w-f8T" secondAttribute="trailing" constant="30" id="btw-1o-c7N"/>
+                                        <constraint firstItem="sgt-2w-f8T" firstAttribute="centerY" secondItem="L1B-4W-gFS" secondAttribute="centerY" id="hqF-9r-3BL"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="info" destination="sgt-2w-f8T" id="27W-ui-hJb"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -95,7 +117,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7r5-Wg-cic" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1884" y="90"/>
+            <point key="canvasLocation" x="2080.8000000000002" y="89.505247376311857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rql-z0-naU">
