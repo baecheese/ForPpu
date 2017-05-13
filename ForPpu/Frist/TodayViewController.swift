@@ -22,9 +22,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     let userDefault = UserDefaults(suiteName: GroupKeys().suiteName)
     
+    @IBOutlet var FristTitle: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("\(userDefault?.value(forKey: "test"))")
+        let test = userDefault?.value(forKey: "test") as! String
+        FristTitle.text = String(describing: test)
     }
     
     override func didReceiveMemoryWarning() {

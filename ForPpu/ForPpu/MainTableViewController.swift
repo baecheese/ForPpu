@@ -8,9 +8,8 @@
 
 import UIKit
 
-struct CardInfo {
+struct CardMenu {
     let list = ["First", "Second", "Third"]
-    let testUserInfo = [["sk":"1234"], ["kakao":"1234"], ["emart":"1234"]]
 }
 
 /** MainTableViewController */
@@ -21,12 +20,17 @@ class MainTableViewCell: UITableViewCell {
 
 class MainTableViewController: UITableViewController {
 
-    let cardInfo = CardInfo()
-    let dataCenter = DataCenter.sharedInstance
+    let cardMenu = CardMenu()
+    let dataRepository = DataRepository.sharedInstance
+    var cardInfo:[[String:String?]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let defaults = UserDefaults(suiteName: GroupKeys().suiteName)
+        print("\(defaults?.value(forKey: "test"))")
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,11 +41,11 @@ class MainTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return cardInfo.list.count
+        return cardMenu.list.count
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return cardInfo.list[section]
+        return cardMenu.list[section]
     }
 
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -54,9 +58,14 @@ class MainTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Card", for: indexPath) as! MainTableViewCell
-        let card = cardInfo.testUserInfo[indexPath.section]
-        cell.name.text = card.first?.key
-        cell.info.text = card.first?.value
+        let nowCardInfo = dataRepository.get(cardID: indexPath.section)
+        if nil == nowCardInfo {
+            cell.name.text = "card"
+            cell.info.text = "입력된 정보가 없습니다"
+            return cell
+        }
+        cell.name.text = nowCardInfo?.0
+        cell.info.text = nowCardInfo?.1
         return cell
     }
 
@@ -83,5 +92,7 @@ class MainTableViewController: UITableViewController {
         let addPage = self.storyboard?.instantiateViewController(withIdentifier: "AddTableViewController") as! AddTableViewController
         self.navigationController?.pushViewController(addPage, animated: true)
     }
-
+    
+    
+    
 }

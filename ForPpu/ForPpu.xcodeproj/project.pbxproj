@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0328AB861EC72CAA00D2C681 /* WedgetDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */; };
+		0328AB881EC72CE200D2C681 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328AB871EC72CE200D2C681 /* DataRepository.swift */; };
 		032FD94E1EC6ED6400F488E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD94D1EC6ED6400F488E9 /* AppDelegate.swift */; };
 		032FD9531EC6ED6400F488E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032FD9511EC6ED6400F488E9 /* Main.storyboard */; };
 		032FD9551EC6ED6400F488E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 032FD9541EC6ED6400F488E9 /* Assets.xcassets */; };
@@ -25,7 +27,6 @@
 		032FD9941EC6F6AE00F488E9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9931EC6F6AE00F488E9 /* TodayViewController.swift */; };
 		032FD9971EC6F6AE00F488E9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032FD9951EC6F6AE00F488E9 /* MainInterface.storyboard */; };
 		032FD99B1EC6F6AE00F488E9 /* Third.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 032FD9901EC6F6AE00F488E9 /* Third.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		032FD9A01EC6F81700F488E9 /* DataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD99F1EC6F81700F488E9 /* DataCenter.swift */; };
 		032FD9A21EC6FD2900F488E9 /* SharedMemoryContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WedgetDataCenter.swift; sourceTree = "<group>"; };
+		0328AB871EC72CE200D2C681 /* DataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
+		0328AB891EC72F1000D2C681 /* Third.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Third.entitlements; sourceTree = "<group>"; };
+		0328AB8A1EC72F6F00D2C681 /* ForPpu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForPpu.entitlements; sourceTree = "<group>"; };
+		0328AB8B1EC72F7500D2C681 /* Frist.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Frist.entitlements; sourceTree = "<group>"; };
+		0328AB8C1EC72F7B00D2C681 /* Second.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Second.entitlements; sourceTree = "<group>"; };
 		032FD94A1EC6ED6400F488E9 /* ForPpu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForPpu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		032FD94D1EC6ED6400F488E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		032FD9521EC6ED6400F488E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,7 +98,6 @@
 		032FD9931EC6F6AE00F488E9 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		032FD9961EC6F6AE00F488E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		032FD9981EC6F6AE00F488E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		032FD99F1EC6F81700F488E9 /* DataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCenter.swift; sourceTree = "<group>"; };
 		032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedMemoryContext.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,10 +162,12 @@
 		032FD94C1EC6ED6400F488E9 /* ForPpu */ = {
 			isa = PBXGroup;
 			children = (
+				0328AB8A1EC72F6F00D2C681 /* ForPpu.entitlements */,
 				032FD94D1EC6ED6400F488E9 /* AppDelegate.swift */,
 				032FD95F1EC6EDF000F488E9 /* MainTableViewController.swift */,
 				032FD9611EC6F08A00F488E9 /* AddTableViewController.swift */,
-				032FD99F1EC6F81700F488E9 /* DataCenter.swift */,
+				0328AB871EC72CE200D2C681 /* DataRepository.swift */,
+				0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */,
 				032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */,
 				032FD9511EC6ED6400F488E9 /* Main.storyboard */,
 				032FD9541EC6ED6400F488E9 /* Assets.xcassets */,
@@ -180,6 +188,7 @@
 		032FD96B1EC6F69100F488E9 /* Frist */ = {
 			isa = PBXGroup;
 			children = (
+				0328AB8B1EC72F7500D2C681 /* Frist.entitlements */,
 				032FD96C1EC6F69100F488E9 /* TodayViewController.swift */,
 				032FD96E1EC6F69100F488E9 /* MainInterface.storyboard */,
 				032FD9711EC6F69100F488E9 /* Info.plist */,
@@ -190,6 +199,7 @@
 		032FD97F1EC6F69E00F488E9 /* Second */ = {
 			isa = PBXGroup;
 			children = (
+				0328AB8C1EC72F7B00D2C681 /* Second.entitlements */,
 				032FD9801EC6F69E00F488E9 /* TodayViewController.swift */,
 				032FD9821EC6F69E00F488E9 /* MainInterface.storyboard */,
 				032FD9851EC6F69E00F488E9 /* Info.plist */,
@@ -200,6 +210,7 @@
 		032FD9921EC6F6AE00F488E9 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				0328AB891EC72F1000D2C681 /* Third.entitlements */,
 				032FD9931EC6F6AE00F488E9 /* TodayViewController.swift */,
 				032FD9951EC6F6AE00F488E9 /* MainInterface.storyboard */,
 				032FD9981EC6F6AE00F488E9 /* Info.plist */,
@@ -296,21 +307,41 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 3Z5E8777P2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					032FD9661EC6F69100F488E9 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 3Z5E8777P2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					032FD97C1EC6F69E00F488E9 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 3Z5E8777P2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					032FD98F1EC6F6AE00F488E9 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 3Z5E8777P2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -380,8 +411,9 @@
 				032FD9A21EC6FD2900F488E9 /* SharedMemoryContext.swift in Sources */,
 				032FD9601EC6EDF000F488E9 /* MainTableViewController.swift in Sources */,
 				032FD94E1EC6ED6400F488E9 /* AppDelegate.swift in Sources */,
-				032FD9A01EC6F81700F488E9 /* DataCenter.swift in Sources */,
+				0328AB861EC72CAA00D2C681 /* WedgetDataCenter.swift in Sources */,
 				032FD9621EC6F08A00F488E9 /* AddTableViewController.swift in Sources */,
+				0328AB881EC72CE200D2C681 /* DataRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +605,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ForPpu/ForPpu.entitlements;
 				DEVELOPMENT_TEAM = 3Z5E8777P2;
 				INFOPLIST_FILE = ForPpu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -587,6 +620,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ForPpu/ForPpu.entitlements;
 				DEVELOPMENT_TEAM = 3Z5E8777P2;
 				INFOPLIST_FILE = ForPpu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -599,6 +633,7 @@
 		032FD9761EC6F69100F488E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Frist/Frist.entitlements;
 				DEVELOPMENT_TEAM = 3Z5E8777P2;
 				INFOPLIST_FILE = Frist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -612,6 +647,7 @@
 		032FD9771EC6F69100F488E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Frist/Frist.entitlements;
 				DEVELOPMENT_TEAM = 3Z5E8777P2;
 				INFOPLIST_FILE = Frist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -625,6 +661,7 @@
 		032FD98A1EC6F69E00F488E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Second/Second.entitlements;
 				DEVELOPMENT_TEAM = 3Z5E8777P2;
 				INFOPLIST_FILE = Second/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -638,6 +675,7 @@
 		032FD98B1EC6F69E00F488E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Second/Second.entitlements;
 				DEVELOPMENT_TEAM = 3Z5E8777P2;
 				INFOPLIST_FILE = Second/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -651,6 +689,7 @@
 		032FD99D1EC6F6AE00F488E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Third/Third.entitlements;
 				DEVELOPMENT_TEAM = 3Z5E8777P2;
 				INFOPLIST_FILE = Third/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -664,6 +703,7 @@
 		032FD99E1EC6F6AE00F488E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Third/Third.entitlements;
 				DEVELOPMENT_TEAM = 3Z5E8777P2;
 				INFOPLIST_FILE = Third/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -693,6 +733,7 @@
 				032FD95E1EC6ED6400F488E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		032FD9751EC6F69100F488E9 /* Build configuration list for PBXNativeTarget "Frist" */ = {
 			isa = XCConfigurationList;
@@ -701,6 +742,7 @@
 				032FD9771EC6F69100F488E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		032FD9891EC6F69E00F488E9 /* Build configuration list for PBXNativeTarget "Second" */ = {
 			isa = XCConfigurationList;
@@ -709,6 +751,7 @@
 				032FD98B1EC6F69E00F488E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		032FD99C1EC6F6AE00F488E9 /* Build configuration list for PBXNativeTarget "Third" */ = {
 			isa = XCConfigurationList;
@@ -717,6 +760,7 @@
 				032FD99E1EC6F6AE00F488E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
