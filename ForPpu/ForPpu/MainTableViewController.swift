@@ -29,8 +29,7 @@ class MainTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let defaults = UserDefaults(suiteName: GroupKeys().suiteName)
-        print("\(defaults?.value(forKey: "test"))")
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {

@@ -9,25 +9,25 @@
 import UIKit
 import NotificationCenter
 
-/** 위젯에 넘기는 용으로 쓰는 것 */
-struct GroupKeys {
-    let suiteName = "group.com.baecheese.ForPpu"
-    let cardID = "cardID"
-    let cardName = "cardName"
-    let cardNumber = "cardNumber"
-    let image = "barCodeImage"
-}
 
 class TodayViewController: UIViewController, NCWidgetProviding {
     
-    let userDefault = UserDefaults(suiteName: GroupKeys().suiteName)
+    @IBOutlet var fristTitle: UILabel!
     
-    @IBOutlet var FristTitle: UILabel!
+    let sendDataBox = SendDataBox.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let test = userDefault?.value(forKey: "test") as! String
-        FristTitle.text = String(describing: test)
+        setCardInfo()
+    }
+    
+    func setCardInfo() {
+        if nil == sendDataBox.getCardInfo() {
+            fristTitle.text = "저장된 카드가 없습니다."
+            return;
+        }
+        let info = "\(String(describing: (sendDataBox.getCardInfo()?.0)!)) - \(String(describing: (sendDataBox.getCardInfo()?.1)!))"
+        fristTitle.text = info
     }
     
     override func didReceiveMemoryWarning() {

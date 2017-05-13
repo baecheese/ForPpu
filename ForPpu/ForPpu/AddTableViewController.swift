@@ -43,12 +43,7 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     
     func clickSaveButton() {
         cell.info.endEditing(true)
-//        dataRepository.set(cardID: cardID, cardName: cardName, cardNumber: cardNumber)
-        let defaults = UserDefaults(suiteName: GroupKeys().suiteName)
-        defaults?.setValue("testValue", forKey: "test")
-        
-//        let main = UINavigationController().viewControllers.first as! MainTableViewController
-//        main.tableView.reloadData()
+        dataRepository.set(cardID: cardID, cardName: cardName, cardNumber: cardNumber)
         navigationController?.popViewController(animated: true)
     }
     

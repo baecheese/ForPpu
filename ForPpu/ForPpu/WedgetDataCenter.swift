@@ -11,7 +11,6 @@ import UIKit
 /** 위젯에 넘기는 용으로 쓰는 것 */
 struct GroupKeys {
     let suiteName = "group.com.baecheese.ForPpu"
-    let cardID = "cardID"
     let cardName = "cardName"
     let cardNumber = "cardNumber"
     let image = "barCodeImage"
@@ -26,31 +25,45 @@ class WedgetDataCenter: NSObject {
     private let defaults = UserDefaults(suiteName: GroupKeys().suiteName)
     let keys = GroupKeys()
     
+    /** let key = "\(keys.cardID)_\(keys.cardName)"*/
     func set(cardID:Int, cardName:String, cardNumber:String) {
-        let info:[String:Any?] = [keys.cardName:cardName, keys.cardNumber:cardNumber, keys.image:getBarCodeImage(cardNumber: cardNumber)]
-        let infoAny = info as Any
-        defaults?.setValue(infoAny, forKey: "\(cardID)")
-        defaults?.set(infoAny, forKey: "\(cardID)")
+        let keys = getKeys(cardID: cardID)
+        defaults?.set(cardName, forKey: keys[0])
+        defaults?.set(cardNumber, forKey: keys[1])
+        defaults?.set(getBarCodeImage(cardNumber: cardNumber), forKey: keys[2])
     }
     
-    /** key: cardID value: [cardKey:Value, key:value .. ] */
-    func setAndGet(cardID:Int, cardName:String, cardNumber:String) -> [String:Any?]? {
-        let info:[String:Any?] = [keys.cardName:cardName, keys.cardNumber:cardNumber, keys.image:getBarCodeImage(cardNumber: cardNumber)]
-        defaults?.set(info, forKey: "\(cardID)")
+    
+    func setAndGet(cardID:Int, cardName:String, cardNumber:String) -> (String, String)?  {
+        let keys = getKeys(cardID: cardID)
+        defaults?.set(cardName, forKey: keys[0])
+        defaults?.set(cardNumber, forKey: keys[1])
+        defaults?.set(getBarCodeImage(cardNumber: cardNumber), forKey: keys[2])
         return get(cardID: cardID)
     }
     
-    /** key: cardID value: [cardKey:Value, key:value .. ] */
-    func get(cardID:Int) -> [String:Any?]? {
-        if defaults?.value(forKey: "\(cardID)") == nil {
-            return nil
+    /** (cardName, cardNumber) */
+    func get(cardID:Int) -> (String, String)? {
+        let keys = getKeys(cardID: cardID)
+        let cardName = defaults?.value(forKey: keys[0])
+        let cardNumber = defaults?.value(forKey: keys[1])
+        if nil != cardName || nil != cardNumber {
+            return (cardName as! String, cardNumber as! String)
         }
-        return defaults?.value(forKey: "\(cardID)") as? [String : Any?]
+        return nil
     }
     
     private func getBarCodeImage(cardNumber:String) -> UIImage? {
         // 바코드 사진 생성 후
         return nil
     }
-
+    
+    /** 0:이름키, 1:번호키, 2:이미지키 */
+    private func getKeys(cardID:Int) -> [String] {
+        let cardNameKey = "\(cardID)_\(keys.cardName)"
+        let cardNumberKey = "\(cardID)_\(keys.cardNumber)"
+        let barCodeImageKey = "\(cardID)_\(keys.image)"
+        return [cardNameKey, cardNumberKey, barCodeImageKey]
+    }
+    
 }

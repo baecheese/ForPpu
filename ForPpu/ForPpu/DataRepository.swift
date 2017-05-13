@@ -31,8 +31,8 @@ class DataRepository: NSObject {
     /** key: cardID value: (cardName, cardNumber)? */
     func get(cardID:Int) -> (String, String)? {
         let data = wedgetDataCenter.get(cardID: cardID)
-        let cardName = data?[keys.cardName] as? String
-        let cardNumber = data?[keys.cardNumber] as? String
+        let cardName = data?.0
+        let cardNumber = data?.1
         
         if nil == cardName || nil == cardNumber {
             return nil
@@ -40,6 +40,5 @@ class DataRepository: NSObject {
         
         return (cardName!, cardNumber!)
     }
-    
     
 }

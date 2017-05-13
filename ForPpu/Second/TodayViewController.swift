@@ -11,9 +11,22 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
     
+    @IBOutlet var secondTitle: UILabel!
+    
+    private let sendDataBox = SendDataBoxTwo.sharedInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setCardInfo()
+    }
+    
+    func setCardInfo() {
+        if nil == sendDataBox.getCardInfo() {
+            secondTitle.text = "저장된 카드가 없습니다."
+            return;
+        }
+        let info = "\(String(describing: (sendDataBox.getCardInfo()?.0)!)) - \(String(describing: (sendDataBox.getCardInfo()?.1)!))"
+        secondTitle.text = info
     }
     
     override func didReceiveMemoryWarning() {

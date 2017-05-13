@@ -42,7 +42,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="37"/>
                     <connections>
-                        <outlet property="FristTitle" destination="GcN-lo-r42" id="ciO-Ye-X5M"/>
+                        <outlet property="fristTitle" destination="GcN-lo-r42" id="IWn-Nr-k9j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>

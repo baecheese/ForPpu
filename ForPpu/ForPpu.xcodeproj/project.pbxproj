@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0328AB861EC72CAA00D2C681 /* WedgetDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */; };
 		0328AB881EC72CE200D2C681 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328AB871EC72CE200D2C681 /* DataRepository.swift */; };
+		0328AB8E1EC7540400D2C681 /* SendDataBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328AB8D1EC7540400D2C681 /* SendDataBox.swift */; };
 		032FD94E1EC6ED6400F488E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD94D1EC6ED6400F488E9 /* AppDelegate.swift */; };
 		032FD9531EC6ED6400F488E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032FD9511EC6ED6400F488E9 /* Main.storyboard */; };
 		032FD9551EC6ED6400F488E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 032FD9541EC6ED6400F488E9 /* Assets.xcassets */; };
@@ -28,6 +29,8 @@
 		032FD9971EC6F6AE00F488E9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032FD9951EC6F6AE00F488E9 /* MainInterface.storyboard */; };
 		032FD99B1EC6F6AE00F488E9 /* Third.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 032FD9901EC6F6AE00F488E9 /* Third.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		032FD9A21EC6FD2900F488E9 /* SharedMemoryContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */; };
+		03E416861EC75736000ED685 /* SendDataBoxTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E416851EC75736000ED685 /* SendDataBoxTwo.swift */; };
+		03E416881EC7574D000ED685 /* SendDataBoxThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E416871EC7574D000ED685 /* SendDataBoxThree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,7 @@
 		0328AB8A1EC72F6F00D2C681 /* ForPpu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForPpu.entitlements; sourceTree = "<group>"; };
 		0328AB8B1EC72F7500D2C681 /* Frist.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Frist.entitlements; sourceTree = "<group>"; };
 		0328AB8C1EC72F7B00D2C681 /* Second.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Second.entitlements; sourceTree = "<group>"; };
+		0328AB8D1EC7540400D2C681 /* SendDataBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBox.swift; sourceTree = "<group>"; };
 		032FD94A1EC6ED6400F488E9 /* ForPpu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForPpu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		032FD94D1EC6ED6400F488E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		032FD9521EC6ED6400F488E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 		032FD9961EC6F6AE00F488E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		032FD9981EC6F6AE00F488E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedMemoryContext.swift; sourceTree = "<group>"; };
+		03E416851EC75736000ED685 /* SendDataBoxTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxTwo.swift; sourceTree = "<group>"; };
+		03E416871EC7574D000ED685 /* SendDataBoxThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxThree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +196,7 @@
 			children = (
 				0328AB8B1EC72F7500D2C681 /* Frist.entitlements */,
 				032FD96C1EC6F69100F488E9 /* TodayViewController.swift */,
+				0328AB8D1EC7540400D2C681 /* SendDataBox.swift */,
 				032FD96E1EC6F69100F488E9 /* MainInterface.storyboard */,
 				032FD9711EC6F69100F488E9 /* Info.plist */,
 			);
@@ -201,6 +208,7 @@
 			children = (
 				0328AB8C1EC72F7B00D2C681 /* Second.entitlements */,
 				032FD9801EC6F69E00F488E9 /* TodayViewController.swift */,
+				03E416851EC75736000ED685 /* SendDataBoxTwo.swift */,
 				032FD9821EC6F69E00F488E9 /* MainInterface.storyboard */,
 				032FD9851EC6F69E00F488E9 /* Info.plist */,
 			);
@@ -212,6 +220,7 @@
 			children = (
 				0328AB891EC72F1000D2C681 /* Third.entitlements */,
 				032FD9931EC6F6AE00F488E9 /* TodayViewController.swift */,
+				03E416871EC7574D000ED685 /* SendDataBoxThree.swift */,
 				032FD9951EC6F6AE00F488E9 /* MainInterface.storyboard */,
 				032FD9981EC6F6AE00F488E9 /* Info.plist */,
 			);
@@ -422,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				032FD96D1EC6F69100F488E9 /* TodayViewController.swift in Sources */,
+				0328AB8E1EC7540400D2C681 /* SendDataBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E416861EC75736000ED685 /* SendDataBoxTwo.swift in Sources */,
 				032FD9811EC6F69E00F488E9 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E416881EC7574D000ED685 /* SendDataBoxThree.swift in Sources */,
 				032FD9941EC6F6AE00F488E9 /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
