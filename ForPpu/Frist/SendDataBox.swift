@@ -11,7 +11,7 @@ import UIKit
 /** 위젯에 넘기는 용으로 쓰는 것 */
 struct GroupKeys {
     let cardID = "0"
-    let suiteName = "group.com.baecheese.ForPpu"
+    let suiteName = "group.com.baecheese.app.forppu"
     let cardName = "cardName"
     let cardNumber = "cardNumber"
     let image = "barCodeImage"
@@ -34,6 +34,16 @@ class SendDataBox: NSObject {
             return (cardName, cardNumber) as? (String, String)
         }
         return nil
+    }
+    
+    func getBarCodeImage() -> UIImage? {
+        let imageKey = getKeys()[2]
+        let barCodeImageData = userDefault?.value(forKey: imageKey) as? Data
+        if nil == barCodeImageData {
+            return nil
+        }
+        let barCodeImage = UIImage(data: barCodeImageData!)!
+        return barCodeImage
     }
     
     /** 0:이름키, 1:번호키, 2:이미지키 */

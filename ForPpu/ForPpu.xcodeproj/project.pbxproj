@@ -31,6 +31,7 @@
 		032FD9A21EC6FD2900F488E9 /* SharedMemoryContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */; };
 		03E416861EC75736000ED685 /* SendDataBoxTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E416851EC75736000ED685 /* SendDataBoxTwo.swift */; };
 		03E416881EC7574D000ED685 /* SendDataBoxThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E416871EC7574D000ED685 /* SendDataBoxThree.swift */; };
+		03E4168A1EC77524000ED685 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E416891EC77524000ED685 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedMemoryContext.swift; sourceTree = "<group>"; };
 		03E416851EC75736000ED685 /* SendDataBoxTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxTwo.swift; sourceTree = "<group>"; };
 		03E416871EC7574D000ED685 /* SendDataBoxThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxThree.swift; sourceTree = "<group>"; };
+		03E416891EC77524000ED685 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				0328AB871EC72CE200D2C681 /* DataRepository.swift */,
 				0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */,
 				032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */,
+				03E416891EC77524000ED685 /* icon.png */,
 				032FD9511EC6ED6400F488E9 /* Main.storyboard */,
 				032FD9541EC6ED6400F488E9 /* Assets.xcassets */,
 				032FD9561EC6ED6400F488E9 /* LaunchScreen.storyboard */,
@@ -314,8 +317,8 @@
 				TargetAttributes = {
 					032FD9491EC6ED6400F488E9 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 3Z5E8777P2;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = UT834J75J3;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -324,8 +327,8 @@
 					};
 					032FD9661EC6F69100F488E9 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 3Z5E8777P2;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = UT834J75J3;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -334,8 +337,8 @@
 					};
 					032FD97C1EC6F69E00F488E9 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 3Z5E8777P2;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = UT834J75J3;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -344,8 +347,8 @@
 					};
 					032FD98F1EC6F6AE00F488E9 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 3Z5E8777P2;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = UT834J75J3;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -380,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E4168A1EC77524000ED685 /* icon.png in Resources */,
 				032FD9581EC6ED6400F488E9 /* LaunchScreen.storyboard in Resources */,
 				032FD9551EC6ED6400F488E9 /* Assets.xcassets in Resources */,
 				032FD9531EC6ED6400F488E9 /* Main.storyboard in Resources */,
@@ -539,9 +543,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = UT834J75J3;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -590,9 +596,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = UT834J75J3;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -618,11 +626,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ForPpu/ForPpu.entitlements;
-				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.ForPpu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.app.forppu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "64875075-be8a-4f3a-8d0e-12f366285dcc";
+				PROVISIONING_PROFILE_SPECIFIER = baecheese;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -633,11 +643,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ForPpu/ForPpu.entitlements;
-				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.ForPpu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.app.forppu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f7f37771-01ec-4e2d-94d3-2f2f933c5361";
+				PROVISIONING_PROFILE_SPECIFIER = baecheese;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -646,11 +658,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Frist/Frist.entitlements;
-				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = Frist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.ForPpu.Frist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.app.forppu.Frist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4617bfa9-7eb7-4c8d-a1f3-4710b3aaf624";
+				PROVISIONING_PROFILE_SPECIFIER = baecheese1;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -660,11 +674,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Frist/Frist.entitlements;
-				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = Frist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.ForPpu.Frist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.app.forppu.Frist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4617bfa9-7eb7-4c8d-a1f3-4710b3aaf624";
+				PROVISIONING_PROFILE_SPECIFIER = baecheese1;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -674,11 +690,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Second/Second.entitlements;
-				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = Second/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.ForPpu.Second;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.app.forppu.Second;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "abeeeb22-0587-4f5f-ba20-9bb0105aba60";
+				PROVISIONING_PROFILE_SPECIFIER = baecheese2;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -688,11 +706,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Second/Second.entitlements;
-				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = Second/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.ForPpu.Second;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.app.forppu.Second;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "abeeeb22-0587-4f5f-ba20-9bb0105aba60";
+				PROVISIONING_PROFILE_SPECIFIER = baecheese2;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -702,11 +722,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Third/Third.entitlements;
-				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = Third/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.ForPpu.Third;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.app.forppu.Third;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e9aee57c-1ebb-40ab-9798-91e65ff9e8c7";
+				PROVISIONING_PROFILE_SPECIFIER = baecheese3;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -716,11 +738,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Third/Third.entitlements;
-				DEVELOPMENT_TEAM = 3Z5E8777P2;
+				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = Third/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.ForPpu.Third;
+				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.app.forppu.Third;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e9aee57c-1ebb-40ab-9798-91e65ff9e8c7";
+				PROVISIONING_PROFILE_SPECIFIER = baecheese3;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};

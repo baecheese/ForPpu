@@ -9,12 +9,12 @@
 import UIKit
 
 struct Menu {
-    let name = ["card name", "card number"]
+    let name = ["card name", "barcode number", "barcode image"]
 }
 
 /** MainTableViewController */
 class AddTableViewCell: UITableViewCell {
-    @IBOutlet var info: UITextField!
+    @IBOutlet var infoLabel: UIView!
 }
 
 class AddTableViewController: UITableViewController, UITextFieldDelegate {
@@ -22,10 +22,14 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     let dataRepository = DataRepository.sharedInstance
     var cell = AddTableViewCell()
     let cardID = SharedMemoryContext.getCardID() as! Int
+    var cardName = UITextField()
+    var barCodeNumber = UITextField()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         makeNavigationItem()
+        cardName.delegate = self
+        barCodeNumber.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,23 +40,46 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     func makeNavigationItem()  {
         let saveBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 30))
         saveBtn.setTitle("save", for: .normal)
+        saveBtn.setTitleColor(.blue, for: .normal)
         saveBtn.addTarget(self, action: #selector(AddTableViewController.clickSaveButton), for: .touchUpInside)
         let item = UIBarButtonItem(customView: saveBtn)
         navigationItem.rightBarButtonItem = item
     }
     
     func clickSaveButton() {
-        cell.info.endEditing(true)
-        dataRepository.set(cardID: cardID, cardName: cardName, cardNumber: cardNumber)
-        navigationController?.popViewController(animated: true)
+        self.cell.endEditing(true)
+        showAlert(message: "저장하시겠습니까?", haveCancel: true, doneHandler: { (UIAlertAction) in
+            if true == (self.isEmpty()) {
+                self.showAlert(message: "빈칸없이 작성해주세요!", haveCancel: false, doneHandler: nil, cancelHandler: nil)
+                return;
+            }
+            self.dataRepository.set(cardID: self.cardID, cardName: self.cardName.text!, cardNumber: self.barCodeNumber.text!)
+            self.navigationController?.popViewController(animated: true)
+        }, cancelHandler: nil)
     }
     
+    func isEmpty() -> Bool {
+        if true == cardName.text?.isEmpty || true == barCodeNumber.text?.isEmpty {
+            return true
+        }
+        return false
+    }
+    
+    func showAlert(message:String, haveCancel:Bool, doneHandler:((UIAlertAction) -> Swift.Void)?, cancelHandler:((UIAlertAction) -> Swift.Void)?)
+    {
+        let alertController = UIAlertController(title: "Notice", message:
+            message, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default,handler: doneHandler))
+        if haveCancel {
+            alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default,handler: cancelHandler))
+        }
+        self.present(alertController, animated: true, completion: nil)
+    }
     
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -64,19 +91,66 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 1
     }
 
     var cardInfo = [String]()
+    var barCodeImage = UIImageView()
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         cell = tableView.dequeueReusableCell(withIdentifier: "Add", for: indexPath) as! AddTableViewCell
-        cell.info.tag = indexPath.section
+        setCellDetailInfo(cell: cell, indexPath: indexPath)
         if true == haveInfo() {
-            cell.info.text = cardInfo[indexPath.section]
+            if 2 == indexPath.section {
+//                barCodeImage.image = dataRepository.getBardCodeImage(cardID: cardID)
+                let barcodeNumber = dataRepository.get(cardID: cardID)?.1
+                barCodeImage.image = showBarCode(cardNumber: barcodeNumber!)
+            }
+            else {
+                setCardInfo(section: indexPath.section)
+            }
         }
         return cell
+    }
+    
+    private func setCellDetailInfo(cell:AddTableViewCell, indexPath:IndexPath) {
+        if 0 == indexPath.section {
+            cardName.frame = CGRect(x: 0, y: 0, width: self.cell.frame.width * 0.7, height: self.cell.infoLabel.frame.height)
+            cell.infoLabel.addSubview(cardName)
+        }
+        if 1 == indexPath.section {
+            barCodeNumber.frame = CGRect(x: 0, y: 0, width: self.cell.frame.width * 0.7, height: self.cell.infoLabel.frame.height)
+            barCodeNumber.keyboardType = .numberPad
+            cell.infoLabel.addSubview(barCodeNumber)
+        }
+        if 2 == indexPath.section {
+            barCodeImage = UIImageView(frame: cell.bounds)
+            barCodeImage.backgroundColor = .clear
+            //                barCodeImage.image = dataRepository.getBardCodeImage(cardID: cardID)
+            let barcodeNumber = dataRepository.get(cardID: cardID)?.1
+            barCodeImage.image = showBarCode(cardNumber: barcodeNumber!)
+            cell.addSubview(barCodeImage)
+        }
+        
+    }
+    
+    private func setCardInfo(section:Int) {
+        if 0 == section {
+            cardName.text = cardInfo[0]
+        }
+        if 1 == section {
+            barCodeNumber.text = cardInfo[1]
+        }
+    }
+    
+    private func showBarCode(cardNumber:String) -> UIImage? {
+        if cardNumber.characters.count < 1 {
+            return nil
+        }
+        let asciiEncodedValue = cardNumber.data(using: .ascii)
+        let filter = CIFilter(name: "CICode128BarcodeGenerator")
+        filter?.setValue(asciiEncodedValue, forKey: "inputMessage")
+        return UIImage(ciImage: (filter?.outputImage)!)
     }
 
     private func haveInfo() -> Bool {
@@ -87,23 +161,5 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
             return true
         }
         return false
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        if 1 == textField.tag {
-            cell.info.keyboardType = .numberPad
-        }
-    }
-    
-    var cardName = ""
-    var cardNumber = ""
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if 0 == textField.tag {
-            cardName = textField.text!
-        }
-        if 1 == textField.tag {
-            cardNumber = textField.text!
-        }
     }
 }

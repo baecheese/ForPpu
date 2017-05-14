@@ -13,6 +13,7 @@ import NotificationCenter
 class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBOutlet var fristTitle: UILabel!
+    @IBOutlet var fristImage: UIImageView!
     
     let sendDataBox = SendDataBox.sharedInstance
     
@@ -28,6 +29,11 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
         let info = "\(String(describing: (sendDataBox.getCardInfo()?.0)!)) - \(String(describing: (sendDataBox.getCardInfo()?.1)!))"
         fristTitle.text = info
+    }
+    
+    func setBarCodeImage() {
+        let image = sendDataBox.getBarCodeImage()
+        fristImage.image = image
     }
     
     override func didReceiveMemoryWarning() {

@@ -85,27 +85,21 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgt-2w-f8T">
-                                            <rect key="frame" x="30" y="12" width="315" height="35"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVI-7o-yHm">
+                                            <rect key="frame" x="38" y="12" width="299" height="35"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="35" id="41V-Rc-DFn"/>
+                                                <constraint firstAttribute="height" constant="35" id="aaV-3m-qTq"/>
                                             </constraints>
-                                            <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                            <connections>
-                                                <outlet property="delegate" destination="G4m-Ub-ALt" id="b6M-Tj-yIL"/>
-                                            </connections>
-                                        </textField>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="sgt-2w-f8T" firstAttribute="leading" secondItem="L1B-4W-gFS" secondAttribute="leading" constant="30" id="VpB-F8-yY7"/>
-                                        <constraint firstAttribute="trailing" secondItem="sgt-2w-f8T" secondAttribute="trailing" constant="30" id="btw-1o-c7N"/>
-                                        <constraint firstItem="sgt-2w-f8T" firstAttribute="centerY" secondItem="L1B-4W-gFS" secondAttribute="centerY" id="hqF-9r-3BL"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="fVI-7o-yHm" secondAttribute="trailing" constant="30" id="0gn-Qb-fVW"/>
+                                        <constraint firstItem="fVI-7o-yHm" firstAttribute="centerY" secondItem="L1B-4W-gFS" secondAttribute="centerY" id="jpZ-FT-9MW"/>
+                                        <constraint firstItem="fVI-7o-yHm" firstAttribute="leading" secondItem="L1B-4W-gFS" secondAttribute="leadingMargin" constant="30" id="qUm-Fd-8JY"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="info" destination="sgt-2w-f8T" id="27W-ui-hJb"/>
+                                    <outlet property="infoLabel" destination="fVI-7o-yHm" id="V2D-Ip-tCE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

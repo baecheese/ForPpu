@@ -41,4 +41,17 @@ class DataRepository: NSObject {
         return (cardName!, cardNumber!)
     }
     
+    func getBardCodeImage(cardID:Int) -> UIImage? {
+        if nil == wedgetDataCenter.getSavedBarCodeImageData(cardID: cardID) {
+            return nil
+        }
+        return UIImage(data: wedgetDataCenter.getSavedBarCodeImageData(cardID: cardID)!)
+    }
+    
+    func deleteData(cardID:Int) {
+        wedgetDataCenter.deleteCardInfo(cardID: cardID)
+        wedgetDataCenter.deleteImage(cardID: cardID)
+    }
+    
+    
 }

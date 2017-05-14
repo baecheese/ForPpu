@@ -10,7 +10,7 @@ import UIKit
 
 /** 위젯에 넘기는 용으로 쓰는 것 */
 struct GroupKeys {
-    let suiteName = "group.com.baecheese.ForPpu"
+    let suiteName = "group.com.baecheese.app.forppu"
     let cardName = "cardName"
     let cardNumber = "cardNumber"
     let image = "barCodeImage"
@@ -28,9 +28,17 @@ class WedgetDataCenter: NSObject {
     /** let key = "\(keys.cardID)_\(keys.cardName)"*/
     func set(cardID:Int, cardName:String, cardNumber:String) {
         let keys = getKeys(cardID: cardID)
-        defaults?.set(cardName, forKey: keys[0])
-        defaults?.set(cardNumber, forKey: keys[1])
-        defaults?.set(getBarCodeImage(cardNumber: cardNumber), forKey: keys[2])
+        let newCardName = cardName
+        let newCardNumber = cardNumber
+        
+        if 1 <= newCardName.characters.count {
+            defaults?.set(newCardName, forKey: keys[0])
+        }
+        if 1 <= newCardNumber.characters.count {
+            defaults?.set(newCardNumber, forKey: keys[1])
+        }
+        
+//        defaults?.set(getImageData(cardNumber: cardNumber), forKey: keys[2])
     }
     
     
@@ -38,7 +46,7 @@ class WedgetDataCenter: NSObject {
         let keys = getKeys(cardID: cardID)
         defaults?.set(cardName, forKey: keys[0])
         defaults?.set(cardNumber, forKey: keys[1])
-        defaults?.set(getBarCodeImage(cardNumber: cardNumber), forKey: keys[2])
+//        defaults?.set(getBarCodeImage(cardNumber: cardNumber), forKey: keys[2])
         return get(cardID: cardID)
     }
     
@@ -53,9 +61,37 @@ class WedgetDataCenter: NSObject {
         return nil
     }
     
+    private func getImageData(cardNumber:String) -> Data? {
+        if nil == getBarCodeImage(cardNumber: cardNumber) {
+            return nil
+        }
+        let image = getBarCodeImage(cardNumber: cardNumber)!
+        // 여기서 계속 Data가 nil로 저장됨 cheesing
+        return UIImageJPEGRepresentation(image, 1.0)
+    }
+    
     private func getBarCodeImage(cardNumber:String) -> UIImage? {
-        // 바코드 사진 생성 후
-        return nil
+        if cardNumber.characters.count < 1 {
+            return nil
+        }
+        let asciiEncodedValue = cardNumber.data(using: .ascii)
+        let filter = CIFilter(name: "CICode128BarcodeGenerator")
+        filter?.setValue(asciiEncodedValue, forKey: "inputMessage")
+        return UIImage(ciImage: (filter?.outputImage)!)
+    }
+    
+    func getSavedBarCodeImageData(cardID:Int) -> Data? {
+        let imageKey = getKeys(cardID: cardID)[2]
+        return defaults?.value(forKey: imageKey) as? Data
+    }
+    
+    func deleteCardInfo(cardID:Int) {
+        defaults?.removeObject(forKey: getKeys(cardID: cardID)[0])
+        defaults?.removeObject(forKey: getKeys(cardID: cardID)[1])
+    }
+    
+    func deleteImage(cardID:Int) {
+        defaults?.removeObject(forKey: getKeys(cardID: cardID)[2])
     }
     
     /** 0:이름키, 1:번호키, 2:이미지키 */

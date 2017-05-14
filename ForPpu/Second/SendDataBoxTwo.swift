@@ -11,7 +11,7 @@ import UIKit
 /** 위젯에 넘기는 용으로 쓰는 것 */
 struct GroupKeys {
     let cardID = "1"
-    let suiteName = "group.com.baecheese.ForPpu"
+    let suiteName = "group.com.baecheese.app.forppu"
     let cardName = "cardName"
     let cardNumber = "cardNumber"
     let image = "barCodeImage"
