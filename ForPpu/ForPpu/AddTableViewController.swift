@@ -127,8 +127,6 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
             barCodeImage = UIImageView(frame: cell.bounds)
             barCodeImage.backgroundColor = .clear
             //                barCodeImage.image = dataRepository.getBardCodeImage(cardID: cardID)
-            let barcodeNumber = dataRepository.get(cardID: cardID)?.1
-            barCodeImage.image = showBarCode(cardNumber: barcodeNumber!)
             cell.addSubview(barCodeImage)
         }
         
