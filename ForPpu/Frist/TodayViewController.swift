@@ -40,7 +40,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         else {
             fristImage.image = sendDataBox.showBarCode(cardNumber: barCodeNumber!)
         }
-        
     }
     
     override func didReceiveMemoryWarning() {

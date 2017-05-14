@@ -44,4 +44,16 @@ class SendDataBoxTwo: NSObject {
         let barCodeImageKey = "\(keys.cardID)_\(keys.image)"
         return [cardNameKey, cardNumberKey, barCodeImageKey]
     }
+    
+    func showBarCode(cardNumber:String) -> UIImage? {
+        if cardNumber.characters.count < 1 {
+            return nil
+        }
+        let asciiEncodedValue = cardNumber.data(using: .ascii)
+        let filter = CIFilter(name: "CICode128BarcodeGenerator")
+        filter?.setValue(asciiEncodedValue, forKey: "inputMessage")
+        return UIImage(ciImage: (filter?.outputImage)!)
+    }
+    
+    
 }
