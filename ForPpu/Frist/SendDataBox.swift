@@ -36,15 +36,15 @@ class SendDataBox: NSObject {
         return nil
     }
     
-    func getBarCodeImage() -> UIImage? {
-        let imageKey = getKeys()[2]
-        let barCodeImageData = userDefault?.value(forKey: imageKey) as? Data
-        if nil == barCodeImageData {
-            return nil
-        }
-        let barCodeImage = UIImage(data: barCodeImageData!)!
-        return barCodeImage
-    }
+//    func getBarCodeImage() -> UIImage? {
+//        let imageKey = getKeys()[2]
+//        let barCodeImageData = userDefault?.value(forKey: imageKey) as? Data
+//        if nil == barCodeImageData {
+//            return nil
+//        }
+//        let barCodeImage = UIImage(data: barCodeImageData!)!
+//        return barCodeImage
+//    }
     
     /** 0:이름키, 1:번호키, 2:이미지키 */
     private func getKeys() -> [String] {
@@ -53,6 +53,16 @@ class SendDataBox: NSObject {
         let cardNumberKey = "\(keys.cardID)_\(keys.cardNumber)"
         let barCodeImageKey = "\(keys.cardID)_\(keys.image)"
         return [cardNameKey, cardNumberKey, barCodeImageKey]
+    }
+    
+    func showBarCode(cardNumber:String) -> UIImage? {
+        if cardNumber.characters.count < 1 {
+            return nil
+        }
+        let asciiEncodedValue = cardNumber.data(using: .ascii)
+        let filter = CIFilter(name: "CICode128BarcodeGenerator")
+        filter?.setValue(asciiEncodedValue, forKey: "inputMessage")
+        return UIImage(ciImage: (filter?.outputImage)!)
     }
     
 }
