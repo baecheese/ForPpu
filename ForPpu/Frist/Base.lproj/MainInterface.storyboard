@@ -22,27 +22,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
-                                <rect key="frame" x="20" y="8" width="280" height="15"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="15"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="YlP-39-vKu"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ipz-Fi-Csq">
-                                <rect key="frame" x="0.0" y="23" width="320" height="14"/>
+                                <rect key="frame" x="0.0" y="15" width="320" height="22"/>
                             </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="ipz-Fi-Csq" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="3dK-M3-WGL"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="20" symbolic="YES" id="6Vq-gs-PHe"/>
                             <constraint firstAttribute="trailing" secondItem="ipz-Fi-Csq" secondAttribute="trailing" id="7j1-Ez-Ez4"/>
-                            <constraint firstAttribute="trailing" secondItem="GcN-lo-r42" secondAttribute="trailing" constant="20" symbolic="YES" id="L8K-9R-egU"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="VaR-d0-aVB"/>
                             <constraint firstAttribute="bottom" secondItem="ipz-Fi-Csq" secondAttribute="bottom" id="ekg-1e-iN2"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="i9y-dp-YTF"/>
                             <constraint firstItem="ipz-Fi-Csq" firstAttribute="top" secondItem="GcN-lo-r42" secondAttribute="bottom" id="iiA-WT-zdY"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" symbolic="YES" id="mYS-Cv-VNx"/>
+                            <constraint firstItem="GcN-lo-r42" firstAttribute="width" secondItem="S3S-Oj-5AN" secondAttribute="width" id="rrh-Qj-c0C"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>

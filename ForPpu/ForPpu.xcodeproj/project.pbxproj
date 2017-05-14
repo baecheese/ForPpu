@@ -29,9 +29,9 @@
 		032FD9971EC6F6AE00F488E9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032FD9951EC6F6AE00F488E9 /* MainInterface.storyboard */; };
 		032FD99B1EC6F6AE00F488E9 /* Third.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 032FD9901EC6F6AE00F488E9 /* Third.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		032FD9A21EC6FD2900F488E9 /* SharedMemoryContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */; };
+		036C04911EC88EDE006DEBBA /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 036C04901EC88EDE006DEBBA /* emptyImage.png */; };
 		03E416861EC75736000ED685 /* SendDataBoxTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E416851EC75736000ED685 /* SendDataBoxTwo.swift */; };
 		03E416881EC7574D000ED685 /* SendDataBoxThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E416871EC7574D000ED685 /* SendDataBoxThree.swift */; };
-		03E4168A1EC77524000ED685 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E416891EC77524000ED685 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,9 +104,9 @@
 		032FD9961EC6F6AE00F488E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		032FD9981EC6F6AE00F488E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedMemoryContext.swift; sourceTree = "<group>"; };
+		036C04901EC88EDE006DEBBA /* emptyImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyImage.png; sourceTree = "<group>"; };
 		03E416851EC75736000ED685 /* SendDataBoxTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxTwo.swift; sourceTree = "<group>"; };
 		03E416871EC7574D000ED685 /* SendDataBoxThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxThree.swift; sourceTree = "<group>"; };
-		03E416891EC77524000ED685 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +177,7 @@
 				0328AB871EC72CE200D2C681 /* DataRepository.swift */,
 				0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */,
 				032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */,
-				03E416891EC77524000ED685 /* icon.png */,
+				036C04901EC88EDE006DEBBA /* emptyImage.png */,
 				032FD9511EC6ED6400F488E9 /* Main.storyboard */,
 				032FD9541EC6ED6400F488E9 /* Assets.xcassets */,
 				032FD9561EC6ED6400F488E9 /* LaunchScreen.storyboard */,
@@ -383,10 +383,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03E4168A1EC77524000ED685 /* icon.png in Resources */,
 				032FD9581EC6ED6400F488E9 /* LaunchScreen.storyboard in Resources */,
 				032FD9551EC6ED6400F488E9 /* Assets.xcassets in Resources */,
 				032FD9531EC6ED6400F488E9 /* Main.storyboard in Resources */,
+				036C04911EC88EDE006DEBBA /* emptyImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

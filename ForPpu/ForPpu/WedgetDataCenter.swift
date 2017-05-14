@@ -61,6 +61,26 @@ class WedgetDataCenter: NSObject {
         return nil
     }
     
+    func deleteCardInfo(cardID:Int) {
+        defaults?.removeObject(forKey: getKeys(cardID: cardID)[0])
+        defaults?.removeObject(forKey: getKeys(cardID: cardID)[1])
+    }
+    
+    func deleteImage(cardID:Int) {
+        defaults?.removeObject(forKey: getKeys(cardID: cardID)[2])
+    }
+    
+    /** 0:이름키, 1:번호키, 2:이미지키 */
+    private func getKeys(cardID:Int) -> [String] {
+        let cardNameKey = "\(cardID)_\(keys.cardName)"
+        let cardNumberKey = "\(cardID)_\(keys.cardNumber)"
+        let barCodeImageKey = "\(cardID)_\(keys.image)"
+        return [cardNameKey, cardNumberKey, barCodeImageKey]
+    }
+    
+    
+    /* image 관련 */
+    
     private func getImageData(cardNumber:String) -> Data? {
         if nil == getBarCodeImage(cardNumber: cardNumber) {
             return nil
@@ -85,21 +105,5 @@ class WedgetDataCenter: NSObject {
         return defaults?.value(forKey: imageKey) as? Data
     }
     
-    func deleteCardInfo(cardID:Int) {
-        defaults?.removeObject(forKey: getKeys(cardID: cardID)[0])
-        defaults?.removeObject(forKey: getKeys(cardID: cardID)[1])
-    }
-    
-    func deleteImage(cardID:Int) {
-        defaults?.removeObject(forKey: getKeys(cardID: cardID)[2])
-    }
-    
-    /** 0:이름키, 1:번호키, 2:이미지키 */
-    private func getKeys(cardID:Int) -> [String] {
-        let cardNameKey = "\(cardID)_\(keys.cardName)"
-        let cardNumberKey = "\(cardID)_\(keys.cardNumber)"
-        let barCodeImageKey = "\(cardID)_\(keys.image)"
-        return [cardNameKey, cardNumberKey, barCodeImageKey]
-    }
     
 }

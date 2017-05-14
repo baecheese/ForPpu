@@ -99,6 +99,7 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         cell = tableView.dequeueReusableCell(withIdentifier: "Add", for: indexPath) as! AddTableViewCell
+        cell.selectionStyle = .none
         setCellDetailInfo(cell: cell, indexPath: indexPath)
         if true == haveInfo() {
             if 2 == indexPath.section {
@@ -114,18 +115,27 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     private func setCellDetailInfo(cell:AddTableViewCell, indexPath:IndexPath) {
+        let cellWidth = self.cell.frame.width
+        let textFieldwidth = cellWidth * 0.8
+        let margen = (cellWidth - textFieldwidth) * 0.5
+        
         if 0 == indexPath.section {
-            cardName.frame = CGRect(x: 0, y: 0, width: self.cell.frame.width * 0.7, height: self.cell.infoLabel.frame.height)
+            cardName.frame = CGRect(x: margen, y: 0, width: textFieldwidth, height: self.cell.infoLabel.frame.height)
+            cardName.font = UIFont.systemFont(ofSize: 13.0)
+            cardName.placeholder = "사용할 카드의 이름을 적어주세요."
             cell.infoLabel.addSubview(cardName)
         }
         if 1 == indexPath.section {
-            barCodeNumber.frame = CGRect(x: 0, y: 0, width: self.cell.frame.width * 0.7, height: self.cell.infoLabel.frame.height)
+            barCodeNumber.frame = CGRect(x: margen, y: 0, width: textFieldwidth, height: self.cell.infoLabel.frame.height)
+            barCodeNumber.font = UIFont.systemFont(ofSize: 13.0)
+            barCodeNumber.placeholder = "띄어쓰기 없이 바코드 번호를 적어주세요."
             barCodeNumber.keyboardType = .numberPad
             cell.infoLabel.addSubview(barCodeNumber)
         }
         if 2 == indexPath.section {
             barCodeImage = UIImageView(frame: cell.bounds)
-            barCodeImage.backgroundColor = .clear
+            barCodeImage.image = UIImage(named: "emptyImage.png")
+            print(cell.bounds)
             //                barCodeImage.image = dataRepository.getBardCodeImage(cardID: cardID)
             cell.addSubview(barCodeImage)
         }

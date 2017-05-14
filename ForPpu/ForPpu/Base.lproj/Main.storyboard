@@ -86,16 +86,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVI-7o-yHm">
-                                            <rect key="frame" x="38" y="12" width="299" height="35"/>
+                                            <rect key="frame" x="0.5" y="12" width="375" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="aaV-3m-qTq"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="fVI-7o-yHm" secondAttribute="trailing" constant="30" id="0gn-Qb-fVW"/>
+                                        <constraint firstItem="fVI-7o-yHm" firstAttribute="width" secondItem="L1B-4W-gFS" secondAttribute="width" id="2d6-Es-b1d"/>
+                                        <constraint firstItem="fVI-7o-yHm" firstAttribute="centerX" secondItem="L1B-4W-gFS" secondAttribute="centerX" id="VyS-Ge-kLb"/>
                                         <constraint firstItem="fVI-7o-yHm" firstAttribute="centerY" secondItem="L1B-4W-gFS" secondAttribute="centerY" id="jpZ-FT-9MW"/>
-                                        <constraint firstItem="fVI-7o-yHm" firstAttribute="leading" secondItem="L1B-4W-gFS" secondAttribute="leadingMargin" constant="30" id="qUm-Fd-8JY"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
