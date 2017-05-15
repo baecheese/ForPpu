@@ -10,22 +10,26 @@ import UIKit
 
 struct CardMenu {
     let list = ["First", "Second", "Third"]
+    let rainbow = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
 }
 
 /** MainTableViewController */
 class MainTableViewCell: UITableViewCell {
-    @IBOutlet var name: UILabel!
+//    @IBOutlet var name: UILabel!
     @IBOutlet var info: UILabel!
+    @IBOutlet var barcodeImage: UIImageView!
 }
 
 class MainTableViewController: UITableViewController {
 
+    let colorManager = ColorManager.sharedInstance
     let cardMenu = CardMenu()
     let dataRepository = DataRepository.sharedInstance
     var cardInfo:[[String:String?]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationColor()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,31 +44,43 @@ class MainTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return cardMenu.list.count
+        return cardMenu.rainbow.count
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return cardMenu.list[section]
+        return cardMenu.rainbow[section]
     }
 
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20.0
+        return 30.0
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 40.0))
+        headerView.backgroundColor = colorManager.getRainbow(section: section)
+        return headerView
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70.0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Card", for: indexPath) as! MainTableViewCell
         let nowCardInfo = dataRepository.get(cardID: indexPath.section)
         if nil == nowCardInfo {
-            cell.name.text = "card"
+//            cell.name.text = "card"
             cell.info.text = "입력된 정보가 없습니다"
             return cell
         }
-        cell.name.text = nowCardInfo?.0
         cell.info.text = nowCardInfo?.1
+        cell.barcodeImage.image = dataRepository.getBarCodeImage(cardNumber: (nowCardInfo?.1)!)
+        cell.barcodeImage.contentMode = .scaleAspectFit
+        
         return cell
     }
 
@@ -96,6 +112,8 @@ class MainTableViewController: UITableViewController {
         self.navigationController?.pushViewController(addPage, animated: true)
     }
     
-    
+    func setNavigationColor() {
+        navigationController?.navigationBar.barTintColor = colorManager.UIColorFromRGB(rgbValue: 0x26140C)
+    }
     
 }

@@ -48,6 +48,16 @@ class DataRepository: NSObject {
         return UIImage(data: wedgetDataCenter.getSavedBarCodeImageData(cardID: cardID)!)
     }
     
+    func getBarCodeImage(cardNumber:String) -> UIImage? {
+        if cardNumber.characters.count < 1 {
+            return nil
+        }
+        let asciiEncodedValue = cardNumber.data(using: .ascii)
+        let filter = CIFilter(name: "CICode128BarcodeGenerator")
+        filter?.setValue(asciiEncodedValue, forKey: "inputMessage")
+        return UIImage(ciImage: (filter?.outputImage)!)
+    }
+    
     func deleteData(cardID:Int) {
         wedgetDataCenter.deleteCardInfo(cardID: cardID)
         wedgetDataCenter.deleteImage(cardID: cardID)

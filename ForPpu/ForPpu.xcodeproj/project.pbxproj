@@ -30,6 +30,7 @@
 		032FD99B1EC6F6AE00F488E9 /* Third.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 032FD9901EC6F6AE00F488E9 /* Third.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		032FD9A21EC6FD2900F488E9 /* SharedMemoryContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */; };
 		036C04911EC88EDE006DEBBA /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 036C04901EC88EDE006DEBBA /* emptyImage.png */; };
+		036C04951EC94C56006DEBBA /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C04941EC94C56006DEBBA /* ColorManager.swift */; };
 		03E416861EC75736000ED685 /* SendDataBoxTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E416851EC75736000ED685 /* SendDataBoxTwo.swift */; };
 		03E416881EC7574D000ED685 /* SendDataBoxThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E416871EC7574D000ED685 /* SendDataBoxThree.swift */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,7 @@
 		032FD9981EC6F6AE00F488E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedMemoryContext.swift; sourceTree = "<group>"; };
 		036C04901EC88EDE006DEBBA /* emptyImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyImage.png; sourceTree = "<group>"; };
+		036C04941EC94C56006DEBBA /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		03E416851EC75736000ED685 /* SendDataBoxTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxTwo.swift; sourceTree = "<group>"; };
 		03E416871EC7574D000ED685 /* SendDataBoxThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxThree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +179,7 @@
 				0328AB871EC72CE200D2C681 /* DataRepository.swift */,
 				0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */,
 				032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */,
+				036C04941EC94C56006DEBBA /* ColorManager.swift */,
 				036C04901EC88EDE006DEBBA /* emptyImage.png */,
 				032FD9511EC6ED6400F488E9 /* Main.storyboard */,
 				032FD9541EC6ED6400F488E9 /* Assets.xcassets */,
@@ -421,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				036C04951EC94C56006DEBBA /* ColorManager.swift in Sources */,
 				032FD9A21EC6FD2900F488E9 /* SharedMemoryContext.swift in Sources */,
 				032FD9601EC6EDF000F488E9 /* MainTableViewController.swift in Sources */,
 				032FD94E1EC6ED6400F488E9 /* AppDelegate.swift in Sources */,

@@ -24,12 +24,15 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     let cardID = SharedMemoryContext.getCardID() as! Int
     var cardName = UITextField()
     var barCodeNumber = UITextField()
+    var cardInfo = [String]()
+    var barCodeImage = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         makeNavigationItem()
         cardName.delegate = self
         barCodeNumber.delegate = self
+        barCodeNumber.addTarget(self, action: #selector(AddTableViewController.textFieldDidChange), for: .editingChanged)
     }
 
     override func didReceiveMemoryWarning() {
@@ -93,9 +96,6 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-
-    var cardInfo = [String]()
-    var barCodeImage = UIImageView()
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         cell = tableView.dequeueReusableCell(withIdentifier: "Add", for: indexPath) as! AddTableViewCell
@@ -140,6 +140,10 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
             cell.addSubview(barCodeImage)
         }
         
+    }
+    
+    func textFieldDidChange() {
+        barCodeImage.image = dataRepository.getBarCodeImage(cardNumber: barCodeNumber.text!)
     }
     
     private func setCardInfo(section:Int) {
