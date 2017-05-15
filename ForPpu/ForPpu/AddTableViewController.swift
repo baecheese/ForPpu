@@ -19,6 +19,7 @@ class AddTableViewCell: UITableViewCell {
 
 class AddTableViewController: UITableViewController, UITextFieldDelegate {
 
+    let colorManager = ColorManager.sharedInstance
     let dataRepository = DataRepository.sharedInstance
     var cell = AddTableViewCell()
     let cardID = SharedMemoryContext.getCardID() as! Int
@@ -29,6 +30,9 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.backgroundColor = colorManager.getMainColor()
+        tableView.separatorStyle = .none
+        
         makeNavigationItem()
         cardName.delegate = self
         barCodeNumber.delegate = self
@@ -90,11 +94,36 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20.0
+        return TableFrameSize().sectionHeight
     }
-
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 30.0))
+        let headerImage = UIImageView(frame: headerView.bounds)
+        headerImage.image = UIImage(named: "headerImage.png")
+        headerImage.contentMode = .scaleToFill
+        headerImage.clipsToBounds = true
+        headerImage.image = headerImage.image!.withRenderingMode(.alwaysTemplate)
+        headerImage.tintColor = colorManager.getRainbow(section: cardID)
+        headerView.addSubview(headerImage)
+        let margenX:CGFloat = 15.0
+        let margenY:CGFloat = headerImage.frame.height/2 - TableFrameSize().sectionLabelHeight/2
+        let title = UILabel(frame: CGRect(x: margenX, y: margenY, width: tableView.frame.width - margenX*2, height: TableFrameSize().sectionLabelHeight))
+        title.text = Menu().name[section]
+        title.font = UIFont.boldSystemFont(ofSize: 13.0)
+        headerImage.addSubview(title)
+        if 0 != section {
+            headerView.backgroundColor = .white
+        }
+        return headerView
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return TableFrameSize().addRowHeghit
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -105,7 +134,7 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
             if 2 == indexPath.section {
 //                barCodeImage.image = dataRepository.getBardCodeImage(cardID: cardID)
                 let barcodeNumber = dataRepository.get(cardID: cardID)?.1
-                barCodeImage.image = showBarCode(cardNumber: barcodeNumber!)
+                barCodeImage.image = dataRepository.showBarCodeImage(cardNumber: barcodeNumber!)
             }
             else {
                 setCardInfo(section: indexPath.section)
@@ -143,7 +172,7 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     func textFieldDidChange() {
-        barCodeImage.image = dataRepository.getBarCodeImage(cardNumber: barCodeNumber.text!)
+        barCodeImage.image = dataRepository.showBarCodeImage(cardNumber: barCodeNumber.text!)
     }
     
     private func setCardInfo(section:Int) {
@@ -155,16 +184,6 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
-    private func showBarCode(cardNumber:String) -> UIImage? {
-        if cardNumber.characters.count < 1 {
-            return nil
-        }
-        let asciiEncodedValue = cardNumber.data(using: .ascii)
-        let filter = CIFilter(name: "CICode128BarcodeGenerator")
-        filter?.setValue(asciiEncodedValue, forKey: "inputMessage")
-        return UIImage(ciImage: (filter?.outputImage)!)
-    }
-
     private func haveInfo() -> Bool {
         if nil != dataRepository.get(cardID: cardID) {
             let savedCardInfo = dataRepository.get(cardID: cardID)

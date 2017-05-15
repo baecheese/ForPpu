@@ -48,7 +48,7 @@ class DataRepository: NSObject {
         return UIImage(data: wedgetDataCenter.getSavedBarCodeImageData(cardID: cardID)!)
     }
     
-    func getBarCodeImage(cardNumber:String) -> UIImage? {
+    func showBarCodeImage(cardNumber:String) -> UIImage? {
         if cardNumber.characters.count < 1 {
             return nil
         }

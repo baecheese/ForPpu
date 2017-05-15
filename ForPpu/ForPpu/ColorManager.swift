@@ -16,32 +16,36 @@ class ColorManager: NSObject {
     
     static let sharedInstance:ColorManager = ColorManager()
     
+    func getMainColor() -> UIColor {
+        return fromRGB(rgbValue: 0x26140C)
+    }
+    
     func getRainbow(section:Int) -> UIColor {
         if section == 0 {
-            return .red
+            return fromRGB(rgbValue: 0xF15A5A)
         }
         if section == 1 {
-            return .orange
+            return fromRGB(rgbValue: 0xFCB571)
         }
         if section == 2 {
-            return .yellow
+            return fromRGB(rgbValue: 0xFFF670)
         }
         if section == 3 {
-            return .green
+            return fromRGB(rgbValue: 0x4EBA6F)
         }
         if section == 4 {
-            return .blue
+            return fromRGB(rgbValue: 0x2D95BF)
         }
         if section == 5 {
-            return .magenta
+            return fromRGB(rgbValue: 0x325583)
         }
         if section == 6 {
-            return .purple
+            return fromRGB(rgbValue: 0x955BA5)
         }
         return .clear
     }
     
-    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+    func fromRGB(rgbValue: UInt) -> UIColor {
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
             green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,

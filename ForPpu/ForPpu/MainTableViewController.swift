@@ -13,6 +13,13 @@ struct CardMenu {
     let rainbow = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
 }
 
+struct TableFrameSize {
+    let sectionHeight:CGFloat = 30.0
+    let rowHeight:CGFloat = 70.0
+    let sectionLabelHeight:CGFloat = 15.0
+    let addRowHeghit:CGFloat = 60.0
+}
+
 /** MainTableViewController */
 class MainTableViewCell: UITableViewCell {
 //    @IBOutlet var name: UILabel!
@@ -29,10 +36,11 @@ class MainTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavigationColor()
+        tableView.backgroundColor = colorManager.getMainColor()
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        setNavigationColor()
         tableView.reloadData()
     }
 
@@ -52,12 +60,29 @@ class MainTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30.0
+        return TableFrameSize().sectionHeight
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 40.0))
-        headerView.backgroundColor = colorManager.getRainbow(section: section)
+        let headerImage = UIImageView(frame: headerView.bounds)
+        headerImage.image = UIImage(named: "headerImage.png")
+        headerImage.contentMode = .scaleToFill
+        headerImage.clipsToBounds = true
+        headerImage.image = headerImage.image!.withRenderingMode(.alwaysTemplate)
+        headerImage.tintColor = colorManager.getRainbow(section: section)
+        headerView.addSubview(headerImage)
+        let margenX:CGFloat = 15.0
+        let margenY:CGFloat = headerImage.frame.height/2 - TableFrameSize().sectionLabelHeight/2
+        let title = UILabel(frame: CGRect(x: margenX, y: margenY, width: tableView.frame.width - margenX*2, height: TableFrameSize().sectionLabelHeight))
+        let nowCardInfo = dataRepository.get(cardID: section)
+        title.text = nowCardInfo?.0
+        title.font = UIFont.boldSystemFont(ofSize: 13.0)
+        headerImage.addSubview(title)
+        
+        if 0 != section {
+            headerView.backgroundColor = .white
+        }
         return headerView
     }
     
@@ -66,7 +91,7 @@ class MainTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70.0
+        return TableFrameSize().rowHeight
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -78,7 +103,7 @@ class MainTableViewController: UITableViewController {
             return cell
         }
         cell.info.text = nowCardInfo?.1
-        cell.barcodeImage.image = dataRepository.getBarCodeImage(cardNumber: (nowCardInfo?.1)!)
+        cell.barcodeImage.image = dataRepository.showBarCodeImage(cardNumber: (nowCardInfo?.1)!)
         cell.barcodeImage.contentMode = .scaleAspectFit
         
         return cell
@@ -113,7 +138,7 @@ class MainTableViewController: UITableViewController {
     }
     
     func setNavigationColor() {
-        navigationController?.navigationBar.barTintColor = colorManager.UIColorFromRGB(rgbValue: 0x26140C)
+        navigationController?.navigationBar.barTintColor = colorManager.getMainColor()
     }
     
 }

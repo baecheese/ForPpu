@@ -28,13 +28,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qm-SW-4yM">
-                                            <rect key="frame" x="28" y="8" width="319" height="37"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <nil key="textColor"/>
+                                            <rect key="frame" x="28" y="13" width="319" height="37"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="izh-7c-bTk">
-                                            <rect key="frame" x="18" y="45" width="339" height="95.5"/>
+                                            <rect key="frame" x="18" y="50" width="339" height="90.5"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -42,7 +42,7 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="izh-7c-bTk" secondAttribute="trailing" constant="10" id="WUi-Pj-cHm"/>
                                         <constraint firstItem="6qm-SW-4yM" firstAttribute="height" secondItem="bZm-Hh-VrE" secondAttribute="height" multiplier="1:4" id="ZdH-NG-C67"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="6qm-SW-4yM" secondAttribute="trailing" constant="20" id="dUf-Fu-HHU"/>
-                                        <constraint firstItem="6qm-SW-4yM" firstAttribute="top" secondItem="bZm-Hh-VrE" secondAttribute="topMargin" id="dwY-h7-0kT"/>
+                                        <constraint firstItem="6qm-SW-4yM" firstAttribute="top" secondItem="bZm-Hh-VrE" secondAttribute="topMargin" constant="5" id="dwY-h7-0kT"/>
                                         <constraint firstItem="izh-7c-bTk" firstAttribute="top" secondItem="6qm-SW-4yM" secondAttribute="bottom" id="eqP-w2-XUx"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="izh-7c-bTk" secondAttribute="bottom" id="kgm-Bs-fte"/>
                                         <constraint firstItem="6qm-SW-4yM" firstAttribute="leading" secondItem="bZm-Hh-VrE" secondAttribute="leadingMargin" constant="20" id="lcv-VU-2fd"/>
