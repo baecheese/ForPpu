@@ -32,11 +32,15 @@
 		036C04911EC88EDE006DEBBA /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 036C04901EC88EDE006DEBBA /* emptyImage.png */; };
 		036C04951EC94C56006DEBBA /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C04941EC94C56006DEBBA /* ColorManager.swift */; };
 		036C04971EC96293006DEBBA /* headerImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 036C04961EC96293006DEBBA /* headerImage.png */; };
-		036C049D1EC96FF0006DEBBA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032FD9691EC6F69100F488E9 /* NotificationCenter.framework */; };
-		036C04A01EC96FF0006DEBBA /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C049F1EC96FF0006DEBBA /* TodayViewController.swift */; };
-		036C04A31EC96FF0006DEBBA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036C04A11EC96FF0006DEBBA /* MainInterface.storyboard */; };
-		036C04A71EC96FF0006DEBBA /* ForPpu_Green.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 036C049C1EC96FF0006DEBBA /* ForPpu_Green.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		036C04AC1EC970B9006DEBBA /* SendDataBoxGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C04AB1EC970B9006DEBBA /* SendDataBoxGreen.swift */; };
+		036C04C61EC9B40A006DEBBA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032FD9691EC6F69100F488E9 /* NotificationCenter.framework */; };
+		036C04C91EC9B40A006DEBBA /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C04C81EC9B40A006DEBBA /* TodayViewController.swift */; };
+		036C04CC1EC9B40A006DEBBA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036C04CA1EC9B40A006DEBBA /* MainInterface.storyboard */; };
+		036C04D01EC9B40A006DEBBA /* ForPpu_Blue.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 036C04C51EC9B40A006DEBBA /* ForPpu_Blue.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		036C04DC1EC9B610006DEBBA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032FD9691EC6F69100F488E9 /* NotificationCenter.framework */; };
+		036C04DF1EC9B610006DEBBA /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C04DE1EC9B610006DEBBA /* TodayViewController.swift */; };
+		036C04E21EC9B610006DEBBA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036C04E01EC9B610006DEBBA /* MainInterface.storyboard */; };
+		036C04E61EC9B610006DEBBA /* ForPpu_Green.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 036C04DB1EC9B610006DEBBA /* ForPpu_Green.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		036C04EC1EC9B68C006DEBBA /* SendDataBoxGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C04EB1EC9B68C006DEBBA /* SendDataBoxGreen.swift */; };
 		03E416861EC75736000ED685 /* SendDataBoxTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E416851EC75736000ED685 /* SendDataBoxTwo.swift */; };
 		03E416881EC7574D000ED685 /* SendDataBoxThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E416871EC7574D000ED685 /* SendDataBoxThree.swift */; };
 /* End PBXBuildFile section */
@@ -63,11 +67,18 @@
 			remoteGlobalIDString = 032FD98F1EC6F6AE00F488E9;
 			remoteInfo = Third;
 		};
-		036C04A51EC96FF0006DEBBA /* PBXContainerItemProxy */ = {
+		036C04CE1EC9B40A006DEBBA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 032FD9421EC6ED6400F488E9 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 036C049B1EC96FF0006DEBBA;
+			remoteGlobalIDString = 036C04C41EC9B40A006DEBBA;
+			remoteInfo = ForPpu_Blue;
+		};
+		036C04E41EC9B610006DEBBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 032FD9421EC6ED6400F488E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 036C04DA1EC9B610006DEBBA;
 			remoteInfo = ForPpu_Green;
 		};
 /* End PBXContainerItemProxy section */
@@ -81,7 +92,8 @@
 			files = (
 				032FD9881EC6F69E00F488E9 /* Second.appex in Embed App Extensions */,
 				032FD99B1EC6F6AE00F488E9 /* Third.appex in Embed App Extensions */,
-				036C04A71EC96FF0006DEBBA /* ForPpu_Green.appex in Embed App Extensions */,
+				036C04D01EC9B40A006DEBBA /* ForPpu_Blue.appex in Embed App Extensions */,
+				036C04E61EC9B610006DEBBA /* ForPpu_Green.appex in Embed App Extensions */,
 				032FD9741EC6F69100F488E9 /* Frist.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -122,11 +134,17 @@
 		036C04901EC88EDE006DEBBA /* emptyImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyImage.png; sourceTree = "<group>"; };
 		036C04941EC94C56006DEBBA /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		036C04961EC96293006DEBBA /* headerImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headerImage.png; sourceTree = "<group>"; };
-		036C049C1EC96FF0006DEBBA /* ForPpu_Green.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ForPpu_Green.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		036C049F1EC96FF0006DEBBA /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		036C04A21EC96FF0006DEBBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		036C04A41EC96FF0006DEBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		036C04AB1EC970B9006DEBBA /* SendDataBoxGreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxGreen.swift; sourceTree = "<group>"; };
+		036C04C51EC9B40A006DEBBA /* ForPpu_Blue.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ForPpu_Blue.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		036C04C81EC9B40A006DEBBA /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		036C04CB1EC9B40A006DEBBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		036C04CD1EC9B40A006DEBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		036C04D61EC9B4B1006DEBBA /* ForPpu_Blue.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForPpu_Blue.entitlements; sourceTree = "<group>"; };
+		036C04DB1EC9B610006DEBBA /* ForPpu_Green.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ForPpu_Green.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		036C04DE1EC9B610006DEBBA /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		036C04E11EC9B610006DEBBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		036C04E31EC9B610006DEBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		036C04EA1EC9B65F006DEBBA /* ForPpu_Green.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForPpu_Green.entitlements; sourceTree = "<group>"; };
+		036C04EB1EC9B68C006DEBBA /* SendDataBoxGreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxGreen.swift; sourceTree = "<group>"; };
 		03E416851EC75736000ED685 /* SendDataBoxTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxTwo.swift; sourceTree = "<group>"; };
 		03E416871EC7574D000ED685 /* SendDataBoxThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxThree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,11 +181,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		036C04991EC96FF0006DEBBA /* Frameworks */ = {
+		036C04C21EC9B40A006DEBBA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				036C049D1EC96FF0006DEBBA /* NotificationCenter.framework in Frameworks */,
+				036C04C61EC9B40A006DEBBA /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		036C04D81EC9B610006DEBBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				036C04DC1EC9B610006DEBBA /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +207,8 @@
 				032FD96B1EC6F69100F488E9 /* Frist */,
 				032FD97F1EC6F69E00F488E9 /* Second */,
 				032FD9921EC6F6AE00F488E9 /* Third */,
-				036C049E1EC96FF0006DEBBA /* ForPpu_Green */,
+				036C04DD1EC9B610006DEBBA /* ForPpu_Green */,
+				036C04C71EC9B40A006DEBBA /* ForPpu_Blue */,
 				032FD9681EC6F69100F488E9 /* Frameworks */,
 				032FD94B1EC6ED6400F488E9 /* Products */,
 			);
@@ -194,7 +221,8 @@
 				032FD9671EC6F69100F488E9 /* Frist.appex */,
 				032FD97D1EC6F69E00F488E9 /* Second.appex */,
 				032FD9901EC6F6AE00F488E9 /* Third.appex */,
-				036C049C1EC96FF0006DEBBA /* ForPpu_Green.appex */,
+				036C04C51EC9B40A006DEBBA /* ForPpu_Blue.appex */,
+				036C04DB1EC9B610006DEBBA /* ForPpu_Green.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,13 +292,25 @@
 			path = Third;
 			sourceTree = "<group>";
 		};
-		036C049E1EC96FF0006DEBBA /* ForPpu_Green */ = {
+		036C04C71EC9B40A006DEBBA /* ForPpu_Blue */ = {
 			isa = PBXGroup;
 			children = (
-				036C049F1EC96FF0006DEBBA /* TodayViewController.swift */,
-				036C04AB1EC970B9006DEBBA /* SendDataBoxGreen.swift */,
-				036C04A11EC96FF0006DEBBA /* MainInterface.storyboard */,
-				036C04A41EC96FF0006DEBBA /* Info.plist */,
+				036C04D61EC9B4B1006DEBBA /* ForPpu_Blue.entitlements */,
+				036C04C81EC9B40A006DEBBA /* TodayViewController.swift */,
+				036C04CA1EC9B40A006DEBBA /* MainInterface.storyboard */,
+				036C04CD1EC9B40A006DEBBA /* Info.plist */,
+			);
+			path = ForPpu_Blue;
+			sourceTree = "<group>";
+		};
+		036C04DD1EC9B610006DEBBA /* ForPpu_Green */ = {
+			isa = PBXGroup;
+			children = (
+				036C04EA1EC9B65F006DEBBA /* ForPpu_Green.entitlements */,
+				036C04DE1EC9B610006DEBBA /* TodayViewController.swift */,
+				036C04EB1EC9B68C006DEBBA /* SendDataBoxGreen.swift */,
+				036C04E01EC9B610006DEBBA /* MainInterface.storyboard */,
+				036C04E31EC9B610006DEBBA /* Info.plist */,
 			);
 			path = ForPpu_Green;
 			sourceTree = "<group>";
@@ -293,7 +333,8 @@
 				032FD9731EC6F69100F488E9 /* PBXTargetDependency */,
 				032FD9871EC6F69E00F488E9 /* PBXTargetDependency */,
 				032FD99A1EC6F6AE00F488E9 /* PBXTargetDependency */,
-				036C04A61EC96FF0006DEBBA /* PBXTargetDependency */,
+				036C04CF1EC9B40A006DEBBA /* PBXTargetDependency */,
+				036C04E51EC9B610006DEBBA /* PBXTargetDependency */,
 			);
 			name = ForPpu;
 			productName = ForPpu;
@@ -351,13 +392,30 @@
 			productReference = 032FD9901EC6F6AE00F488E9 /* Third.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		036C049B1EC96FF0006DEBBA /* ForPpu_Green */ = {
+		036C04C41EC9B40A006DEBBA /* ForPpu_Blue */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 036C04A81EC96FF0006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Green" */;
+			buildConfigurationList = 036C04D11EC9B40A006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Blue" */;
 			buildPhases = (
-				036C04981EC96FF0006DEBBA /* Sources */,
-				036C04991EC96FF0006DEBBA /* Frameworks */,
-				036C049A1EC96FF0006DEBBA /* Resources */,
+				036C04C11EC9B40A006DEBBA /* Sources */,
+				036C04C21EC9B40A006DEBBA /* Frameworks */,
+				036C04C31EC9B40A006DEBBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForPpu_Blue;
+			productName = ForPpu_Blue;
+			productReference = 036C04C51EC9B40A006DEBBA /* ForPpu_Blue.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		036C04DA1EC9B610006DEBBA /* ForPpu_Green */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 036C04E91EC9B610006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Green" */;
+			buildPhases = (
+				036C04D71EC9B610006DEBBA /* Sources */,
+				036C04D81EC9B610006DEBBA /* Frameworks */,
+				036C04D91EC9B610006DEBBA /* Resources */,
 			);
 			buildRules = (
 			);
@@ -365,7 +423,7 @@
 			);
 			name = ForPpu_Green;
 			productName = ForPpu_Green;
-			productReference = 036C049C1EC96FF0006DEBBA /* ForPpu_Green.appex */;
+			productReference = 036C04DB1EC9B610006DEBBA /* ForPpu_Green.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -418,9 +476,27 @@
 							};
 						};
 					};
-					036C049B1EC96FF0006DEBBA = {
+					036C04C41EC9B40A006DEBBA = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = UT834J75J3;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.WAC = {
+								enabled = 0;
+							};
+						};
+					};
+					036C04DA1EC9B610006DEBBA = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -441,7 +517,8 @@
 				032FD9661EC6F69100F488E9 /* Frist */,
 				032FD97C1EC6F69E00F488E9 /* Second */,
 				032FD98F1EC6F6AE00F488E9 /* Third */,
-				036C049B1EC96FF0006DEBBA /* ForPpu_Green */,
+				036C04DA1EC9B610006DEBBA /* ForPpu_Green */,
+				036C04C41EC9B40A006DEBBA /* ForPpu_Blue */,
 			);
 		};
 /* End PBXProject section */
@@ -483,11 +560,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		036C049A1EC96FF0006DEBBA /* Resources */ = {
+		036C04C31EC9B40A006DEBBA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				036C04A31EC96FF0006DEBBA /* MainInterface.storyboard in Resources */,
+				036C04CC1EC9B40A006DEBBA /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		036C04D91EC9B610006DEBBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				036C04E21EC9B610006DEBBA /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,12 +620,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		036C04981EC96FF0006DEBBA /* Sources */ = {
+		036C04C11EC9B40A006DEBBA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				036C04A01EC96FF0006DEBBA /* TodayViewController.swift in Sources */,
-				036C04AC1EC970B9006DEBBA /* SendDataBoxGreen.swift in Sources */,
+				036C04C91EC9B40A006DEBBA /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		036C04D71EC9B610006DEBBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				036C04DF1EC9B610006DEBBA /* TodayViewController.swift in Sources */,
+				036C04EC1EC9B68C006DEBBA /* SendDataBoxGreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,10 +655,15 @@
 			target = 032FD98F1EC6F6AE00F488E9 /* Third */;
 			targetProxy = 032FD9991EC6F6AE00F488E9 /* PBXContainerItemProxy */;
 		};
-		036C04A61EC96FF0006DEBBA /* PBXTargetDependency */ = {
+		036C04CF1EC9B40A006DEBBA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 036C049B1EC96FF0006DEBBA /* ForPpu_Green */;
-			targetProxy = 036C04A51EC96FF0006DEBBA /* PBXContainerItemProxy */;
+			target = 036C04C41EC9B40A006DEBBA /* ForPpu_Blue */;
+			targetProxy = 036C04CE1EC9B40A006DEBBA /* PBXContainerItemProxy */;
+		};
+		036C04E51EC9B610006DEBBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 036C04DA1EC9B610006DEBBA /* ForPpu_Green */;
+			targetProxy = 036C04E41EC9B610006DEBBA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -610,10 +708,18 @@
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
-		036C04A11EC96FF0006DEBBA /* MainInterface.storyboard */ = {
+		036C04CA1EC9B40A006DEBBA /* MainInterface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				036C04A21EC96FF0006DEBBA /* Base */,
+				036C04CB1EC9B40A006DEBBA /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		036C04E01EC9B610006DEBBA /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				036C04E11EC9B610006DEBBA /* Base */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -850,9 +956,42 @@
 			};
 			name = Release;
 		};
-		036C04A91EC96FF0006DEBBA /* Debug */ = {
+		036C04D21EC9B40A006DEBBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForPpu_Blue/ForPpu_Blue.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = UT834J75J3;
+				INFOPLIST_FILE = ForPpu_Blue/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Blue";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		036C04D31EC9B40A006DEBBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForPpu_Blue/ForPpu_Blue.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ForPpu_Blue/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Blue";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		036C04E71EC9B610006DEBBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForPpu_Green/ForPpu_Green.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ForPpu_Green/Info.plist;
@@ -865,9 +1004,10 @@
 			};
 			name = Debug;
 		};
-		036C04AA1EC96FF0006DEBBA /* Release */ = {
+		036C04E81EC9B610006DEBBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForPpu_Green/ForPpu_Green.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ForPpu_Green/Info.plist;
@@ -928,11 +1068,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		036C04A81EC96FF0006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Green" */ = {
+		036C04D11EC9B40A006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Blue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				036C04A91EC96FF0006DEBBA /* Debug */,
-				036C04AA1EC96FF0006DEBBA /* Release */,
+				036C04D21EC9B40A006DEBBA /* Debug */,
+				036C04D31EC9B40A006DEBBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		036C04E91EC9B610006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Green" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				036C04E71EC9B610006DEBBA /* Debug */,
+				036C04E81EC9B610006DEBBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

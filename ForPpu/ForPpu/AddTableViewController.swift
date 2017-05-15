@@ -164,7 +164,6 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         if 2 == indexPath.section {
             barCodeImage = UIImageView(frame: cell.bounds)
             barCodeImage.image = UIImage(named: "emptyImage.png")
-            print(cell.bounds)
             //                barCodeImage.image = dataRepository.getBardCodeImage(cardID: cardID)
             cell.addSubview(barCodeImage)
         }

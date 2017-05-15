@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>ForPpu_Blue.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>ForPpu_Green.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -53,6 +58,21 @@
 			<true/>
 		</dict>
 		<key>036C049B1EC96FF0006DEBBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>036C04B01EC9B33F006DEBBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>036C04C41EC9B40A006DEBBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>036C04DA1EC9B610006DEBBA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

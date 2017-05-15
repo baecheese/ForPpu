@@ -104,7 +104,6 @@ class MainTableViewController: UITableViewController {
         }
         cell.info.text = nowCardInfo?.1
         cell.barcodeImage.image = dataRepository.showBarCodeImage(cardNumber: (nowCardInfo?.1)!)
-        cell.barcodeImage.contentMode = .scaleAspectFit
         
         return cell
     }

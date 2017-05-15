@@ -10,10 +10,54 @@ import UIKit
 import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
-        
+    
+    @IBOutlet var greenTitleLabel: UILabel!
+    @IBOutlet var greenImage: UIImageView!
+    @IBOutlet var greenNumberLabel: UILabel!
+    
+    private let sendDataBox = SendDataBoxGreen.sharedInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view from its nib.
+        view.backgroundColor = .white
+        setCardInfo()
+        setBarCodeImage()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setEmptyInfo()
+    }
+    
+    func setEmptyInfo() {
+        if nil == sendDataBox.getCardInfo() {
+            let emptyMessage = UILabel(frame: greenImage.bounds)
+            emptyMessage.text = "저장된 바코드가 없습니다."
+            emptyMessage.textColor = .black
+            emptyMessage.textAlignment = .center
+            emptyMessage.backgroundColor = .white
+            greenImage.addSubview(emptyMessage)
+        }
+    }
+    
+    func setCardInfo() {
+        if nil == sendDataBox.getCardInfo() {
+            greenTitleLabel.text = ""
+            greenNumberLabel.text = ""
+            return;
+        }
+        greenTitleLabel.text = sendDataBox.getCardInfo()?.0
+        greenTitleLabel.backgroundColor = sendDataBox.getMainColor()
+        greenNumberLabel.text = sendDataBox.getCardInfo()?.1
+    }
+    
+    func setBarCodeImage() {
+        let barCodeNumber = sendDataBox.getCardInfo()?.1
+        if true == barCodeNumber?.isEmpty || barCodeNumber == nil {
+            greenImage.image = nil
+        }
+        else {
+            greenImage.image = sendDataBox.showBarCode(cardNumber: barCodeNumber!)
+        }
     }
     
     override func didReceiveMemoryWarning() {

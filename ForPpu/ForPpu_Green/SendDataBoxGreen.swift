@@ -7,15 +7,6 @@
 //
 
 import UIKit
-//
-//  SendDataBoxThree.swift
-//  ForPpu
-//
-//  Created by 배지영 on 2017. 5. 14..
-//  Copyright © 2017년 baecheese. All rights reserved.
-//
-
-import UIKit
 
 /** 위젯에 넘기는 용으로 쓰는 것 */
 struct GroupKeys {
@@ -27,7 +18,6 @@ struct GroupKeys {
 }
 
 class SendDataBoxGreen: NSObject {
-    
     
     private override init() {
         super.init()
@@ -63,5 +53,18 @@ class SendDataBoxGreen: NSObject {
         let filter = CIFilter(name: "CICode128BarcodeGenerator")
         filter?.setValue(asciiEncodedValue, forKey: "inputMessage")
         return UIImage(ciImage: (filter?.outputImage)!)
+    }
+    
+    private func fromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+    
+    func getMainColor() -> UIColor {
+        return fromRGB(rgbValue: 0x4EBA6F)
     }
 }
