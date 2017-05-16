@@ -1,33 +1,59 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Today View Controller-->
         <scene sceneID="cwh-vc-ff4">
             <objects>
-                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="ForPpu_Orange" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QiK-kk-tNp">
+                                <rect key="frame" x="0.0" y="23" width="320" height="152"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voo-Uq-Gfw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="TLe-rv-vgh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qh-tM-box">
+                                <rect key="frame" x="0.0" y="165" width="320" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Z0y-0j-h72"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="GcN-lo-r42" secondAttribute="bottom" constant="20" symbolic="YES" id="0Q0-KW-PJ6"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="20" symbolic="YES" id="6Vq-gs-PHe"/>
-                            <constraint firstAttribute="trailing" secondItem="GcN-lo-r42" secondAttribute="trailing" constant="20" symbolic="YES" id="L8K-9R-egU"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="20" symbolic="YES" id="mYS-Cv-VNx"/>
+                            <constraint firstItem="3qh-tM-box" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="3L9-Ex-KZs"/>
+                            <constraint firstItem="QiK-kk-tNp" firstAttribute="top" secondItem="voo-Uq-Gfw" secondAttribute="bottom" id="4Fz-7B-S2O"/>
+                            <constraint firstItem="voo-Uq-Gfw" firstAttribute="width" secondItem="S3S-Oj-5AN" secondAttribute="width" id="ACQ-Rh-jtN"/>
+                            <constraint firstItem="3qh-tM-box" firstAttribute="top" secondItem="QiK-kk-tNp" secondAttribute="bottom" constant="-10" id="EQl-ZX-y7W"/>
+                            <constraint firstItem="3qh-tM-box" firstAttribute="width" secondItem="S3S-Oj-5AN" secondAttribute="width" id="Xz5-Pj-aWc"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="3qh-tM-box" secondAttribute="bottom" id="ZTR-lf-4sE"/>
+                            <constraint firstItem="QiK-kk-tNp" firstAttribute="width" secondItem="S3S-Oj-5AN" secondAttribute="width" id="daW-UP-ky3"/>
+                            <constraint firstItem="voo-Uq-Gfw" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="ip2-LR-lZI"/>
+                            <constraint firstItem="voo-Uq-Gfw" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="mpj-aF-m7M"/>
+                            <constraint firstItem="QiK-kk-tNp" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="tjA-Kx-Y9h"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -35,10 +61,16 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="37"/>
+                    <size key="freeformSize" width="320" height="200"/>
+                    <connections>
+                        <outlet property="orangeBarCodeImage" destination="QiK-kk-tNp" id="4mT-tF-pFk"/>
+                        <outlet property="orangeNumberLabel" destination="3qh-tM-box" id="OYt-zO-A9s"/>
+                        <outlet property="orangeTitleLabel" destination="voo-Uq-Gfw" id="tNT-gr-iYa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116.8" y="123.23838080959521"/>
         </scene>
     </scenes>
 </document>

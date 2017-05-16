@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="126"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7t-ow-5Ok">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name-Bold15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7t-ow-5Ok">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="23"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -35,7 +35,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cSH-ia-jaQ">
                                 <rect key="frame" x="0.0" y="23" width="320" height="78"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkF-lP-PyJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="number-Light12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkF-lP-PyJ">
                                 <rect key="frame" x="16" y="91" width="288" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Fk4-kK-EC3"/>
@@ -65,14 +65,14 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="126"/>
                     <connections>
-                        <outlet property="greenImage" destination="cSH-ia-jaQ" id="NTl-cg-MU5"/>
-                        <outlet property="greenNumberLabel" destination="UkF-lP-PyJ" id="uqC-9X-DRF"/>
+                        <outlet property="greenBarCodeImage" destination="cSH-ia-jaQ" id="Ino-f9-0AF"/>
+                        <outlet property="greenNumberLabel" destination="UkF-lP-PyJ" id="GnU-bs-Ji4"/>
                         <outlet property="greenTitleLabel" destination="f7t-ow-5Ok" id="bA5-J4-6Gh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76.799999999999997" y="43.628185907046479"/>
+            <point key="canvasLocation" x="76.799999999999997" y="43.178410794602705"/>
         </scene>
     </scenes>
 </document>

@@ -10,10 +10,54 @@ import UIKit
 import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
-        
+    
+    @IBOutlet var indigoTitleLabel: UILabel!
+    @IBOutlet var indigoBarCodeImage: UIImageView!
+    @IBOutlet var indigoNumberLabel: UILabel!
+    
+    private let sendDataBox = SendDataBoxIndigo.sharedInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view from its nib.
+        view.backgroundColor = .white
+        setCardInfo()
+        setBarCodeImage()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setEmptyInfo()
+    }
+    
+    func setEmptyInfo() {
+        if nil == sendDataBox.getCardInfo() {
+            let emptyMessage = UILabel(frame: indigoBarCodeImage.bounds)
+            emptyMessage.text = "저장된 바코드가 없습니다."
+            emptyMessage.textColor = .black
+            emptyMessage.textAlignment = .center
+            emptyMessage.backgroundColor = .white
+            indigoBarCodeImage.addSubview(emptyMessage)
+        }
+    }
+    
+    func setCardInfo() {
+        if nil == sendDataBox.getCardInfo() {
+            indigoTitleLabel.text = ""
+            indigoNumberLabel.text = ""
+            return;
+        }
+        indigoTitleLabel.text = sendDataBox.getCardInfo()?.0
+        indigoTitleLabel.backgroundColor = sendDataBox.getMainColor()
+        indigoNumberLabel.text = sendDataBox.getCardInfo()?.1
+    }
+    
+    func setBarCodeImage() {
+        let barCodeNumber = sendDataBox.getCardInfo()?.1
+        if true == barCodeNumber?.isEmpty || barCodeNumber == nil {
+            indigoBarCodeImage.image = nil
+        }
+        else {
+            indigoBarCodeImage.image = sendDataBox.showBarCode(cardNumber: barCodeNumber!)
+        }
     }
     
     override func didReceiveMemoryWarning() {

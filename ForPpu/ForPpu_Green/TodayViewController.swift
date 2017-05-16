@@ -12,7 +12,7 @@ import NotificationCenter
 class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBOutlet var greenTitleLabel: UILabel!
-    @IBOutlet var greenImage: UIImageView!
+    @IBOutlet var greenBarCodeImage: UIImageView!
     @IBOutlet var greenNumberLabel: UILabel!
     
     private let sendDataBox = SendDataBoxGreen.sharedInstance
@@ -30,12 +30,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     func setEmptyInfo() {
         if nil == sendDataBox.getCardInfo() {
-            let emptyMessage = UILabel(frame: greenImage.bounds)
+            let emptyMessage = UILabel(frame: greenBarCodeImage.bounds)
             emptyMessage.text = "저장된 바코드가 없습니다."
             emptyMessage.textColor = .black
             emptyMessage.textAlignment = .center
             emptyMessage.backgroundColor = .white
-            greenImage.addSubview(emptyMessage)
+            greenBarCodeImage.addSubview(emptyMessage)
         }
     }
     
@@ -53,10 +53,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     func setBarCodeImage() {
         let barCodeNumber = sendDataBox.getCardInfo()?.1
         if true == barCodeNumber?.isEmpty || barCodeNumber == nil {
-            greenImage.image = nil
+            greenBarCodeImage.image = nil
         }
         else {
-            greenImage.image = sendDataBox.showBarCode(cardNumber: barCodeNumber!)
+            greenBarCodeImage.image = sendDataBox.showBarCode(cardNumber: barCodeNumber!)
         }
     }
     
