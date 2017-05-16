@@ -788,7 +788,7 @@
 					036C04C41EC9B40A006DEBBA = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = UT834J75J3;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -801,7 +801,7 @@
 					036C04DA1EC9B610006DEBBA = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = UT834J75J3;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -1477,14 +1477,14 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Blue/ForPpu_Blue.entitlements;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Blue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Blue";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8ee0fc28-e2db-4864-b99a-000f3866615a";
-				PROVISIONING_PROFILE_SPECIFIER = baecheese5;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1495,14 +1495,14 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Blue/ForPpu_Blue.entitlements;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Blue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Blue";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8ee0fc28-e2db-4864-b99a-000f3866615a";
-				PROVISIONING_PROFILE_SPECIFIER = baecheese5;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1512,14 +1512,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Green/ForPpu_Green.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = UT834J75J3;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ForPpu_Green/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Green";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bbe9a8cb-4727-49c7-b29d-de2fced19ea3";
-				PROVISIONING_PROFILE_SPECIFIER = baecheese4;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1529,14 +1529,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Green/ForPpu_Green.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = UT834J75J3;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ForPpu_Green/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Green";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "bbe9a8cb-4727-49c7-b29d-de2fced19ea3";
-				PROVISIONING_PROFILE_SPECIFIER = baecheese4;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1756,6 +1756,7 @@
 				036C04E81EC9B610006DEBBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		036C04FE1ECAC783006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Red" */ = {
 			isa = XCConfigurationList;
@@ -1764,6 +1765,7 @@
 				036C05001ECAC783006DEBBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		036C05111ECAC7CD006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Orange" */ = {
 			isa = XCConfigurationList;
@@ -1772,6 +1774,7 @@
 				036C05131ECAC7CD006DEBBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		036C05241ECAC7DF006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Yellow" */ = {
 			isa = XCConfigurationList;
@@ -1780,6 +1783,7 @@
 				036C05261ECAC7DF006DEBBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		036C05371ECAC7F0006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Indigo" */ = {
 			isa = XCConfigurationList;
@@ -1788,6 +1792,7 @@
 				036C05391ECAC7F0006DEBBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		036C054A1ECAC7FC006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Violet" */ = {
 			isa = XCConfigurationList;
@@ -1796,6 +1801,7 @@
 				036C054C1ECAC7FC006DEBBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

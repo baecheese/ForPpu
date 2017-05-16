@@ -62,10 +62,8 @@ class WedgetDataCenter: NSObject {
     }
     
     func deleteCardInfo(cardID:Int) {
-        print("delete before: \(cardID))")
         defaults?.removeObject(forKey: getKeys(cardID: cardID)[0])
         defaults?.removeObject(forKey: getKeys(cardID: cardID)[1])
-        print("delete after: \(get(cardID: cardID))")
     }
     
     /** 0:이름키, 1:번호키, 2:이미지키 */

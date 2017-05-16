@@ -9,6 +9,10 @@
 import UIKit
 import NotificationCenter
 
+struct Message {
+    let empty = "저장된 바코드가 없습니다."
+}
+
 class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBOutlet var blueTitleLabel: UILabel!
@@ -26,14 +30,18 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     override func viewWillAppear(_ animated: Bool) {
         setEmptyInfo()
+        if true == isChangeCardInfo() {
+            setCardInfo()
+            setBarCodeImage()
+        }
     }
 
     var emptyMessage = UILabel()
     
     func setEmptyInfo() {
-        if nil == sendDataBox.getCardInfo() {
+        if nil == sendDataBox.getCardInfo() && Message().empty != emptyMessage.text {
             emptyMessage.frame = blueBarCodeImage.bounds
-            emptyMessage.text = "저장된 바코드가 없습니다."
+            emptyMessage.text = Message().empty
             emptyMessage.textColor = .black
             emptyMessage.textAlignment = .center
             emptyMessage.backgroundColor = .white
@@ -53,13 +61,31 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     func setBarCodeImage() {
         let barCodeNumber = sendDataBox.getCardInfo()?.1
-        if true == barCodeNumber?.isEmpty || barCodeNumber == nil {
+        if barCodeNumber == nil {
             blueBarCodeImage.image = nil
         }
         else {
             blueBarCodeImage.image = sendDataBox.showBarCode(cardNumber: barCodeNumber!)
         }
         blueBarCodeImage.addSubview(emptyMessage)
+    }
+    
+    func isChangeCardInfo() -> Bool {
+        let widgetCardInfo = (blueTitleLabel.text, blueNumberLabel.text)
+        let newCardInfo = sendDataBox.getCardInfo()
+        
+        if widgetCardInfo.0 == newCardInfo?.0 || widgetCardInfo.1 == newCardInfo?.1 || true == isEmptyInGroupDefaultAndWidget() {
+            return false
+        }
+        return true
+    }
+    
+    func isEmptyInGroupDefaultAndWidget() -> Bool {
+        let newCardInfo = sendDataBox.getCardInfo()
+        if emptyMessage.text == Message().empty && newCardInfo == nil {
+            return true
+        }
+        return false
     }
     
     override func didReceiveMemoryWarning() {

@@ -9,6 +9,10 @@
 import UIKit
 import NotificationCenter
 
+struct Message {
+    let empty = "저장된 바코드가 없습니다."
+}
+
 class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBOutlet var yellowTitleLabel: UILabel!
@@ -26,14 +30,18 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     override func viewWillAppear(_ animated: Bool) {
         setEmptyInfo()
+        if true == isChangeCardInfo() {
+            setCardInfo()
+            setBarCodeImage()
+        }
     }
     
     var emptyMessage = UILabel()
     
     func setEmptyInfo() {
-        if nil == sendDataBox.getCardInfo() {
+        if nil == sendDataBox.getCardInfo() && Message().empty == emptyMessage.text {
             emptyMessage.frame = yellowBarCodeImage.bounds
-            emptyMessage.text = "저장된 바코드가 없습니다."
+            emptyMessage.text = Message().empty
             emptyMessage.textColor = .black
             emptyMessage.textAlignment = .center
             emptyMessage.backgroundColor = .white
@@ -53,7 +61,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     func setBarCodeImage() {
         let barCodeNumber = sendDataBox.getCardInfo()?.1
-        if true == barCodeNumber?.isEmpty || barCodeNumber == nil {
+        if barCodeNumber == nil {
             yellowBarCodeImage.image = nil
         }
         else {
@@ -62,6 +70,24 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         yellowBarCodeImage.addSubview(emptyMessage)
     }
     
+    func isChangeCardInfo() -> Bool {
+        let widgetCardInfo = (yellowTitleLabel.text, yellowNumberLabel.text)
+        let newCardInfo = sendDataBox.getCardInfo()
+        
+        if widgetCardInfo.0 == newCardInfo?.0 || widgetCardInfo.1 == newCardInfo?.1 || true == isEmptyInGroupDefaultAndWidget() {
+            return false
+        }
+        return true
+    }
+    
+    func isEmptyInGroupDefaultAndWidget() -> Bool {
+        let newCardInfo = sendDataBox.getCardInfo()
+        if emptyMessage.text == Message().empty && newCardInfo == nil {
+            return true
+        }
+        return false
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
