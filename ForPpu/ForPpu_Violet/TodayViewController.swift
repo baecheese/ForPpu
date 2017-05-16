@@ -28,25 +28,26 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         setEmptyInfo()
     }
     
+    var emptyMessage = UILabel()
+    
     func setEmptyInfo() {
         if nil == sendDataBox.getCardInfo() {
-            let emptyMessage = UILabel(frame: violetBarCodeImage.bounds)
+            emptyMessage.frame = violetBarCodeImage.bounds
             emptyMessage.text = "저장된 바코드가 없습니다."
             emptyMessage.textColor = .black
             emptyMessage.textAlignment = .center
             emptyMessage.backgroundColor = .white
-            violetBarCodeImage.addSubview(emptyMessage)
         }
     }
     
     func setCardInfo() {
+        violetTitleLabel.backgroundColor = sendDataBox.getMainColor()
         if nil == sendDataBox.getCardInfo() {
             violetTitleLabel.text = ""
             violetNumberLabel.text = ""
             return;
         }
         violetTitleLabel.text = sendDataBox.getCardInfo()?.0
-        violetTitleLabel.backgroundColor = sendDataBox.getMainColor()
         violetNumberLabel.text = sendDataBox.getCardInfo()?.1
     }
     
@@ -58,6 +59,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         else {
             violetBarCodeImage.image = sendDataBox.showBarCode(cardNumber: barCodeNumber!)
         }
+        violetBarCodeImage.addSubview(emptyMessage)
     }
     
     override func didReceiveMemoryWarning() {

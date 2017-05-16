@@ -65,8 +65,8 @@
 		036C05551ECAC99F006DEBBA /* SendDataBoxOrange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C05541ECAC99F006DEBBA /* SendDataBoxOrange.swift */; };
 		036C05571ECAC9E8006DEBBA /* SendDataBoxYellow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C05561ECAC9E8006DEBBA /* SendDataBoxYellow.swift */; };
 		036C05591ECACA2C006DEBBA /* SendDataBoxBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C05581ECACA2C006DEBBA /* SendDataBoxBlue.swift */; };
-		036C055B1ECACABF006DEBBA /* SendDataBoxIndigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C055A1ECACABF006DEBBA /* SendDataBoxIndigo.swift */; };
 		036C055D1ECACAF5006DEBBA /* SendDataBoxViolet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C055C1ECACAF5006DEBBA /* SendDataBoxViolet.swift */; };
+		036C05611ECAD630006DEBBA /* SendDataBoxIndigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C055A1ECACABF006DEBBA /* SendDataBoxIndigo.swift */; };
 		03E416861EC75736000ED685 /* SendDataBoxTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E416851EC75736000ED685 /* SendDataBoxTwo.swift */; };
 		03E416881EC7574D000ED685 /* SendDataBoxThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E416871EC7574D000ED685 /* SendDataBoxThree.swift */; };
 /* End PBXBuildFile section */
@@ -1075,7 +1075,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				036C052F1ECAC7F0006DEBBA /* TodayViewController.swift in Sources */,
-				036C055B1ECACABF006DEBBA /* SendDataBoxIndigo.swift in Sources */,
+				036C05611ECAD630006DEBBA /* SendDataBoxIndigo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
