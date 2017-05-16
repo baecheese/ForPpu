@@ -9,7 +9,6 @@
 import UIKit
 
 struct CardMenu {
-    let list = ["First", "Second", "Third"]
     let rainbow = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
 }
 
@@ -100,6 +99,7 @@ class MainTableViewController: UITableViewController {
         if nil == nowCardInfo {
 //            cell.name.text = "card"
             cell.info.text = "입력된 정보가 없습니다"
+            cell.barcodeImage.image = nil
             return cell
         }
         cell.info.text = nowCardInfo?.1
@@ -117,17 +117,13 @@ class MainTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let add = UITableViewRowAction(style: .default, title: "edit") { action, index in
-            self.moveEditPage(section: indexPath.section)
-        }
-        add.backgroundColor = .gray
-        
         let delete = UITableViewRowAction(style: .default, title: "delete") { action, index in
-            print("delete")
+            self.dataRepository.delete(cardID: indexPath.section)
+            self.tableView.reloadData()
         }
         delete.backgroundColor = .red
         
-        return [delete, add]
+        return [delete]
     }
     
     func moveEditPage(section:Int) {

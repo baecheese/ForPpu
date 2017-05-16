@@ -62,12 +62,10 @@ class WedgetDataCenter: NSObject {
     }
     
     func deleteCardInfo(cardID:Int) {
+        print("delete before: \(cardID))")
         defaults?.removeObject(forKey: getKeys(cardID: cardID)[0])
         defaults?.removeObject(forKey: getKeys(cardID: cardID)[1])
-    }
-    
-    func deleteImage(cardID:Int) {
-        defaults?.removeObject(forKey: getKeys(cardID: cardID)[2])
+        print("delete after: \(get(cardID: cardID))")
     }
     
     /** 0:이름키, 1:번호키, 2:이미지키 */
@@ -76,33 +74,6 @@ class WedgetDataCenter: NSObject {
         let cardNumberKey = "\(cardID)_\(keys.cardNumber)"
         let barCodeImageKey = "\(cardID)_\(keys.image)"
         return [cardNameKey, cardNumberKey, barCodeImageKey]
-    }
-    
-    
-    /* image 관련 */
-    
-    private func getImageData(cardNumber:String) -> Data? {
-        if nil == getBarCodeImage(cardNumber: cardNumber) {
-            return nil
-        }
-        let image = getBarCodeImage(cardNumber: cardNumber)!
-        // 여기서 계속 Data가 nil로 저장됨 cheesing
-        return UIImageJPEGRepresentation(image, 1.0)
-    }
-    
-    private func getBarCodeImage(cardNumber:String) -> UIImage? {
-        if cardNumber.characters.count < 1 {
-            return nil
-        }
-        let asciiEncodedValue = cardNumber.data(using: .ascii)
-        let filter = CIFilter(name: "CICode128BarcodeGenerator")
-        filter?.setValue(asciiEncodedValue, forKey: "inputMessage")
-        return UIImage(ciImage: (filter?.outputImage)!)
-    }
-    
-    func getSavedBarCodeImageData(cardID:Int) -> Data? {
-        let imageKey = getKeys(cardID: cardID)[2]
-        return defaults?.value(forKey: imageKey) as? Data
     }
     
     
