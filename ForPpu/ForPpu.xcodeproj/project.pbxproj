@@ -788,7 +788,7 @@
 					036C04C41EC9B40A006DEBBA = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = UT834J75J3;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -801,7 +801,7 @@
 					036C04DA1EC9B610006DEBBA = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = UT834J75J3;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -820,6 +820,7 @@
 					};
 					036C05041ECAC7CD006DEBBA = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = UT834J75J3;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -830,7 +831,7 @@
 					036C05171ECAC7DF006DEBBA = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = UT834J75J3;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -840,7 +841,7 @@
 					036C052A1ECAC7F0006DEBBA = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = UT834J75J3;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -850,7 +851,7 @@
 					036C053D1ECAC7FC006DEBBA = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = UT834J75J3;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -1476,14 +1477,14 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Blue/ForPpu_Blue.entitlements;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Blue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Blue";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "e5c3f012-283e-4cd6-b13d-b2175ebe23dd";
+				PROVISIONING_PROFILE_SPECIFIER = baecheeseBlue;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1494,14 +1495,14 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Blue/ForPpu_Blue.entitlements;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Blue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Blue";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "e5c3f012-283e-4cd6-b13d-b2175ebe23dd";
+				PROVISIONING_PROFILE_SPECIFIER = baecheeseBlue;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1511,14 +1512,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Green/ForPpu_Green.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Green/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Green";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "3be4d983-5812-423b-bfd5-cd8eb87b69c0";
+				PROVISIONING_PROFILE_SPECIFIER = baecheeseGreen;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1528,14 +1529,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Green/ForPpu_Green.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Green/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Green";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "3be4d983-5812-423b-bfd5-cd8eb87b69c0";
+				PROVISIONING_PROFILE_SPECIFIER = baecheeseGreen;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1545,6 +1546,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Red/ForPpu_Red.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Red/Info.plist;
@@ -1562,6 +1564,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Red/ForPpu_Red.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Red/Info.plist;
@@ -1579,13 +1582,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Orange/ForPpu_Orange.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Orange/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Orange";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "e5799e87-1bb2-4c42-8fc2-10febcddf823";
+				PROVISIONING_PROFILE_SPECIFIER = baecheeseOrange;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1595,13 +1599,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Orange/ForPpu_Orange.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Orange/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Orange";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "e5799e87-1bb2-4c42-8fc2-10febcddf823";
+				PROVISIONING_PROFILE_SPECIFIER = baecheeseOrange;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1611,12 +1616,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Yellow/ForPpu_Yellow.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Yellow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Yellow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f0543bcd-0204-4f0a-b831-69df341975c9";
+				PROVISIONING_PROFILE_SPECIFIER = baecheeseYellow;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1626,12 +1633,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Yellow/ForPpu_Yellow.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Yellow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Yellow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f0543bcd-0204-4f0a-b831-69df341975c9";
+				PROVISIONING_PROFILE_SPECIFIER = baecheeseYellow;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1641,12 +1650,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Indigo/ForPpu_Indigo.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Indigo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Indigo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "57d60eb0-8d48-461c-af78-16d57bb9bc48";
+				PROVISIONING_PROFILE_SPECIFIER = baecheeseIndigo;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1656,12 +1667,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Indigo/ForPpu_Indigo.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Indigo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Indigo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "57d60eb0-8d48-461c-af78-16d57bb9bc48";
+				PROVISIONING_PROFILE_SPECIFIER = baecheeseIndigo;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1671,12 +1684,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Violet/ForPpu_Violet.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Violet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Violet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "037fb2ee-143a-4fcb-ba65-36403d60b67e";
+				PROVISIONING_PROFILE_SPECIFIER = baecheeseViolet;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1686,12 +1701,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Violet/ForPpu_Violet.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Violet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Violet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "037fb2ee-143a-4fcb-ba65-36403d60b67e";
+				PROVISIONING_PROFILE_SPECIFIER = baecheeseViolet;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
