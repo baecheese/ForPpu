@@ -811,7 +811,7 @@
 					036C04F11ECAC783006DEBBA = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = UT834J75J3;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -820,8 +820,7 @@
 					};
 					036C05041ECAC7CD006DEBBA = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = UT834J75J3;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -1513,7 +1512,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Green/ForPpu_Green.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Green/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Green";
@@ -1530,7 +1529,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Green/ForPpu_Green.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Green/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Green";
@@ -1546,12 +1545,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Red/ForPpu_Red.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Red/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Red";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "56962431-bb11-4bf9-b2ec-2a14cdc2de63";
+				PROVISIONING_PROFILE_SPECIFIER = baecheeseRed;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1561,12 +1562,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Red/ForPpu_Red.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Red/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Red";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "56962431-bb11-4bf9-b2ec-2a14cdc2de63";
+				PROVISIONING_PROFILE_SPECIFIER = baecheeseRed;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1577,11 +1580,12 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Orange/ForPpu_Orange.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = UT834J75J3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ForPpu_Orange/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Orange";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1592,11 +1596,12 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Orange/ForPpu_Orange.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = UT834J75J3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ForPpu_Orange/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Orange";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
