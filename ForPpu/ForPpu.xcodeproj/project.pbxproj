@@ -41,6 +41,26 @@
 		036C04E21EC9B610006DEBBA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036C04E01EC9B610006DEBBA /* MainInterface.storyboard */; };
 		036C04E61EC9B610006DEBBA /* ForPpu_Green.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 036C04DB1EC9B610006DEBBA /* ForPpu_Green.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		036C04EC1EC9B68C006DEBBA /* SendDataBoxGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C04EB1EC9B68C006DEBBA /* SendDataBoxGreen.swift */; };
+		036C04F31ECAC783006DEBBA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032FD9691EC6F69100F488E9 /* NotificationCenter.framework */; };
+		036C04F61ECAC783006DEBBA /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C04F51ECAC783006DEBBA /* TodayViewController.swift */; };
+		036C04F91ECAC783006DEBBA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036C04F71ECAC783006DEBBA /* MainInterface.storyboard */; };
+		036C04FD1ECAC783006DEBBA /* ForPpu_Red.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 036C04F21ECAC783006DEBBA /* ForPpu_Red.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		036C05061ECAC7CD006DEBBA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032FD9691EC6F69100F488E9 /* NotificationCenter.framework */; };
+		036C05091ECAC7CD006DEBBA /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C05081ECAC7CD006DEBBA /* TodayViewController.swift */; };
+		036C050C1ECAC7CD006DEBBA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036C050A1ECAC7CD006DEBBA /* MainInterface.storyboard */; };
+		036C05101ECAC7CD006DEBBA /* ForPpu_Orange.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 036C05051ECAC7CD006DEBBA /* ForPpu_Orange.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		036C05191ECAC7DF006DEBBA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032FD9691EC6F69100F488E9 /* NotificationCenter.framework */; };
+		036C051C1ECAC7DF006DEBBA /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C051B1ECAC7DF006DEBBA /* TodayViewController.swift */; };
+		036C051F1ECAC7DF006DEBBA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036C051D1ECAC7DF006DEBBA /* MainInterface.storyboard */; };
+		036C05231ECAC7DF006DEBBA /* ForPpu_Yellow.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 036C05181ECAC7DF006DEBBA /* ForPpu_Yellow.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		036C052C1ECAC7F0006DEBBA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032FD9691EC6F69100F488E9 /* NotificationCenter.framework */; };
+		036C052F1ECAC7F0006DEBBA /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C052E1ECAC7F0006DEBBA /* TodayViewController.swift */; };
+		036C05321ECAC7F0006DEBBA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036C05301ECAC7F0006DEBBA /* MainInterface.storyboard */; };
+		036C05361ECAC7F0006DEBBA /* ForPpu_Indigo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 036C052B1ECAC7F0006DEBBA /* ForPpu_Indigo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		036C053F1ECAC7FC006DEBBA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032FD9691EC6F69100F488E9 /* NotificationCenter.framework */; };
+		036C05421ECAC7FC006DEBBA /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C05411ECAC7FC006DEBBA /* TodayViewController.swift */; };
+		036C05451ECAC7FC006DEBBA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036C05431ECAC7FC006DEBBA /* MainInterface.storyboard */; };
+		036C05491ECAC7FC006DEBBA /* ForPpu_Violet.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 036C053E1ECAC7FC006DEBBA /* ForPpu_Violet.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		03E416861EC75736000ED685 /* SendDataBoxTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E416851EC75736000ED685 /* SendDataBoxTwo.swift */; };
 		03E416881EC7574D000ED685 /* SendDataBoxThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E416871EC7574D000ED685 /* SendDataBoxThree.swift */; };
 /* End PBXBuildFile section */
@@ -81,6 +101,41 @@
 			remoteGlobalIDString = 036C04DA1EC9B610006DEBBA;
 			remoteInfo = ForPpu_Green;
 		};
+		036C04FB1ECAC783006DEBBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 032FD9421EC6ED6400F488E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 036C04F11ECAC783006DEBBA;
+			remoteInfo = ForPpu_Red;
+		};
+		036C050E1ECAC7CD006DEBBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 032FD9421EC6ED6400F488E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 036C05041ECAC7CD006DEBBA;
+			remoteInfo = ForPpu_Orange;
+		};
+		036C05211ECAC7DF006DEBBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 032FD9421EC6ED6400F488E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 036C05171ECAC7DF006DEBBA;
+			remoteInfo = ForPpu_Yellow;
+		};
+		036C05341ECAC7F0006DEBBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 032FD9421EC6ED6400F488E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 036C052A1ECAC7F0006DEBBA;
+			remoteInfo = ForPpu_Indigo;
+		};
+		036C05471ECAC7FC006DEBBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 032FD9421EC6ED6400F488E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 036C053D1ECAC7FC006DEBBA;
+			remoteInfo = ForPpu_Violet;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -90,10 +145,15 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				036C05361ECAC7F0006DEBBA /* ForPpu_Indigo.appex in Embed App Extensions */,
+				036C04FD1ECAC783006DEBBA /* ForPpu_Red.appex in Embed App Extensions */,
 				032FD9881EC6F69E00F488E9 /* Second.appex in Embed App Extensions */,
 				032FD99B1EC6F6AE00F488E9 /* Third.appex in Embed App Extensions */,
 				036C04D01EC9B40A006DEBBA /* ForPpu_Blue.appex in Embed App Extensions */,
+				036C05491ECAC7FC006DEBBA /* ForPpu_Violet.appex in Embed App Extensions */,
 				036C04E61EC9B610006DEBBA /* ForPpu_Green.appex in Embed App Extensions */,
+				036C05101ECAC7CD006DEBBA /* ForPpu_Orange.appex in Embed App Extensions */,
+				036C05231ECAC7DF006DEBBA /* ForPpu_Yellow.appex in Embed App Extensions */,
 				032FD9741EC6F69100F488E9 /* Frist.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -145,6 +205,31 @@
 		036C04E31EC9B610006DEBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		036C04EA1EC9B65F006DEBBA /* ForPpu_Green.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForPpu_Green.entitlements; sourceTree = "<group>"; };
 		036C04EB1EC9B68C006DEBBA /* SendDataBoxGreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxGreen.swift; sourceTree = "<group>"; };
+		036C04F21ECAC783006DEBBA /* ForPpu_Red.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ForPpu_Red.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		036C04F51ECAC783006DEBBA /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		036C04F81ECAC783006DEBBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		036C04FA1ECAC783006DEBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		036C05051ECAC7CD006DEBBA /* ForPpu_Orange.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ForPpu_Orange.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		036C05081ECAC7CD006DEBBA /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		036C050B1ECAC7CD006DEBBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		036C050D1ECAC7CD006DEBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		036C05181ECAC7DF006DEBBA /* ForPpu_Yellow.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ForPpu_Yellow.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		036C051B1ECAC7DF006DEBBA /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		036C051E1ECAC7DF006DEBBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		036C05201ECAC7DF006DEBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		036C052B1ECAC7F0006DEBBA /* ForPpu_Indigo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ForPpu_Indigo.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		036C052E1ECAC7F0006DEBBA /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		036C05311ECAC7F0006DEBBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		036C05331ECAC7F0006DEBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		036C053E1ECAC7FC006DEBBA /* ForPpu_Violet.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ForPpu_Violet.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		036C05411ECAC7FC006DEBBA /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		036C05441ECAC7FC006DEBBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		036C05461ECAC7FC006DEBBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		036C054D1ECAC838006DEBBA /* ForPpu_Red.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForPpu_Red.entitlements; sourceTree = "<group>"; };
+		036C054E1ECAC847006DEBBA /* ForPpu_Orange.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForPpu_Orange.entitlements; sourceTree = "<group>"; };
+		036C054F1ECAC84C006DEBBA /* ForPpu_Yellow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForPpu_Yellow.entitlements; sourceTree = "<group>"; };
+		036C05501ECAC868006DEBBA /* ForPpu_Indigo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForPpu_Indigo.entitlements; sourceTree = "<group>"; };
+		036C05511ECAC874006DEBBA /* ForPpu_Violet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForPpu_Violet.entitlements; sourceTree = "<group>"; };
 		03E416851EC75736000ED685 /* SendDataBoxTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxTwo.swift; sourceTree = "<group>"; };
 		03E416871EC7574D000ED685 /* SendDataBoxThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxThree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,6 +282,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		036C04EF1ECAC783006DEBBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				036C04F31ECAC783006DEBBA /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		036C05021ECAC7CD006DEBBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				036C05061ECAC7CD006DEBBA /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		036C05151ECAC7DF006DEBBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				036C05191ECAC7DF006DEBBA /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		036C05281ECAC7F0006DEBBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				036C052C1ECAC7F0006DEBBA /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		036C053B1ECAC7FC006DEBBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				036C053F1ECAC7FC006DEBBA /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -204,13 +329,16 @@
 			isa = PBXGroup;
 			children = (
 				032FD94C1EC6ED6400F488E9 /* ForPpu */,
-				032FD96B1EC6F69100F488E9 /* Frist */,
-				032FD97F1EC6F69E00F488E9 /* Second */,
-				032FD9921EC6F6AE00F488E9 /* Third */,
+				036C04F41ECAC783006DEBBA /* ForPpu_Red */,
+				036C05071ECAC7CD006DEBBA /* ForPpu_Orange */,
+				036C051A1ECAC7DF006DEBBA /* ForPpu_Yellow */,
 				036C04DD1EC9B610006DEBBA /* ForPpu_Green */,
 				036C04C71EC9B40A006DEBBA /* ForPpu_Blue */,
+				036C052D1ECAC7F0006DEBBA /* ForPpu_Indigo */,
+				036C05401ECAC7FC006DEBBA /* ForPpu_Violet */,
 				032FD9681EC6F69100F488E9 /* Frameworks */,
 				032FD94B1EC6ED6400F488E9 /* Products */,
+				036C04ED1ECAC6EC006DEBBA /*  🗑 trash */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,6 +351,11 @@
 				032FD9901EC6F6AE00F488E9 /* Third.appex */,
 				036C04C51EC9B40A006DEBBA /* ForPpu_Blue.appex */,
 				036C04DB1EC9B610006DEBBA /* ForPpu_Green.appex */,
+				036C04F21ECAC783006DEBBA /* ForPpu_Red.appex */,
+				036C05051ECAC7CD006DEBBA /* ForPpu_Orange.appex */,
+				036C05181ECAC7DF006DEBBA /* ForPpu_Yellow.appex */,
+				036C052B1ECAC7F0006DEBBA /* ForPpu_Indigo.appex */,
+				036C053E1ECAC7FC006DEBBA /* ForPpu_Violet.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -265,7 +398,7 @@
 				032FD96E1EC6F69100F488E9 /* MainInterface.storyboard */,
 				032FD9711EC6F69100F488E9 /* Info.plist */,
 			);
-			path = Frist;
+			name = Frist;
 			sourceTree = "<group>";
 		};
 		032FD97F1EC6F69E00F488E9 /* Second */ = {
@@ -277,7 +410,8 @@
 				032FD9821EC6F69E00F488E9 /* MainInterface.storyboard */,
 				032FD9851EC6F69E00F488E9 /* Info.plist */,
 			);
-			path = Second;
+			name = Second;
+			path = ../Second;
 			sourceTree = "<group>";
 		};
 		032FD9921EC6F6AE00F488E9 /* Third */ = {
@@ -289,7 +423,8 @@
 				032FD9951EC6F6AE00F488E9 /* MainInterface.storyboard */,
 				032FD9981EC6F6AE00F488E9 /* Info.plist */,
 			);
-			path = Third;
+			name = Third;
+			path = ../Third;
 			sourceTree = "<group>";
 		};
 		036C04C71EC9B40A006DEBBA /* ForPpu_Blue */ = {
@@ -315,6 +450,72 @@
 			path = ForPpu_Green;
 			sourceTree = "<group>";
 		};
+		036C04ED1ECAC6EC006DEBBA /*  🗑 trash */ = {
+			isa = PBXGroup;
+			children = (
+				032FD96B1EC6F69100F488E9 /* Frist */,
+				032FD97F1EC6F69E00F488E9 /* Second */,
+				032FD9921EC6F6AE00F488E9 /* Third */,
+			);
+			name = " 🗑 trash";
+			path = Frist;
+			sourceTree = "<group>";
+		};
+		036C04F41ECAC783006DEBBA /* ForPpu_Red */ = {
+			isa = PBXGroup;
+			children = (
+				036C054D1ECAC838006DEBBA /* ForPpu_Red.entitlements */,
+				036C04F51ECAC783006DEBBA /* TodayViewController.swift */,
+				036C04F71ECAC783006DEBBA /* MainInterface.storyboard */,
+				036C04FA1ECAC783006DEBBA /* Info.plist */,
+			);
+			path = ForPpu_Red;
+			sourceTree = "<group>";
+		};
+		036C05071ECAC7CD006DEBBA /* ForPpu_Orange */ = {
+			isa = PBXGroup;
+			children = (
+				036C054E1ECAC847006DEBBA /* ForPpu_Orange.entitlements */,
+				036C05081ECAC7CD006DEBBA /* TodayViewController.swift */,
+				036C050A1ECAC7CD006DEBBA /* MainInterface.storyboard */,
+				036C050D1ECAC7CD006DEBBA /* Info.plist */,
+			);
+			path = ForPpu_Orange;
+			sourceTree = "<group>";
+		};
+		036C051A1ECAC7DF006DEBBA /* ForPpu_Yellow */ = {
+			isa = PBXGroup;
+			children = (
+				036C054F1ECAC84C006DEBBA /* ForPpu_Yellow.entitlements */,
+				036C051B1ECAC7DF006DEBBA /* TodayViewController.swift */,
+				036C051D1ECAC7DF006DEBBA /* MainInterface.storyboard */,
+				036C05201ECAC7DF006DEBBA /* Info.plist */,
+			);
+			path = ForPpu_Yellow;
+			sourceTree = "<group>";
+		};
+		036C052D1ECAC7F0006DEBBA /* ForPpu_Indigo */ = {
+			isa = PBXGroup;
+			children = (
+				036C05501ECAC868006DEBBA /* ForPpu_Indigo.entitlements */,
+				036C052E1ECAC7F0006DEBBA /* TodayViewController.swift */,
+				036C05301ECAC7F0006DEBBA /* MainInterface.storyboard */,
+				036C05331ECAC7F0006DEBBA /* Info.plist */,
+			);
+			path = ForPpu_Indigo;
+			sourceTree = "<group>";
+		};
+		036C05401ECAC7FC006DEBBA /* ForPpu_Violet */ = {
+			isa = PBXGroup;
+			children = (
+				036C05511ECAC874006DEBBA /* ForPpu_Violet.entitlements */,
+				036C05411ECAC7FC006DEBBA /* TodayViewController.swift */,
+				036C05431ECAC7FC006DEBBA /* MainInterface.storyboard */,
+				036C05461ECAC7FC006DEBBA /* Info.plist */,
+			);
+			path = ForPpu_Violet;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -335,6 +536,11 @@
 				032FD99A1EC6F6AE00F488E9 /* PBXTargetDependency */,
 				036C04CF1EC9B40A006DEBBA /* PBXTargetDependency */,
 				036C04E51EC9B610006DEBBA /* PBXTargetDependency */,
+				036C04FC1ECAC783006DEBBA /* PBXTargetDependency */,
+				036C050F1ECAC7CD006DEBBA /* PBXTargetDependency */,
+				036C05221ECAC7DF006DEBBA /* PBXTargetDependency */,
+				036C05351ECAC7F0006DEBBA /* PBXTargetDependency */,
+				036C05481ECAC7FC006DEBBA /* PBXTargetDependency */,
 			);
 			name = ForPpu;
 			productName = ForPpu;
@@ -426,6 +632,91 @@
 			productReference = 036C04DB1EC9B610006DEBBA /* ForPpu_Green.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		036C04F11ECAC783006DEBBA /* ForPpu_Red */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 036C04FE1ECAC783006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Red" */;
+			buildPhases = (
+				036C04EE1ECAC783006DEBBA /* Sources */,
+				036C04EF1ECAC783006DEBBA /* Frameworks */,
+				036C04F01ECAC783006DEBBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForPpu_Red;
+			productName = ForPpu_Red;
+			productReference = 036C04F21ECAC783006DEBBA /* ForPpu_Red.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		036C05041ECAC7CD006DEBBA /* ForPpu_Orange */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 036C05111ECAC7CD006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Orange" */;
+			buildPhases = (
+				036C05011ECAC7CD006DEBBA /* Sources */,
+				036C05021ECAC7CD006DEBBA /* Frameworks */,
+				036C05031ECAC7CD006DEBBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForPpu_Orange;
+			productName = ForPpu_Orange;
+			productReference = 036C05051ECAC7CD006DEBBA /* ForPpu_Orange.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		036C05171ECAC7DF006DEBBA /* ForPpu_Yellow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 036C05241ECAC7DF006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Yellow" */;
+			buildPhases = (
+				036C05141ECAC7DF006DEBBA /* Sources */,
+				036C05151ECAC7DF006DEBBA /* Frameworks */,
+				036C05161ECAC7DF006DEBBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForPpu_Yellow;
+			productName = ForPpu_Yellow;
+			productReference = 036C05181ECAC7DF006DEBBA /* ForPpu_Yellow.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		036C052A1ECAC7F0006DEBBA /* ForPpu_Indigo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 036C05371ECAC7F0006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Indigo" */;
+			buildPhases = (
+				036C05271ECAC7F0006DEBBA /* Sources */,
+				036C05281ECAC7F0006DEBBA /* Frameworks */,
+				036C05291ECAC7F0006DEBBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForPpu_Indigo;
+			productName = ForPpu_Indigo;
+			productReference = 036C052B1ECAC7F0006DEBBA /* ForPpu_Indigo.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		036C053D1ECAC7FC006DEBBA /* ForPpu_Violet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 036C054A1ECAC7FC006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Violet" */;
+			buildPhases = (
+				036C053A1ECAC7FC006DEBBA /* Sources */,
+				036C053B1ECAC7FC006DEBBA /* Frameworks */,
+				036C053C1ECAC7FC006DEBBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForPpu_Violet;
+			productName = ForPpu_Violet;
+			productReference = 036C053E1ECAC7FC006DEBBA /* ForPpu_Violet.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -491,7 +782,58 @@
 					};
 					036C04DA1EC9B610006DEBBA = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = UT834J75J3;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					036C04F11ECAC783006DEBBA = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = UT834J75J3;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					036C05041ECAC7CD006DEBBA = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = UT834J75J3;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					036C05171ECAC7DF006DEBBA = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = UT834J75J3;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					036C052A1ECAC7F0006DEBBA = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = UT834J75J3;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					036C053D1ECAC7FC006DEBBA = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = UT834J75J3;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -514,11 +856,16 @@
 			projectRoot = "";
 			targets = (
 				032FD9491EC6ED6400F488E9 /* ForPpu */,
+				036C04F11ECAC783006DEBBA /* ForPpu_Red */,
+				036C05041ECAC7CD006DEBBA /* ForPpu_Orange */,
+				036C05171ECAC7DF006DEBBA /* ForPpu_Yellow */,
+				036C04DA1EC9B610006DEBBA /* ForPpu_Green */,
+				036C04C41EC9B40A006DEBBA /* ForPpu_Blue */,
+				036C052A1ECAC7F0006DEBBA /* ForPpu_Indigo */,
+				036C053D1ECAC7FC006DEBBA /* ForPpu_Violet */,
 				032FD9661EC6F69100F488E9 /* Frist */,
 				032FD97C1EC6F69E00F488E9 /* Second */,
 				032FD98F1EC6F6AE00F488E9 /* Third */,
-				036C04DA1EC9B610006DEBBA /* ForPpu_Green */,
-				036C04C41EC9B40A006DEBBA /* ForPpu_Blue */,
 			);
 		};
 /* End PBXProject section */
@@ -573,6 +920,46 @@
 			buildActionMask = 2147483647;
 			files = (
 				036C04E21EC9B610006DEBBA /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		036C04F01ECAC783006DEBBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				036C04F91ECAC783006DEBBA /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		036C05031ECAC7CD006DEBBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				036C050C1ECAC7CD006DEBBA /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		036C05161ECAC7DF006DEBBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				036C051F1ECAC7DF006DEBBA /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		036C05291ECAC7F0006DEBBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				036C05321ECAC7F0006DEBBA /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		036C053C1ECAC7FC006DEBBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				036C05451ECAC7FC006DEBBA /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +1024,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		036C04EE1ECAC783006DEBBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				036C04F61ECAC783006DEBBA /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		036C05011ECAC7CD006DEBBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				036C05091ECAC7CD006DEBBA /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		036C05141ECAC7DF006DEBBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				036C051C1ECAC7DF006DEBBA /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		036C05271ECAC7F0006DEBBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				036C052F1ECAC7F0006DEBBA /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		036C053A1ECAC7FC006DEBBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				036C05421ECAC7FC006DEBBA /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -664,6 +1091,31 @@
 			isa = PBXTargetDependency;
 			target = 036C04DA1EC9B610006DEBBA /* ForPpu_Green */;
 			targetProxy = 036C04E41EC9B610006DEBBA /* PBXContainerItemProxy */;
+		};
+		036C04FC1ECAC783006DEBBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 036C04F11ECAC783006DEBBA /* ForPpu_Red */;
+			targetProxy = 036C04FB1ECAC783006DEBBA /* PBXContainerItemProxy */;
+		};
+		036C050F1ECAC7CD006DEBBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 036C05041ECAC7CD006DEBBA /* ForPpu_Orange */;
+			targetProxy = 036C050E1ECAC7CD006DEBBA /* PBXContainerItemProxy */;
+		};
+		036C05221ECAC7DF006DEBBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 036C05171ECAC7DF006DEBBA /* ForPpu_Yellow */;
+			targetProxy = 036C05211ECAC7DF006DEBBA /* PBXContainerItemProxy */;
+		};
+		036C05351ECAC7F0006DEBBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 036C052A1ECAC7F0006DEBBA /* ForPpu_Indigo */;
+			targetProxy = 036C05341ECAC7F0006DEBBA /* PBXContainerItemProxy */;
+		};
+		036C05481ECAC7FC006DEBBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 036C053D1ECAC7FC006DEBBA /* ForPpu_Violet */;
+			targetProxy = 036C05471ECAC7FC006DEBBA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -720,6 +1172,46 @@
 			isa = PBXVariantGroup;
 			children = (
 				036C04E11EC9B610006DEBBA /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		036C04F71ECAC783006DEBBA /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				036C04F81ECAC783006DEBBA /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		036C050A1ECAC7CD006DEBBA /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				036C050B1ECAC7CD006DEBBA /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		036C051D1ECAC7DF006DEBBA /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				036C051E1ECAC7DF006DEBBA /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		036C05301ECAC7F0006DEBBA /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				036C05311ECAC7F0006DEBBA /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		036C05431ECAC7FC006DEBBA /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				036C05441ECAC7FC006DEBBA /* Base */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -960,13 +1452,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Blue/ForPpu_Blue.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Blue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Blue";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "8ee0fc28-e2db-4864-b99a-000f3866615a";
+				PROVISIONING_PROFILE_SPECIFIER = baecheese5;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -976,13 +1470,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Blue/ForPpu_Blue.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Blue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Blue";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "8ee0fc28-e2db-4864-b99a-000f3866615a";
+				PROVISIONING_PROFILE_SPECIFIER = baecheese5;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -992,13 +1488,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Green/ForPpu_Green.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Green/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Green";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "bbe9a8cb-4727-49c7-b29d-de2fced19ea3";
+				PROVISIONING_PROFILE_SPECIFIER = baecheese4;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1008,13 +1505,164 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ForPpu_Green/ForPpu_Green.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = UT834J75J3;
 				INFOPLIST_FILE = ForPpu_Green/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Green";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "bbe9a8cb-4727-49c7-b29d-de2fced19ea3";
+				PROVISIONING_PROFILE_SPECIFIER = baecheese4;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		036C04FF1ECAC783006DEBBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForPpu_Red/ForPpu_Red.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = UT834J75J3;
+				INFOPLIST_FILE = ForPpu_Red/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Red";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		036C05001ECAC783006DEBBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForPpu_Red/ForPpu_Red.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = UT834J75J3;
+				INFOPLIST_FILE = ForPpu_Red/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Red";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		036C05121ECAC7CD006DEBBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForPpu_Orange/ForPpu_Orange.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = UT834J75J3;
+				INFOPLIST_FILE = ForPpu_Orange/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Orange";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		036C05131ECAC7CD006DEBBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForPpu_Orange/ForPpu_Orange.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = UT834J75J3;
+				INFOPLIST_FILE = ForPpu_Orange/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Orange";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		036C05251ECAC7DF006DEBBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForPpu_Yellow/ForPpu_Yellow.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = UT834J75J3;
+				INFOPLIST_FILE = ForPpu_Yellow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Yellow";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		036C05261ECAC7DF006DEBBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForPpu_Yellow/ForPpu_Yellow.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = UT834J75J3;
+				INFOPLIST_FILE = ForPpu_Yellow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Yellow";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		036C05381ECAC7F0006DEBBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForPpu_Indigo/ForPpu_Indigo.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = UT834J75J3;
+				INFOPLIST_FILE = ForPpu_Indigo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Indigo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		036C05391ECAC7F0006DEBBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForPpu_Indigo/ForPpu_Indigo.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = UT834J75J3;
+				INFOPLIST_FILE = ForPpu_Indigo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Indigo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		036C054B1ECAC7FC006DEBBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForPpu_Violet/ForPpu_Violet.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = UT834J75J3;
+				INFOPLIST_FILE = ForPpu_Violet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Violet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		036C054C1ECAC7FC006DEBBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForPpu_Violet/ForPpu_Violet.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = UT834J75J3;
+				INFOPLIST_FILE = ForPpu_Violet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baecheese.app.forppu.ForPpu-Violet";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1082,6 +1730,46 @@
 			buildConfigurations = (
 				036C04E71EC9B610006DEBBA /* Debug */,
 				036C04E81EC9B610006DEBBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		036C04FE1ECAC783006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Red" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				036C04FF1ECAC783006DEBBA /* Debug */,
+				036C05001ECAC783006DEBBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		036C05111ECAC7CD006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Orange" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				036C05121ECAC7CD006DEBBA /* Debug */,
+				036C05131ECAC7CD006DEBBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		036C05241ECAC7DF006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Yellow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				036C05251ECAC7DF006DEBBA /* Debug */,
+				036C05261ECAC7DF006DEBBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		036C05371ECAC7F0006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Indigo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				036C05381ECAC7F0006DEBBA /* Debug */,
+				036C05391ECAC7F0006DEBBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		036C054A1ECAC7FC006DEBBA /* Build configuration list for PBXNativeTarget "ForPpu_Violet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				036C054B1ECAC7FC006DEBBA /* Debug */,
+				036C054C1ECAC7FC006DEBBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

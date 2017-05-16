@@ -19,6 +19,31 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>ForPpu_Indigo.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>ForPpu_Orange.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>ForPpu_Red.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>ForPpu_Violet.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+		<key>ForPpu_Yellow.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>Frist.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -73,6 +98,31 @@
 			<true/>
 		</dict>
 		<key>036C04DA1EC9B610006DEBBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>036C04F11ECAC783006DEBBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>036C05041ECAC7CD006DEBBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>036C05171ECAC7DF006DEBBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>036C052A1ECAC7F0006DEBBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>036C053D1ECAC7FC006DEBBA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
