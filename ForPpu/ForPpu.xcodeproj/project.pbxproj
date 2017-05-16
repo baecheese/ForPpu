@@ -9,25 +9,12 @@
 /* Begin PBXBuildFile section */
 		0328AB861EC72CAA00D2C681 /* WedgetDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */; };
 		0328AB881EC72CE200D2C681 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328AB871EC72CE200D2C681 /* DataRepository.swift */; };
-		0328AB8E1EC7540400D2C681 /* SendDataBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328AB8D1EC7540400D2C681 /* SendDataBox.swift */; };
 		032FD94E1EC6ED6400F488E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD94D1EC6ED6400F488E9 /* AppDelegate.swift */; };
 		032FD9531EC6ED6400F488E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032FD9511EC6ED6400F488E9 /* Main.storyboard */; };
 		032FD9551EC6ED6400F488E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 032FD9541EC6ED6400F488E9 /* Assets.xcassets */; };
 		032FD9581EC6ED6400F488E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032FD9561EC6ED6400F488E9 /* LaunchScreen.storyboard */; };
 		032FD9601EC6EDF000F488E9 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD95F1EC6EDF000F488E9 /* MainTableViewController.swift */; };
 		032FD9621EC6F08A00F488E9 /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9611EC6F08A00F488E9 /* AddTableViewController.swift */; };
-		032FD96A1EC6F69100F488E9 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032FD9691EC6F69100F488E9 /* NotificationCenter.framework */; };
-		032FD96D1EC6F69100F488E9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD96C1EC6F69100F488E9 /* TodayViewController.swift */; };
-		032FD9701EC6F69100F488E9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032FD96E1EC6F69100F488E9 /* MainInterface.storyboard */; };
-		032FD9741EC6F69100F488E9 /* Frist.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 032FD9671EC6F69100F488E9 /* Frist.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		032FD97E1EC6F69E00F488E9 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032FD9691EC6F69100F488E9 /* NotificationCenter.framework */; };
-		032FD9811EC6F69E00F488E9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9801EC6F69E00F488E9 /* TodayViewController.swift */; };
-		032FD9841EC6F69E00F488E9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032FD9821EC6F69E00F488E9 /* MainInterface.storyboard */; };
-		032FD9881EC6F69E00F488E9 /* Second.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 032FD97D1EC6F69E00F488E9 /* Second.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		032FD9911EC6F6AE00F488E9 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032FD9691EC6F69100F488E9 /* NotificationCenter.framework */; };
-		032FD9941EC6F6AE00F488E9 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9931EC6F6AE00F488E9 /* TodayViewController.swift */; };
-		032FD9971EC6F6AE00F488E9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032FD9951EC6F6AE00F488E9 /* MainInterface.storyboard */; };
-		032FD99B1EC6F6AE00F488E9 /* Third.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 032FD9901EC6F6AE00F488E9 /* Third.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		032FD9A21EC6FD2900F488E9 /* SharedMemoryContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */; };
 		036C04911EC88EDE006DEBBA /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 036C04901EC88EDE006DEBBA /* emptyImage.png */; };
 		036C04951EC94C56006DEBBA /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C04941EC94C56006DEBBA /* ColorManager.swift */; };
@@ -67,32 +54,9 @@
 		036C05591ECACA2C006DEBBA /* SendDataBoxBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C05581ECACA2C006DEBBA /* SendDataBoxBlue.swift */; };
 		036C055D1ECACAF5006DEBBA /* SendDataBoxViolet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C055C1ECACAF5006DEBBA /* SendDataBoxViolet.swift */; };
 		036C05611ECAD630006DEBBA /* SendDataBoxIndigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C055A1ECACABF006DEBBA /* SendDataBoxIndigo.swift */; };
-		03E416861EC75736000ED685 /* SendDataBoxTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E416851EC75736000ED685 /* SendDataBoxTwo.swift */; };
-		03E416881EC7574D000ED685 /* SendDataBoxThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E416871EC7574D000ED685 /* SendDataBoxThree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		032FD9721EC6F69100F488E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 032FD9421EC6ED6400F488E9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 032FD9661EC6F69100F488E9;
-			remoteInfo = Frist;
-		};
-		032FD9861EC6F69E00F488E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 032FD9421EC6ED6400F488E9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 032FD97C1EC6F69E00F488E9;
-			remoteInfo = Second;
-		};
-		032FD9991EC6F6AE00F488E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 032FD9421EC6ED6400F488E9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 032FD98F1EC6F6AE00F488E9;
-			remoteInfo = Third;
-		};
 		036C04CE1EC9B40A006DEBBA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 032FD9421EC6ED6400F488E9 /* Project object */;
@@ -153,14 +117,11 @@
 			files = (
 				036C05361ECAC7F0006DEBBA /* ForPpu_Indigo.appex in Embed App Extensions */,
 				036C04FD1ECAC783006DEBBA /* ForPpu_Red.appex in Embed App Extensions */,
-				032FD9881EC6F69E00F488E9 /* Second.appex in Embed App Extensions */,
-				032FD99B1EC6F6AE00F488E9 /* Third.appex in Embed App Extensions */,
 				036C04D01EC9B40A006DEBBA /* ForPpu_Blue.appex in Embed App Extensions */,
 				036C05491ECAC7FC006DEBBA /* ForPpu_Violet.appex in Embed App Extensions */,
 				036C04E61EC9B610006DEBBA /* ForPpu_Green.appex in Embed App Extensions */,
 				036C05101ECAC7CD006DEBBA /* ForPpu_Orange.appex in Embed App Extensions */,
 				036C05231ECAC7DF006DEBBA /* ForPpu_Yellow.appex in Embed App Extensions */,
-				032FD9741EC6F69100F488E9 /* Frist.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,11 +131,7 @@
 /* Begin PBXFileReference section */
 		0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WedgetDataCenter.swift; sourceTree = "<group>"; };
 		0328AB871EC72CE200D2C681 /* DataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
-		0328AB891EC72F1000D2C681 /* Third.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Third.entitlements; sourceTree = "<group>"; };
 		0328AB8A1EC72F6F00D2C681 /* ForPpu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForPpu.entitlements; sourceTree = "<group>"; };
-		0328AB8B1EC72F7500D2C681 /* Frist.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Frist.entitlements; sourceTree = "<group>"; };
-		0328AB8C1EC72F7B00D2C681 /* Second.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Second.entitlements; sourceTree = "<group>"; };
-		0328AB8D1EC7540400D2C681 /* SendDataBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBox.swift; sourceTree = "<group>"; };
 		032FD94A1EC6ED6400F488E9 /* ForPpu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForPpu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		032FD94D1EC6ED6400F488E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		032FD9521EC6ED6400F488E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -183,19 +140,7 @@
 		032FD9591EC6ED6400F488E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		032FD95F1EC6EDF000F488E9 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		032FD9611EC6F08A00F488E9 /* AddTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
-		032FD9671EC6F69100F488E9 /* Frist.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Frist.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		032FD9691EC6F69100F488E9 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		032FD96C1EC6F69100F488E9 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		032FD96F1EC6F69100F488E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		032FD9711EC6F69100F488E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		032FD97D1EC6F69E00F488E9 /* Second.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Second.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		032FD9801EC6F69E00F488E9 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		032FD9831EC6F69E00F488E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		032FD9851EC6F69E00F488E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		032FD9901EC6F6AE00F488E9 /* Third.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Third.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		032FD9931EC6F6AE00F488E9 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		032FD9961EC6F6AE00F488E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		032FD9981EC6F6AE00F488E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedMemoryContext.swift; sourceTree = "<group>"; };
 		036C04901EC88EDE006DEBBA /* emptyImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyImage.png; sourceTree = "<group>"; };
 		036C04941EC94C56006DEBBA /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
@@ -242,8 +187,6 @@
 		036C05581ECACA2C006DEBBA /* SendDataBoxBlue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxBlue.swift; sourceTree = "<group>"; };
 		036C055A1ECACABF006DEBBA /* SendDataBoxIndigo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxIndigo.swift; sourceTree = "<group>"; };
 		036C055C1ECACAF5006DEBBA /* SendDataBoxViolet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxViolet.swift; sourceTree = "<group>"; };
-		03E416851EC75736000ED685 /* SendDataBoxTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxTwo.swift; sourceTree = "<group>"; };
-		03E416871EC7574D000ED685 /* SendDataBoxThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxThree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,30 +194,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		032FD9641EC6F69100F488E9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				032FD96A1EC6F69100F488E9 /* NotificationCenter.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		032FD97A1EC6F69E00F488E9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				032FD97E1EC6F69E00F488E9 /* NotificationCenter.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		032FD98D1EC6F6AE00F488E9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				032FD9911EC6F6AE00F488E9 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +269,6 @@
 				036C05401ECAC7FC006DEBBA /* ForPpu_Violet */,
 				032FD9681EC6F69100F488E9 /* Frameworks */,
 				032FD94B1EC6ED6400F488E9 /* Products */,
-				036C04ED1ECAC6EC006DEBBA /*  🗑 trash */,
 			);
 			sourceTree = "<group>";
 		};
@@ -358,9 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				032FD94A1EC6ED6400F488E9 /* ForPpu.app */,
-				032FD9671EC6F69100F488E9 /* Frist.appex */,
-				032FD97D1EC6F69E00F488E9 /* Second.appex */,
-				032FD9901EC6F6AE00F488E9 /* Third.appex */,
 				036C04C51EC9B40A006DEBBA /* ForPpu_Blue.appex */,
 				036C04DB1EC9B610006DEBBA /* ForPpu_Green.appex */,
 				036C04F21ECAC783006DEBBA /* ForPpu_Red.appex */,
@@ -401,44 +316,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		032FD96B1EC6F69100F488E9 /* Frist */ = {
-			isa = PBXGroup;
-			children = (
-				0328AB8B1EC72F7500D2C681 /* Frist.entitlements */,
-				032FD96C1EC6F69100F488E9 /* TodayViewController.swift */,
-				0328AB8D1EC7540400D2C681 /* SendDataBox.swift */,
-				032FD96E1EC6F69100F488E9 /* MainInterface.storyboard */,
-				032FD9711EC6F69100F488E9 /* Info.plist */,
-			);
-			name = Frist;
-			sourceTree = "<group>";
-		};
-		032FD97F1EC6F69E00F488E9 /* Second */ = {
-			isa = PBXGroup;
-			children = (
-				0328AB8C1EC72F7B00D2C681 /* Second.entitlements */,
-				032FD9801EC6F69E00F488E9 /* TodayViewController.swift */,
-				03E416851EC75736000ED685 /* SendDataBoxTwo.swift */,
-				032FD9821EC6F69E00F488E9 /* MainInterface.storyboard */,
-				032FD9851EC6F69E00F488E9 /* Info.plist */,
-			);
-			name = Second;
-			path = ../Second;
-			sourceTree = "<group>";
-		};
-		032FD9921EC6F6AE00F488E9 /* Third */ = {
-			isa = PBXGroup;
-			children = (
-				0328AB891EC72F1000D2C681 /* Third.entitlements */,
-				032FD9931EC6F6AE00F488E9 /* TodayViewController.swift */,
-				03E416871EC7574D000ED685 /* SendDataBoxThree.swift */,
-				032FD9951EC6F6AE00F488E9 /* MainInterface.storyboard */,
-				032FD9981EC6F6AE00F488E9 /* Info.plist */,
-			);
-			name = Third;
-			path = ../Third;
-			sourceTree = "<group>";
-		};
 		036C04C71EC9B40A006DEBBA /* ForPpu_Blue */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,17 +338,6 @@
 				036C04E31EC9B610006DEBBA /* Info.plist */,
 			);
 			path = ForPpu_Green;
-			sourceTree = "<group>";
-		};
-		036C04ED1ECAC6EC006DEBBA /*  🗑 trash */ = {
-			isa = PBXGroup;
-			children = (
-				032FD96B1EC6F69100F488E9 /* Frist */,
-				032FD97F1EC6F69E00F488E9 /* Second */,
-				032FD9921EC6F6AE00F488E9 /* Third */,
-			);
-			name = " 🗑 trash";
-			path = Frist;
 			sourceTree = "<group>";
 		};
 		036C04F41ECAC783006DEBBA /* ForPpu_Red */ = {
@@ -549,9 +415,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				032FD9731EC6F69100F488E9 /* PBXTargetDependency */,
-				032FD9871EC6F69E00F488E9 /* PBXTargetDependency */,
-				032FD99A1EC6F6AE00F488E9 /* PBXTargetDependency */,
 				036C04CF1EC9B40A006DEBBA /* PBXTargetDependency */,
 				036C04E51EC9B610006DEBBA /* PBXTargetDependency */,
 				036C04FC1ECAC783006DEBBA /* PBXTargetDependency */,
@@ -564,57 +427,6 @@
 			productName = ForPpu;
 			productReference = 032FD94A1EC6ED6400F488E9 /* ForPpu.app */;
 			productType = "com.apple.product-type.application";
-		};
-		032FD9661EC6F69100F488E9 /* Frist */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 032FD9751EC6F69100F488E9 /* Build configuration list for PBXNativeTarget "Frist" */;
-			buildPhases = (
-				032FD9631EC6F69100F488E9 /* Sources */,
-				032FD9641EC6F69100F488E9 /* Frameworks */,
-				032FD9651EC6F69100F488E9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Frist;
-			productName = Frist;
-			productReference = 032FD9671EC6F69100F488E9 /* Frist.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		032FD97C1EC6F69E00F488E9 /* Second */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 032FD9891EC6F69E00F488E9 /* Build configuration list for PBXNativeTarget "Second" */;
-			buildPhases = (
-				032FD9791EC6F69E00F488E9 /* Sources */,
-				032FD97A1EC6F69E00F488E9 /* Frameworks */,
-				032FD97B1EC6F69E00F488E9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Second;
-			productName = Second;
-			productReference = 032FD97D1EC6F69E00F488E9 /* Second.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		032FD98F1EC6F6AE00F488E9 /* Third */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 032FD99C1EC6F6AE00F488E9 /* Build configuration list for PBXNativeTarget "Third" */;
-			buildPhases = (
-				032FD98C1EC6F6AE00F488E9 /* Sources */,
-				032FD98D1EC6F6AE00F488E9 /* Frameworks */,
-				032FD98E1EC6F6AE00F488E9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Third;
-			productName = Third;
-			productReference = 032FD9901EC6F6AE00F488E9 /* Third.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 		036C04C41EC9B40A006DEBBA /* ForPpu_Blue */ = {
 			isa = PBXNativeTarget;
@@ -755,36 +567,6 @@
 							};
 						};
 					};
-					032FD9661EC6F69100F488E9 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = UT834J75J3;
-						ProvisioningStyle = Manual;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
-					};
-					032FD97C1EC6F69E00F488E9 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = UT834J75J3;
-						ProvisioningStyle = Manual;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
-					};
-					032FD98F1EC6F6AE00F488E9 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = UT834J75J3;
-						ProvisioningStyle = Manual;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
-					};
 					036C04C41EC9B40A006DEBBA = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = UT834J75J3;
@@ -881,9 +663,6 @@
 				036C04C41EC9B40A006DEBBA /* ForPpu_Blue */,
 				036C052A1ECAC7F0006DEBBA /* ForPpu_Indigo */,
 				036C053D1ECAC7FC006DEBBA /* ForPpu_Violet */,
-				032FD9661EC6F69100F488E9 /* Frist */,
-				032FD97C1EC6F69E00F488E9 /* Second */,
-				032FD98F1EC6F6AE00F488E9 /* Third */,
 			);
 		};
 /* End PBXProject section */
@@ -898,30 +677,6 @@
 				032FD9531EC6ED6400F488E9 /* Main.storyboard in Resources */,
 				036C04911EC88EDE006DEBBA /* emptyImage.png in Resources */,
 				036C04971EC96293006DEBBA /* headerImage.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		032FD9651EC6F69100F488E9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				032FD9701EC6F69100F488E9 /* MainInterface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		032FD97B1EC6F69E00F488E9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				032FD9841EC6F69E00F488E9 /* MainInterface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		032FD98E1EC6F6AE00F488E9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				032FD9971EC6F6AE00F488E9 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -998,33 +753,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		032FD9631EC6F69100F488E9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				032FD96D1EC6F69100F488E9 /* TodayViewController.swift in Sources */,
-				0328AB8E1EC7540400D2C681 /* SendDataBox.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		032FD9791EC6F69E00F488E9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				03E416861EC75736000ED685 /* SendDataBoxTwo.swift in Sources */,
-				032FD9811EC6F69E00F488E9 /* TodayViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		032FD98C1EC6F6AE00F488E9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				03E416881EC7574D000ED685 /* SendDataBoxThree.swift in Sources */,
-				032FD9941EC6F6AE00F488E9 /* TodayViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		036C04C11EC9B40A006DEBBA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1091,21 +819,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		032FD9731EC6F69100F488E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 032FD9661EC6F69100F488E9 /* Frist */;
-			targetProxy = 032FD9721EC6F69100F488E9 /* PBXContainerItemProxy */;
-		};
-		032FD9871EC6F69E00F488E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 032FD97C1EC6F69E00F488E9 /* Second */;
-			targetProxy = 032FD9861EC6F69E00F488E9 /* PBXContainerItemProxy */;
-		};
-		032FD99A1EC6F6AE00F488E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 032FD98F1EC6F6AE00F488E9 /* Third */;
-			targetProxy = 032FD9991EC6F6AE00F488E9 /* PBXContainerItemProxy */;
-		};
 		036C04CF1EC9B40A006DEBBA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 036C04C41EC9B40A006DEBBA /* ForPpu_Blue */;
@@ -1158,30 +871,6 @@
 				032FD9571EC6ED6400F488E9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		032FD96E1EC6F69100F488E9 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				032FD96F1EC6F69100F488E9 /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
-		032FD9821EC6F69E00F488E9 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				032FD9831EC6F69E00F488E9 /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
-		032FD9951EC6F6AE00F488E9 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				032FD9961EC6F6AE00F488E9 /* Base */,
-			);
-			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 		036C04CA1EC9B40A006DEBBA /* MainInterface.storyboard */ = {
@@ -1372,102 +1061,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f7f37771-01ec-4e2d-94d3-2f2f933c5361";
 				PROVISIONING_PROFILE_SPECIFIER = baecheese;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		032FD9761EC6F69100F488E9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Frist/Frist.entitlements;
-				DEVELOPMENT_TEAM = UT834J75J3;
-				INFOPLIST_FILE = Frist/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.app.forppu.Frist;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4617bfa9-7eb7-4c8d-a1f3-4710b3aaf624";
-				PROVISIONING_PROFILE_SPECIFIER = baecheese1;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		032FD9771EC6F69100F488E9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Frist/Frist.entitlements;
-				DEVELOPMENT_TEAM = UT834J75J3;
-				INFOPLIST_FILE = Frist/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.app.forppu.Frist;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4617bfa9-7eb7-4c8d-a1f3-4710b3aaf624";
-				PROVISIONING_PROFILE_SPECIFIER = baecheese1;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		032FD98A1EC6F69E00F488E9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Second/Second.entitlements;
-				DEVELOPMENT_TEAM = UT834J75J3;
-				INFOPLIST_FILE = Second/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.app.forppu.Second;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "abeeeb22-0587-4f5f-ba20-9bb0105aba60";
-				PROVISIONING_PROFILE_SPECIFIER = baecheese2;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		032FD98B1EC6F69E00F488E9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Second/Second.entitlements;
-				DEVELOPMENT_TEAM = UT834J75J3;
-				INFOPLIST_FILE = Second/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.app.forppu.Second;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "abeeeb22-0587-4f5f-ba20-9bb0105aba60";
-				PROVISIONING_PROFILE_SPECIFIER = baecheese2;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		032FD99D1EC6F6AE00F488E9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Third/Third.entitlements;
-				DEVELOPMENT_TEAM = UT834J75J3;
-				INFOPLIST_FILE = Third/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.app.forppu.Third;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e9aee57c-1ebb-40ab-9798-91e65ff9e8c7";
-				PROVISIONING_PROFILE_SPECIFIER = baecheese3;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		032FD99E1EC6F6AE00F488E9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Third/Third.entitlements;
-				DEVELOPMENT_TEAM = UT834J75J3;
-				INFOPLIST_FILE = Third/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.baecheese.app.forppu.Third;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e9aee57c-1ebb-40ab-9798-91e65ff9e8c7";
-				PROVISIONING_PROFILE_SPECIFIER = baecheese3;
-				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -1731,33 +1324,6 @@
 			buildConfigurations = (
 				032FD95D1EC6ED6400F488E9 /* Debug */,
 				032FD95E1EC6ED6400F488E9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		032FD9751EC6F69100F488E9 /* Build configuration list for PBXNativeTarget "Frist" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				032FD9761EC6F69100F488E9 /* Debug */,
-				032FD9771EC6F69100F488E9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		032FD9891EC6F69E00F488E9 /* Build configuration list for PBXNativeTarget "Second" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				032FD98A1EC6F69E00F488E9 /* Debug */,
-				032FD98B1EC6F69E00F488E9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		032FD99C1EC6F6AE00F488E9 /* Build configuration list for PBXNativeTarget "Third" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				032FD99D1EC6F6AE00F488E9 /* Debug */,
-				032FD99E1EC6F6AE00F488E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
