@@ -29,22 +29,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setEmptyInfo()
         if true == isChangeCardInfo() {
             setCardInfo()
             setBarCodeImage()
-        }
-    }
-    
-    var emptyMessage = UILabel()
-    
-    func setEmptyInfo() {
-        if nil == sendDataBox.getCardInfo() && Message().empty != emptyMessage.text {
-            emptyMessage.frame = violetBarCodeImage.bounds
-            emptyMessage.text = Message().empty
-            emptyMessage.textColor = .black
-            emptyMessage.textAlignment = .center
-            emptyMessage.backgroundColor = .white
         }
     }
     
@@ -52,7 +39,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         violetTitleLabel.backgroundColor = sendDataBox.getMainColor()
         if nil == sendDataBox.getCardInfo() {
             violetTitleLabel.text = ""
-            violetNumberLabel.text = ""
+            violetNumberLabel.text = Message().empty
             return;
         }
         violetTitleLabel.text = sendDataBox.getCardInfo()?.0
@@ -62,12 +49,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     func setBarCodeImage() {
         let barCodeNumber = sendDataBox.getCardInfo()?.1
         if barCodeNumber == nil {
-            violetBarCodeImage.image = nil
+            violetBarCodeImage.backgroundColor = .white
+            violetBarCodeImage.contentMode = .scaleAspectFit
+            violetBarCodeImage.image = UIImage(named: "emptyImage.png")
         }
         else {
+            violetBarCodeImage.contentMode = .scaleToFill
             violetBarCodeImage.image = sendDataBox.showBarCode(cardNumber: barCodeNumber!)
         }
-        violetBarCodeImage.addSubview(emptyMessage)
     }
     
     func isChangeCardInfo() -> Bool {
@@ -82,7 +71,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     func isEmptyInGroupDefaultAndWidget() -> Bool {
         let newCardInfo = sendDataBox.getCardInfo()
-        if emptyMessage.text == Message().empty && newCardInfo == nil {
+        if violetNumberLabel.text == Message().empty && newCardInfo == nil {
             return true
         }
         return false

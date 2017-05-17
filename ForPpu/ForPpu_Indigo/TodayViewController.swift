@@ -29,30 +29,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setEmptyInfo()
-        if true == isChangeCardInfo() {
-            setCardInfo()
-            setBarCodeImage()
-        }
-    }
-    
-    var emptyMessage = UILabel()
-    
-    func setEmptyInfo() {
-        if nil == sendDataBox.getCardInfo() && Message().empty != emptyMessage.text {
-            emptyMessage.frame = indigoBarCodeImage.bounds
-            emptyMessage.text = Message().empty
-            emptyMessage.textColor = .black
-            emptyMessage.textAlignment = .center
-            emptyMessage.backgroundColor = .white
-        }
+        
     }
     
     func setCardInfo() {
         indigoTitleLabel.backgroundColor = sendDataBox.getMainColor()
         if nil == sendDataBox.getCardInfo() {
             indigoTitleLabel.text = ""
-            indigoNumberLabel.text = ""
+            indigoNumberLabel.text = Message().empty
             return;
         }
         indigoTitleLabel.text = sendDataBox.getCardInfo()?.0
@@ -62,12 +46,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     func setBarCodeImage() {
         let barCodeNumber = sendDataBox.getCardInfo()?.1
         if barCodeNumber == nil {
-            indigoBarCodeImage.image = nil
+            indigoBarCodeImage.backgroundColor = .white
+            indigoBarCodeImage.contentMode = .scaleAspectFit
+            indigoBarCodeImage.image = UIImage(named: "emptyImage.png")
         }
         else {
+            indigoBarCodeImage.contentMode = .scaleToFill
             indigoBarCodeImage.image = sendDataBox.showBarCode(cardNumber: barCodeNumber!)
         }
-        indigoBarCodeImage.addSubview(emptyMessage)
     }
     
     func isChangeCardInfo() -> Bool {
@@ -82,7 +68,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     func isEmptyInGroupDefaultAndWidget() -> Bool {
         let newCardInfo = sendDataBox.getCardInfo()
-        if emptyMessage.text == Message().empty && newCardInfo == nil {
+        if indigoNumberLabel.text == Message().empty && newCardInfo == nil {
             return true
         }
         return false

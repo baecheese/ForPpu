@@ -136,4 +136,5 @@ class MainTableViewController: UITableViewController {
         navigationController?.navigationBar.barTintColor = colorManager.getMainColor()
     }
     
+    
 }

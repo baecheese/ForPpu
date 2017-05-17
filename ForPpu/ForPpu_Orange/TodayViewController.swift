@@ -29,30 +29,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setEmptyInfo()
-        if true == isChangeCardInfo() {
-            setCardInfo()
-            setBarCodeImage()
-        }
-    }
-    
-    var emptyMessage = UILabel()
-    
-    func setEmptyInfo() {
-        if nil == sendDataBox.getCardInfo() && Message().empty == emptyMessage.text {
-            emptyMessage.frame = orangeBarCodeImage.bounds
-            emptyMessage.text = Message().empty
-            emptyMessage.textColor = .black
-            emptyMessage.textAlignment = .center
-            emptyMessage.backgroundColor = .white
-        }
+        
     }
     
     func setCardInfo() {
         orangeTitleLabel.backgroundColor = sendDataBox.getMainColor()
         if nil == sendDataBox.getCardInfo() {
             orangeTitleLabel.text = ""
-            orangeNumberLabel.text = ""
+            orangeNumberLabel.text = Message().empty
             return;
         }
         orangeTitleLabel.text = sendDataBox.getCardInfo()?.0
@@ -62,12 +46,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     func setBarCodeImage() {
         let barCodeNumber = sendDataBox.getCardInfo()?.1
         if barCodeNumber == nil {
-            orangeBarCodeImage.image = nil
+            orangeBarCodeImage.backgroundColor = .white
+            orangeBarCodeImage.contentMode = .scaleAspectFit
+            orangeBarCodeImage.image = UIImage(named: "emptyImage.png")
         }
         else {
+            orangeBarCodeImage.contentMode = .scaleToFill
             orangeBarCodeImage.image = sendDataBox.showBarCode(cardNumber: barCodeNumber!)
         }
-        orangeBarCodeImage.addSubview(emptyMessage)
     }
     
     func isChangeCardInfo() -> Bool {
@@ -82,7 +68,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     func isEmptyInGroupDefaultAndWidget() -> Bool {
         let newCardInfo = sendDataBox.getCardInfo()
-        if emptyMessage.text == Message().empty && newCardInfo == nil {
+        if orangeNumberLabel.text == Message().empty && newCardInfo == nil {
             return true
         }
         return false

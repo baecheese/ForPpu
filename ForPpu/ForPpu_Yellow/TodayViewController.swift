@@ -29,30 +29,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setEmptyInfo()
-        if true == isChangeCardInfo() {
-            setCardInfo()
-            setBarCodeImage()
-        }
-    }
-    
-    var emptyMessage = UILabel()
-    
-    func setEmptyInfo() {
-        if nil == sendDataBox.getCardInfo() && Message().empty == emptyMessage.text {
-            emptyMessage.frame = yellowBarCodeImage.bounds
-            emptyMessage.text = Message().empty
-            emptyMessage.textColor = .black
-            emptyMessage.textAlignment = .center
-            emptyMessage.backgroundColor = .white
-        }
+        
     }
     
     func setCardInfo() {
         yellowTitleLabel.backgroundColor = sendDataBox.getMainColor()
         if nil == sendDataBox.getCardInfo() {
             yellowTitleLabel.text = ""
-            yellowNumberLabel.text = ""
+            yellowNumberLabel.text = Message().empty
             return;
         }
         yellowTitleLabel.text = sendDataBox.getCardInfo()?.0
@@ -62,12 +46,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     func setBarCodeImage() {
         let barCodeNumber = sendDataBox.getCardInfo()?.1
         if barCodeNumber == nil {
-            yellowBarCodeImage.image = nil
+            yellowBarCodeImage.backgroundColor = .white
+            yellowBarCodeImage.contentMode = .scaleAspectFit
+            yellowBarCodeImage.image = UIImage(named: "emptyImage.png")
         }
         else {
+            yellowBarCodeImage.contentMode = .scaleToFill
             yellowBarCodeImage.image = sendDataBox.showBarCode(cardNumber: barCodeNumber!)
         }
-        yellowBarCodeImage.addSubview(emptyMessage)
     }
     
     func isChangeCardInfo() -> Bool {
@@ -82,7 +68,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     func isEmptyInGroupDefaultAndWidget() -> Bool {
         let newCardInfo = sendDataBox.getCardInfo()
-        if emptyMessage.text == Message().empty && newCardInfo == nil {
+        if yellowNumberLabel.text == Message().empty && newCardInfo == nil {
             return true
         }
         return false

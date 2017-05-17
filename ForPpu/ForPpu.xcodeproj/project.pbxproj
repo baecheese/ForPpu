@@ -16,7 +16,6 @@
 		032FD9601EC6EDF000F488E9 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD95F1EC6EDF000F488E9 /* MainTableViewController.swift */; };
 		032FD9621EC6F08A00F488E9 /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9611EC6F08A00F488E9 /* AddTableViewController.swift */; };
 		032FD9A21EC6FD2900F488E9 /* SharedMemoryContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */; };
-		036C04911EC88EDE006DEBBA /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 036C04901EC88EDE006DEBBA /* emptyImage.png */; };
 		036C04951EC94C56006DEBBA /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C04941EC94C56006DEBBA /* ColorManager.swift */; };
 		036C04971EC96293006DEBBA /* headerImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 036C04961EC96293006DEBBA /* headerImage.png */; };
 		036C04C61EC9B40A006DEBBA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032FD9691EC6F69100F488E9 /* NotificationCenter.framework */; };
@@ -54,6 +53,14 @@
 		036C05591ECACA2C006DEBBA /* SendDataBoxBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C05581ECACA2C006DEBBA /* SendDataBoxBlue.swift */; };
 		036C055D1ECACAF5006DEBBA /* SendDataBoxViolet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C055C1ECACAF5006DEBBA /* SendDataBoxViolet.swift */; };
 		036C05611ECAD630006DEBBA /* SendDataBoxIndigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C055A1ECACABF006DEBBA /* SendDataBoxIndigo.swift */; };
+		0391B8F81ECC0A5E000CBC58 /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0391B8F71ECC0A5E000CBC58 /* emptyImage.png */; };
+		0391B8F91ECC0A5E000CBC58 /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0391B8F71ECC0A5E000CBC58 /* emptyImage.png */; };
+		0391B8FA1ECC0A5E000CBC58 /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0391B8F71ECC0A5E000CBC58 /* emptyImage.png */; };
+		0391B8FB1ECC0A5E000CBC58 /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0391B8F71ECC0A5E000CBC58 /* emptyImage.png */; };
+		0391B8FC1ECC0A5E000CBC58 /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0391B8F71ECC0A5E000CBC58 /* emptyImage.png */; };
+		0391B8FD1ECC0A5E000CBC58 /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0391B8F71ECC0A5E000CBC58 /* emptyImage.png */; };
+		0391B8FE1ECC0A5E000CBC58 /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0391B8F71ECC0A5E000CBC58 /* emptyImage.png */; };
+		0391B8FF1ECC0A5E000CBC58 /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0391B8F71ECC0A5E000CBC58 /* emptyImage.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,7 +149,6 @@
 		032FD9611EC6F08A00F488E9 /* AddTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
 		032FD9691EC6F69100F488E9 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedMemoryContext.swift; sourceTree = "<group>"; };
-		036C04901EC88EDE006DEBBA /* emptyImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyImage.png; sourceTree = "<group>"; };
 		036C04941EC94C56006DEBBA /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		036C04961EC96293006DEBBA /* headerImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headerImage.png; sourceTree = "<group>"; };
 		036C04C51EC9B40A006DEBBA /* ForPpu_Blue.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ForPpu_Blue.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +193,7 @@
 		036C05581ECACA2C006DEBBA /* SendDataBoxBlue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxBlue.swift; sourceTree = "<group>"; };
 		036C055A1ECACABF006DEBBA /* SendDataBoxIndigo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxIndigo.swift; sourceTree = "<group>"; };
 		036C055C1ECACAF5006DEBBA /* SendDataBoxViolet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxViolet.swift; sourceTree = "<group>"; };
+		0391B8F71ECC0A5E000CBC58 /* emptyImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyImage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,8 +305,8 @@
 				0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */,
 				032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */,
 				036C04941EC94C56006DEBBA /* ColorManager.swift */,
+				0391B8F71ECC0A5E000CBC58 /* emptyImage.png */,
 				036C04961EC96293006DEBBA /* headerImage.png */,
-				036C04901EC88EDE006DEBBA /* emptyImage.png */,
 				032FD9511EC6ED6400F488E9 /* Main.storyboard */,
 				032FD9541EC6ED6400F488E9 /* Assets.xcassets */,
 				032FD9561EC6ED6400F488E9 /* LaunchScreen.storyboard */,
@@ -672,10 +679,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0391B8F81ECC0A5E000CBC58 /* emptyImage.png in Resources */,
 				032FD9581EC6ED6400F488E9 /* LaunchScreen.storyboard in Resources */,
 				032FD9551EC6ED6400F488E9 /* Assets.xcassets in Resources */,
 				032FD9531EC6ED6400F488E9 /* Main.storyboard in Resources */,
-				036C04911EC88EDE006DEBBA /* emptyImage.png in Resources */,
 				036C04971EC96293006DEBBA /* headerImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -684,6 +691,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0391B8FD1ECC0A5E000CBC58 /* emptyImage.png in Resources */,
 				036C04CC1EC9B40A006DEBBA /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -692,6 +700,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0391B8FC1ECC0A5E000CBC58 /* emptyImage.png in Resources */,
 				036C04E21EC9B610006DEBBA /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -700,6 +709,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0391B8F91ECC0A5E000CBC58 /* emptyImage.png in Resources */,
 				036C04F91ECAC783006DEBBA /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -708,6 +718,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0391B8FA1ECC0A5E000CBC58 /* emptyImage.png in Resources */,
 				036C050C1ECAC7CD006DEBBA /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -716,6 +727,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0391B8FB1ECC0A5E000CBC58 /* emptyImage.png in Resources */,
 				036C051F1ECAC7DF006DEBBA /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -724,6 +736,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0391B8FE1ECC0A5E000CBC58 /* emptyImage.png in Resources */,
 				036C05321ECAC7F0006DEBBA /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -732,6 +745,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0391B8FF1ECC0A5E000CBC58 /* emptyImage.png in Resources */,
 				036C05451ECAC7FC006DEBBA /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
