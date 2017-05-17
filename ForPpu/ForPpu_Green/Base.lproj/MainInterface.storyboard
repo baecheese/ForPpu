@@ -45,6 +45,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="UkF-lP-PyJ" secondAttribute="bottom" id="8yd-g8-6O8"/>
                             <constraint firstItem="f7t-ow-5Ok" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="Gen-Ma-ciJ"/>
@@ -57,6 +58,9 @@
                             <constraint firstItem="cSH-ia-jaQ" firstAttribute="top" secondItem="f7t-ow-5Ok" secondAttribute="bottom" id="h5V-fm-yh2"/>
                             <constraint firstItem="f7t-ow-5Ok" firstAttribute="width" secondItem="S3S-Oj-5AN" secondAttribute="width" id="sTf-dQ-Whx"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="SOK-mk-zZJ" appends="YES" id="jZ2-8q-0lL"/>
+                        </connections>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -71,6 +75,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="SOK-mk-zZJ">
+                    <connections>
+                        <action selector="goToAppFromGreen:" destination="M4Y-Lb-cyx" id="jWK-Re-gvy"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="76.799999999999997" y="43.178410794602705"/>
         </scene>

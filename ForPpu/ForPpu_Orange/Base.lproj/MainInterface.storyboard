@@ -43,6 +43,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="3qh-tM-box" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="3L9-Ex-KZs"/>
                             <constraint firstItem="QiK-kk-tNp" firstAttribute="top" secondItem="voo-Uq-Gfw" secondAttribute="bottom" id="4Fz-7B-S2O"/>
@@ -55,6 +56,9 @@
                             <constraint firstItem="voo-Uq-Gfw" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="mpj-aF-m7M"/>
                             <constraint firstItem="QiK-kk-tNp" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="tjA-Kx-Y9h"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="y0I-lf-dmL" appends="YES" id="VpF-TB-gy2"/>
+                        </connections>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -69,6 +73,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="y0I-lf-dmL">
+                    <connections>
+                        <action selector="goToAppFromOrange:" destination="M4Y-Lb-cyx" id="rAG-si-7u9"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="116.8" y="123.23838080959521"/>
         </scene>

@@ -32,6 +32,7 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OPv-BC-jRr">
                                 <rect key="frame" x="0.0" y="23" width="320" height="152"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gju-vb-zlI">
                                 <rect key="frame" x="0.0" y="165" width="320" height="35"/>
@@ -43,6 +44,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="OPv-BC-jRr" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="C71-Ps-clH"/>
                             <constraint firstItem="OPv-BC-jRr" firstAttribute="width" secondItem="S3S-Oj-5AN" secondAttribute="width" id="NRS-MF-oUk"/>
@@ -55,6 +57,9 @@
                             <constraint firstItem="nCq-q1-Nfj" firstAttribute="width" secondItem="S3S-Oj-5AN" secondAttribute="width" id="rWO-b8-3v7"/>
                             <constraint firstItem="nCq-q1-Nfj" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="vnn-N5-uoz"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="3td-9x-BvE" appends="YES" id="FeS-go-MUw"/>
+                        </connections>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -69,6 +74,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3td-9x-BvE">
+                    <connections>
+                        <action selector="goToAppFromRed:" destination="M4Y-Lb-cyx" id="WM3-On-Lf7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>

@@ -43,6 +43,7 @@
                                 <rect key="frame" x="0.0" y="23" width="320" height="152"/>
                             </imageView>
                         </subviews>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="gYj-j9-TQE" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="9k2-Kr-4RJ"/>
                             <constraint firstItem="4S8-QV-D5Q" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="A3w-Yl-2U6"/>
@@ -55,6 +56,9 @@
                             <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="gYj-j9-TQE" secondAttribute="bottom" id="o5A-Wr-qLg"/>
                             <constraint firstItem="xMT-vN-DoM" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="w7j-ez-0wh"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="nKN-ro-76g" appends="YES" id="kac-29-9eq"/>
+                        </connections>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -69,6 +73,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="nKN-ro-76g">
+                    <connections>
+                        <action selector="goToAppFromYellow:" destination="M4Y-Lb-cyx" id="Dq0-bk-pgt"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="25.600000000000001" y="36.881559220389811"/>
         </scene>

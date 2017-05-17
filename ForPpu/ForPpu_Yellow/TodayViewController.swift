@@ -73,7 +73,11 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
         return false
     }
-
+    
+    @IBAction func goToAppFromYellow(_ sender: UITapGestureRecognizer) {
+        extensionContext?.open(URL(string: "forPpu://")! , completionHandler: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
