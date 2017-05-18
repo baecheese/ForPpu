@@ -134,6 +134,7 @@ class MainTableViewController: UITableViewController {
     
     func setNavigationColor() {
         navigationController?.navigationBar.barTintColor = colorManager.getMainColor()
+        navigationController?.navigationBar.tintColor = colorManager.getTint()
     }
     
     

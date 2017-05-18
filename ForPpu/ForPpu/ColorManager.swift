@@ -20,6 +20,10 @@ class ColorManager: NSObject {
         return fromRGB(rgbValue: 0x26140C)
     }
     
+    func getTint() -> UIColor {
+        return .lightGray
+    }
+    
     func getRainbow(section:Int) -> UIColor {
         if section == 0 {
             return fromRGB(rgbValue: 0xF15A5A)

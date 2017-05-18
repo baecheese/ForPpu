@@ -32,7 +32,6 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         super.viewDidLoad()
         tableView.backgroundColor = colorManager.getMainColor()
         tableView.separatorStyle = .none
-        
         makeNavigationItem()
         cardName.delegate = self
         barCodeNumber.delegate = self
@@ -47,7 +46,7 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     func makeNavigationItem()  {
         let saveBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 30))
         saveBtn.setTitle("save", for: .normal)
-        saveBtn.setTitleColor(.blue, for: .normal)
+        saveBtn.setTitleColor(colorManager.getTint(), for: .normal)
         saveBtn.addTarget(self, action: #selector(AddTableViewController.clickSaveButton), for: .touchUpInside)
         let item = UIBarButtonItem(customView: saveBtn)
         navigationItem.rightBarButtonItem = item
