@@ -16,7 +16,8 @@ struct TableFrameSize {
     let sectionHeight:CGFloat = 30.0
     let rowHeight:CGFloat = 70.0
     let sectionLabelHeight:CGFloat = 15.0
-    let addRowHeghit:CGFloat = 50.0
+    let addRowHeghit:CGFloat = 49.0
+    let addRowInfoHeghit:CGFloat = 35.0
 }
 
 /** MainTableViewController */
@@ -119,7 +120,9 @@ class MainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .default, title: "delete") { action, index in
             self.dataRepository.delete(cardID: indexPath.section)
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
         delete.backgroundColor = .red
         
@@ -137,5 +140,9 @@ class MainTableViewController: UITableViewController {
         navigationController?.navigationBar.tintColor = colorManager.getTint()
     }
     
+    @IBAction func refresh(_ sender: UIBarButtonItem) {
+        
+        self.tableView.reloadData()
+    }
     
 }
