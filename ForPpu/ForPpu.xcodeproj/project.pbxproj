@@ -1095,6 +1095,7 @@
 				PROVISIONING_PROFILE = "64875075-be8a-4f3a-8d0e-12f366285dcc";
 				PROVISIONING_PROFILE_SPECIFIER = baecheese;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1112,6 +1113,7 @@
 				PROVISIONING_PROFILE = "f7f37771-01ec-4e2d-94d3-2f2f933c5361";
 				PROVISIONING_PROFILE_SPECIFIER = baecheese;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
