@@ -31,8 +31,8 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.backgroundColor = colorManager.getMainColor()
-//        tableView.separatorStyle = .none
+        tableView.backgroundColor = colorManager.getMainColor()
+        tableView.separatorStyle = .none
         makeNavigationItem()
         cardName.delegate = self
         barCodeNumber.delegate = self
@@ -133,6 +133,9 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if 1 == indexPath.section && 1 == indexPath.row {
+            return TableFrameSize().addRowInfoHeghit
+        }
         if 2 == indexPath.section {
             return view.frame.height - 230.1
         }
@@ -185,9 +188,9 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
             cell.infoLabel.addSubview(barCodeNumber)
         }
         if 2 == indexPath.section {
-            //
             let leatherImage = UIImageView(frame: cell.bounds)
-            leatherImage.backgroundColor = .red
+            leatherImage.image = UIImage(named: "leatherBlack_7")
+            leatherImage.contentMode = .topRight
             cell.addSubview(leatherImage)
         }
     }

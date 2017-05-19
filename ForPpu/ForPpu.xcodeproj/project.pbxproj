@@ -54,6 +54,12 @@
 		036C055D1ECACAF5006DEBBA /* SendDataBoxViolet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C055C1ECACAF5006DEBBA /* SendDataBoxViolet.swift */; };
 		036C05611ECAD630006DEBBA /* SendDataBoxIndigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C055A1ECACABF006DEBBA /* SendDataBoxIndigo.swift */; };
 		037C81411ECEA5DC00D37ACD /* leatherBlack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 037C81401ECEA5DC00D37ACD /* leatherBlack.jpg */; };
+		037C81431ECED90300D37ACD /* leatherBlack_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 037C81421ECED90300D37ACD /* leatherBlack_4.png */; };
+		037C81451ECEDAE600D37ACD /* leatherBlack_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 037C81441ECEDAE600D37ACD /* leatherBlack_5.png */; };
+		037C81491ECEDDA000D37ACD /* leatherBlack_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 037C81461ECEDDA000D37ACD /* leatherBlack_6.png */; };
+		037C814A1ECEDDA000D37ACD /* leatherBlack_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 037C81471ECEDDA000D37ACD /* leatherBlack_7.png */; };
+		037C814B1ECEDDA000D37ACD /* leatherBlack_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 037C81481ECEDDA000D37ACD /* leatherBlack_8.png */; };
+		037C814D1ECEE05B00D37ACD /* leatherBlack_9.png in Resources */ = {isa = PBXBuildFile; fileRef = 037C814C1ECEE05B00D37ACD /* leatherBlack_9.png */; };
 		0391B8F81ECC0A5E000CBC58 /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0391B8F71ECC0A5E000CBC58 /* emptyImage.png */; };
 		0391B8F91ECC0A5E000CBC58 /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0391B8F71ECC0A5E000CBC58 /* emptyImage.png */; };
 		0391B8FA1ECC0A5E000CBC58 /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0391B8F71ECC0A5E000CBC58 /* emptyImage.png */; };
@@ -195,6 +201,12 @@
 		036C055A1ECACABF006DEBBA /* SendDataBoxIndigo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxIndigo.swift; sourceTree = "<group>"; };
 		036C055C1ECACAF5006DEBBA /* SendDataBoxViolet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxViolet.swift; sourceTree = "<group>"; };
 		037C81401ECEA5DC00D37ACD /* leatherBlack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leatherBlack.jpg; sourceTree = "<group>"; };
+		037C81421ECED90300D37ACD /* leatherBlack_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leatherBlack_4.png; sourceTree = "<group>"; };
+		037C81441ECEDAE600D37ACD /* leatherBlack_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leatherBlack_5.png; sourceTree = "<group>"; };
+		037C81461ECEDDA000D37ACD /* leatherBlack_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leatherBlack_6.png; sourceTree = "<group>"; };
+		037C81471ECEDDA000D37ACD /* leatherBlack_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leatherBlack_7.png; sourceTree = "<group>"; };
+		037C81481ECEDDA000D37ACD /* leatherBlack_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leatherBlack_8.png; sourceTree = "<group>"; };
+		037C814C1ECEE05B00D37ACD /* leatherBlack_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leatherBlack_9.png; sourceTree = "<group>"; };
 		0391B8F71ECC0A5E000CBC58 /* emptyImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyImage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -299,6 +311,7 @@
 		032FD94C1EC6ED6400F488E9 /* ForPpu */ = {
 			isa = PBXGroup;
 			children = (
+				037C814E1ECEE07000D37ACD /* resource */,
 				0328AB8A1EC72F6F00D2C681 /* ForPpu.entitlements */,
 				032FD94D1EC6ED6400F488E9 /* AppDelegate.swift */,
 				032FD95F1EC6EDF000F488E9 /* MainTableViewController.swift */,
@@ -307,9 +320,6 @@
 				0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */,
 				032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */,
 				036C04941EC94C56006DEBBA /* ColorManager.swift */,
-				037C81401ECEA5DC00D37ACD /* leatherBlack.jpg */,
-				0391B8F71ECC0A5E000CBC58 /* emptyImage.png */,
-				036C04961EC96293006DEBBA /* headerImage.png */,
 				032FD9511EC6ED6400F488E9 /* Main.storyboard */,
 				032FD9541EC6ED6400F488E9 /* Assets.xcassets */,
 				032FD9561EC6ED6400F488E9 /* LaunchScreen.storyboard */,
@@ -408,6 +418,22 @@
 				036C05461ECAC7FC006DEBBA /* Info.plist */,
 			);
 			path = ForPpu_Violet;
+			sourceTree = "<group>";
+		};
+		037C814E1ECEE07000D37ACD /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				037C81401ECEA5DC00D37ACD /* leatherBlack.jpg */,
+				037C814C1ECEE05B00D37ACD /* leatherBlack_9.png */,
+				037C81461ECEDDA000D37ACD /* leatherBlack_6.png */,
+				037C81471ECEDDA000D37ACD /* leatherBlack_7.png */,
+				037C81481ECEDDA000D37ACD /* leatherBlack_8.png */,
+				037C81421ECED90300D37ACD /* leatherBlack_4.png */,
+				037C81441ECEDAE600D37ACD /* leatherBlack_5.png */,
+				0391B8F71ECC0A5E000CBC58 /* emptyImage.png */,
+				036C04961EC96293006DEBBA /* headerImage.png */,
+			);
+			name = resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -685,9 +711,15 @@
 				0391B8F81ECC0A5E000CBC58 /* emptyImage.png in Resources */,
 				037C81411ECEA5DC00D37ACD /* leatherBlack.jpg in Resources */,
 				032FD9581EC6ED6400F488E9 /* LaunchScreen.storyboard in Resources */,
+				037C81451ECEDAE600D37ACD /* leatherBlack_5.png in Resources */,
+				037C814B1ECEDDA000D37ACD /* leatherBlack_8.png in Resources */,
+				037C81491ECEDDA000D37ACD /* leatherBlack_6.png in Resources */,
+				037C81431ECED90300D37ACD /* leatherBlack_4.png in Resources */,
+				037C814D1ECEE05B00D37ACD /* leatherBlack_9.png in Resources */,
 				032FD9551EC6ED6400F488E9 /* Assets.xcassets in Resources */,
 				032FD9531EC6ED6400F488E9 /* Main.storyboard in Resources */,
 				036C04971EC96293006DEBBA /* headerImage.png in Resources */,
+				037C814A1ECEDDA000D37ACD /* leatherBlack_7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1271,6 +1303,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = baecheeseIndigo;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1288,6 +1321,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = baecheeseIndigo;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
