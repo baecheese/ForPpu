@@ -53,6 +53,7 @@
 		036C05591ECACA2C006DEBBA /* SendDataBoxBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C05581ECACA2C006DEBBA /* SendDataBoxBlue.swift */; };
 		036C055D1ECACAF5006DEBBA /* SendDataBoxViolet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C055C1ECACAF5006DEBBA /* SendDataBoxViolet.swift */; };
 		036C05611ECAD630006DEBBA /* SendDataBoxIndigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C055A1ECACABF006DEBBA /* SendDataBoxIndigo.swift */; };
+		037C81411ECEA5DC00D37ACD /* leatherBlack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 037C81401ECEA5DC00D37ACD /* leatherBlack.jpg */; };
 		0391B8F81ECC0A5E000CBC58 /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0391B8F71ECC0A5E000CBC58 /* emptyImage.png */; };
 		0391B8F91ECC0A5E000CBC58 /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0391B8F71ECC0A5E000CBC58 /* emptyImage.png */; };
 		0391B8FA1ECC0A5E000CBC58 /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0391B8F71ECC0A5E000CBC58 /* emptyImage.png */; };
@@ -193,6 +194,7 @@
 		036C05581ECACA2C006DEBBA /* SendDataBoxBlue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxBlue.swift; sourceTree = "<group>"; };
 		036C055A1ECACABF006DEBBA /* SendDataBoxIndigo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxIndigo.swift; sourceTree = "<group>"; };
 		036C055C1ECACAF5006DEBBA /* SendDataBoxViolet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxViolet.swift; sourceTree = "<group>"; };
+		037C81401ECEA5DC00D37ACD /* leatherBlack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leatherBlack.jpg; sourceTree = "<group>"; };
 		0391B8F71ECC0A5E000CBC58 /* emptyImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyImage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -305,6 +307,7 @@
 				0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */,
 				032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */,
 				036C04941EC94C56006DEBBA /* ColorManager.swift */,
+				037C81401ECEA5DC00D37ACD /* leatherBlack.jpg */,
 				0391B8F71ECC0A5E000CBC58 /* emptyImage.png */,
 				036C04961EC96293006DEBBA /* headerImage.png */,
 				032FD9511EC6ED6400F488E9 /* Main.storyboard */,
@@ -680,6 +683,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0391B8F81ECC0A5E000CBC58 /* emptyImage.png in Resources */,
+				037C81411ECEA5DC00D37ACD /* leatherBlack.jpg in Resources */,
 				032FD9581EC6ED6400F488E9 /* LaunchScreen.storyboard in Resources */,
 				032FD9551EC6ED6400F488E9 /* Assets.xcassets in Resources */,
 				032FD9531EC6ED6400F488E9 /* Main.storyboard in Resources */,

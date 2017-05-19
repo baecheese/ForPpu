@@ -16,7 +16,7 @@ struct TableFrameSize {
     let sectionHeight:CGFloat = 30.0
     let rowHeight:CGFloat = 70.0
     let sectionLabelHeight:CGFloat = 15.0
-    let addRowHeghit:CGFloat = 60.0
+    let addRowHeghit:CGFloat = 50.0
 }
 
 /** MainTableViewController */

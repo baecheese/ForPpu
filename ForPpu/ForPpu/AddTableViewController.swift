@@ -9,7 +9,8 @@
 import UIKit
 
 struct Menu {
-    let name = ["card name", "barcode number", "barcode image"]
+    let sectionName = ["empty space", "card Info", "leather"]
+    let cardInfo = ["card name", "barcode image", "barcode number"]
 }
 
 /** MainTableViewController */
@@ -30,14 +31,14 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = colorManager.getMainColor()
-        tableView.separatorStyle = .none
+//        tableView.backgroundColor = colorManager.getMainColor()
+//        tableView.separatorStyle = .none
         makeNavigationItem()
         cardName.delegate = self
         barCodeNumber.delegate = self
         barCodeNumber.addTarget(self, action: #selector(AddTableViewController.textFieldDidChange), for: .editingChanged)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -85,32 +86,39 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return Menu().sectionName.count
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return Menu().name[section]
+        return Menu().sectionName[section]
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if 0 != section {
+            return 0.1
+        }
         return TableFrameSize().sectionHeight
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 30.0))
-        let headerImage = UIImageView(frame: headerView.bounds)
-        headerImage.image = UIImage(named: "headerImage.png")
-        headerImage.contentMode = .scaleToFill
-        headerImage.clipsToBounds = true
-        headerImage.image = headerImage.image!.withRenderingMode(.alwaysTemplate)
-        headerImage.tintColor = colorManager.getRainbow(section: cardID)
-        headerView.addSubview(headerImage)
-        let margenX:CGFloat = 15.0
-        let margenY:CGFloat = headerImage.frame.height/2 - TableFrameSize().sectionLabelHeight/2
-        let title = UILabel(frame: CGRect(x: margenX, y: margenY, width: tableView.frame.width - margenX*2, height: TableFrameSize().sectionLabelHeight))
-        title.text = Menu().name[section]
-        title.font = UIFont.boldSystemFont(ofSize: 13.0)
-        headerImage.addSubview(title)
+        if 0 == section {
+            let headerImage = UIImageView(frame: headerView.bounds)
+            headerImage.image = UIImage(named: "headerImage.png")
+            headerImage.contentMode = .scaleToFill
+            headerImage.clipsToBounds = true
+            headerImage.image = headerImage.image!.withRenderingMode(.alwaysTemplate)
+//            headerImage.tintColor = colorManager.getRainbow(section: cardID)
+            headerImage.tintColor = .white
+            
+            headerView.addSubview(headerImage)
+            let margenX:CGFloat = 15.0
+            let margenY:CGFloat = headerImage.frame.height/2 - TableFrameSize().sectionLabelHeight/2
+            let title = UILabel(frame: CGRect(x: margenX, y: margenY, width: tableView.frame.width - margenX*2, height: TableFrameSize().sectionLabelHeight))
+//            title.text = Menu().name[section]
+//            title.font = UIFont.boldSystemFont(ofSize: 13.0)
+            headerImage.addSubview(title)
+        }
         if 0 != section {
             headerView.backgroundColor = .white
         }
@@ -118,10 +126,16 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if 1 == section {
+            return Menu().cardInfo.count
+        }
         return 1
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if 2 == indexPath.section {
+            return view.frame.height - 230.1
+        }
         return TableFrameSize().addRowHeghit
     }
     
@@ -130,7 +144,7 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         cell.selectionStyle = .none
         setCellDetailInfo(cell: cell, indexPath: indexPath)
         if true == haveInfo() {
-            if 2 == indexPath.section {
+            if 1 == indexPath.section && 1 == indexPath.row {
 //                barCodeImage.image = dataRepository.getBardCodeImage(cardID: cardID)
                 let barcodeNumber = dataRepository.get(cardID: cardID)?.1
                 barCodeImage.image = dataRepository.showBarCodeImage(cardNumber: barcodeNumber!)
@@ -146,31 +160,43 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         let cellWidth = self.cell.frame.width
         let textFieldwidth = cellWidth * 0.8
         let margen = (cellWidth - textFieldwidth) * 0.5
-        
+        let commonFrame = CGRect(x: margen, y: 0, width: textFieldwidth, height: self.cell.infoLabel.frame.height)
         if 0 == indexPath.section {
-            cardName.frame = CGRect(x: margen, y: 0, width: textFieldwidth, height: self.cell.infoLabel.frame.height)
+            cell.backgroundColor = colorManager.getRainbow(section: cardID)
+        }
+        if 1 == indexPath.section && 0 == indexPath.row {
+            cardName.frame = commonFrame
             cardName.font = UIFont.systemFont(ofSize: 13.0)
             cardName.placeholder = "사용할 카드의 이름을 적어주세요."
+            cardName.textAlignment = .center
             cell.infoLabel.addSubview(cardName)
         }
-        if 1 == indexPath.section {
-            barCodeNumber.frame = CGRect(x: margen, y: 0, width: textFieldwidth, height: self.cell.infoLabel.frame.height)
+        if 1 == indexPath.section && 1 == indexPath.row {
+            barCodeImage = UIImageView(frame: commonFrame)
+            barCodeImage.image = UIImage(named: "emptyImage.png")
+            cell.addSubview(barCodeImage)
+        }
+        if 1 == indexPath.section && 2 == indexPath.row {
+            barCodeNumber.frame = commonFrame
+            barCodeNumber.textAlignment = .center
             barCodeNumber.font = UIFont.systemFont(ofSize: 13.0)
             barCodeNumber.placeholder = "띄어쓰기 없이 바코드 번호를 적어주세요."
             barCodeNumber.keyboardType = .numberPad
             cell.infoLabel.addSubview(barCodeNumber)
         }
         if 2 == indexPath.section {
-            barCodeImage = UIImageView(frame: cell.bounds)
-            barCodeImage.image = UIImage(named: "emptyImage.png")
-            //                barCodeImage.image = dataRepository.getBardCodeImage(cardID: cardID)
-            cell.addSubview(barCodeImage)
+            //
+            let leatherImage = UIImageView(frame: cell.bounds)
+            leatherImage.backgroundColor = .red
+            cell.addSubview(leatherImage)
         }
-        
     }
     
     func textFieldDidChange() {
         barCodeImage.image = dataRepository.showBarCodeImage(cardNumber: barCodeNumber.text!)
+        if true == barCodeNumber.text?.isEmpty {
+            barCodeImage.image = UIImage(named: "emptyImage.png")
+        }
     }
     
     private func setCardInfo(section:Int) {
