@@ -14,7 +14,7 @@ struct CardMenu {
 
 struct TableFrameSize {
     let sectionHeight:CGFloat = 30.0
-    let rowHeight:CGFloat = 70.0
+    let rowHeight:CGFloat = 80.0
     let sectionLabelHeight:CGFloat = 15.0
     let addRowHeghit:CGFloat = 49.0
     let addRowInfoHeghit:CGFloat = 35.0
@@ -77,7 +77,7 @@ class MainTableViewController: UITableViewController {
         let title = UILabel(frame: CGRect(x: margenX, y: margenY, width: tableView.frame.width - margenX*2, height: TableFrameSize().sectionLabelHeight))
         let nowCardInfo = dataRepository.get(cardID: section)
         title.text = nowCardInfo?.0
-        title.font = UIFont.boldSystemFont(ofSize: 13.0)
+        title.font = UIFont.boldSystemFont(ofSize: 15.0)
         headerImage.addSubview(title)
         
         if 0 != section {
@@ -138,11 +138,6 @@ class MainTableViewController: UITableViewController {
     func setNavigationColor() {
         navigationController?.navigationBar.barTintColor = colorManager.getMainColor()
         navigationController?.navigationBar.tintColor = colorManager.getTint()
-    }
-    
-    @IBAction func refresh(_ sender: UIBarButtonItem) {
-        
-        self.tableView.reloadData()
     }
     
 }

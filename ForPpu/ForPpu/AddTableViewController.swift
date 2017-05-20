@@ -108,15 +108,12 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
             headerImage.contentMode = .scaleToFill
             headerImage.clipsToBounds = true
             headerImage.image = headerImage.image!.withRenderingMode(.alwaysTemplate)
-//            headerImage.tintColor = colorManager.getRainbow(section: cardID)
             headerImage.tintColor = .white
             
             headerView.addSubview(headerImage)
             let margenX:CGFloat = 15.0
             let margenY:CGFloat = headerImage.frame.height/2 - TableFrameSize().sectionLabelHeight/2
             let title = UILabel(frame: CGRect(x: margenX, y: margenY, width: tableView.frame.width - margenX*2, height: TableFrameSize().sectionLabelHeight))
-//            title.text = Menu().name[section]
-//            title.font = UIFont.boldSystemFont(ofSize: 13.0)
             headerImage.addSubview(title)
         }
         if 0 != section {
@@ -169,7 +166,7 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         }
         if 1 == indexPath.section && 0 == indexPath.row {
             cardName.frame = commonFrame
-            cardName.font = UIFont.systemFont(ofSize: 13.0)
+            cardName.font = UIFont.systemFont(ofSize: 15.0)
             cardName.placeholder = "사용할 카드의 이름을 적어주세요."
             cardName.textAlignment = .center
             cell.infoLabel.addSubview(cardName)

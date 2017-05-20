@@ -60,6 +60,7 @@
 		037C814A1ECEDDA000D37ACD /* leatherBlack_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 037C81471ECEDDA000D37ACD /* leatherBlack_7.png */; };
 		037C814B1ECEDDA000D37ACD /* leatherBlack_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 037C81481ECEDDA000D37ACD /* leatherBlack_8.png */; };
 		037C814D1ECEE05B00D37ACD /* leatherBlack_9.png in Resources */ = {isa = PBXBuildFile; fileRef = 037C814C1ECEE05B00D37ACD /* leatherBlack_9.png */; };
+		037C81501ECEF62200D37ACD /* leather_patten.png in Resources */ = {isa = PBXBuildFile; fileRef = 037C814F1ECEF62200D37ACD /* leather_patten.png */; };
 		0391B8F81ECC0A5E000CBC58 /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0391B8F71ECC0A5E000CBC58 /* emptyImage.png */; };
 		0391B8F91ECC0A5E000CBC58 /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0391B8F71ECC0A5E000CBC58 /* emptyImage.png */; };
 		0391B8FA1ECC0A5E000CBC58 /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0391B8F71ECC0A5E000CBC58 /* emptyImage.png */; };
@@ -207,6 +208,7 @@
 		037C81471ECEDDA000D37ACD /* leatherBlack_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leatherBlack_7.png; sourceTree = "<group>"; };
 		037C81481ECEDDA000D37ACD /* leatherBlack_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leatherBlack_8.png; sourceTree = "<group>"; };
 		037C814C1ECEE05B00D37ACD /* leatherBlack_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leatherBlack_9.png; sourceTree = "<group>"; };
+		037C814F1ECEF62200D37ACD /* leather_patten.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leather_patten.png; sourceTree = "<group>"; };
 		0391B8F71ECC0A5E000CBC58 /* emptyImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyImage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -430,6 +432,7 @@
 				037C81481ECEDDA000D37ACD /* leatherBlack_8.png */,
 				037C81421ECED90300D37ACD /* leatherBlack_4.png */,
 				037C81441ECEDAE600D37ACD /* leatherBlack_5.png */,
+				037C814F1ECEF62200D37ACD /* leather_patten.png */,
 				0391B8F71ECC0A5E000CBC58 /* emptyImage.png */,
 				036C04961EC96293006DEBBA /* headerImage.png */,
 			);
@@ -711,6 +714,7 @@
 				0391B8F81ECC0A5E000CBC58 /* emptyImage.png in Resources */,
 				037C81411ECEA5DC00D37ACD /* leatherBlack.jpg in Resources */,
 				032FD9581EC6ED6400F488E9 /* LaunchScreen.storyboard in Resources */,
+				037C81501ECEF62200D37ACD /* leather_patten.png in Resources */,
 				037C81451ECEDAE600D37ACD /* leatherBlack_5.png in Resources */,
 				037C814B1ECEDDA000D37ACD /* leatherBlack_8.png in Resources */,
 				037C81491ECEDDA000D37ACD /* leatherBlack_6.png in Resources */,
