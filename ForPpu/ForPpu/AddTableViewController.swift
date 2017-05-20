@@ -13,6 +13,11 @@ struct Menu {
     let cardInfo = ["card name", "barcode image", "barcode number"]
 }
 
+struct Message {
+    let setCardName = "Write your card name."
+    let setCardNumber = "Write barcode number with no spaces."
+}
+
 /** MainTableViewController */
 class AddTableViewCell: UITableViewCell {
     @IBOutlet var infoLabel: UIView!
@@ -55,9 +60,9 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     
     func clickSaveButton() {
         self.cell.endEditing(true)
-        showAlert(message: "저장하시겠습니까?", haveCancel: true, doneHandler: { (UIAlertAction) in
+        showAlert(message: "Do you want to save?", haveCancel: true, doneHandler: { (UIAlertAction) in
             if true == (self.isEmpty()) {
-                self.showAlert(message: "빈칸없이 작성해주세요!", haveCancel: false, doneHandler: nil, cancelHandler: nil)
+                self.showAlert(message: "Fill in the blanks without omission!", haveCancel: false, doneHandler: nil, cancelHandler: nil)
                 return;
             }
             self.dataRepository.set(cardID: self.cardID, cardName: self.cardName.text!, cardNumber: self.barCodeNumber.text!)
@@ -161,13 +166,18 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         let textFieldwidth = cellWidth * 0.8
         let margen = (cellWidth - textFieldwidth) * 0.5
         let commonFrame = CGRect(x: margen, y: 0, width: textFieldwidth, height: self.cell.infoLabel.frame.height)
+        
         if 0 == indexPath.section {
             cell.backgroundColor = colorManager.getRainbow(section: cardID)
         }
         if 1 == indexPath.section && 0 == indexPath.row {
             cardName.frame = commonFrame
-            cardName.font = UIFont.systemFont(ofSize: 15.0)
-            cardName.placeholder = "사용할 카드의 이름을 적어주세요."
+            cardName.font = UIFont.boldSystemFont(ofSize: 23.0)
+            let attributes = [
+                NSForegroundColorAttributeName: UIColor.lightGray,
+                NSFontAttributeName : UIFont.systemFont(ofSize: 15.0)
+            ]
+            cardName.attributedPlaceholder = NSAttributedString(string: Message().setCardName, attributes:attributes)
             cardName.textAlignment = .center
             cell.infoLabel.addSubview(cardName)
         }
@@ -179,14 +189,18 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         if 1 == indexPath.section && 2 == indexPath.row {
             barCodeNumber.frame = commonFrame
             barCodeNumber.textAlignment = .center
-            barCodeNumber.font = UIFont.systemFont(ofSize: 13.0)
-            barCodeNumber.placeholder = "띄어쓰기 없이 바코드 번호를 적어주세요."
+            barCodeNumber.font = UIFont.systemFont(ofSize: 18.0)
+            let attributes = [
+                NSForegroundColorAttributeName: UIColor.lightGray,
+                NSFontAttributeName : UIFont.systemFont(ofSize: 12.0)
+            ]
+            barCodeNumber.attributedPlaceholder = NSAttributedString(string: Message().setCardNumber, attributes:attributes)
             barCodeNumber.keyboardType = .numberPad
             cell.infoLabel.addSubview(barCodeNumber)
         }
         if 2 == indexPath.section {
             let leatherImage = UIImageView(frame: cell.bounds)
-            leatherImage.image = UIImage(named: "leatherBlack_7")
+            leatherImage.image = UIImage(named: "leatherBlack.jpg")
             leatherImage.contentMode = .topRight
             cell.addSubview(leatherImage)
         }

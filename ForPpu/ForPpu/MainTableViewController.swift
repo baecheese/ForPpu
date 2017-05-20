@@ -77,7 +77,7 @@ class MainTableViewController: UITableViewController {
         let title = UILabel(frame: CGRect(x: margenX, y: margenY, width: tableView.frame.width - margenX*2, height: TableFrameSize().sectionLabelHeight))
         let nowCardInfo = dataRepository.get(cardID: section)
         title.text = nowCardInfo?.0
-        title.font = UIFont.boldSystemFont(ofSize: 15.0)
+        title.font = UIFont.boldSystemFont(ofSize: 14.0)
         headerImage.addSubview(title)
         
         if 0 != section {
@@ -99,7 +99,7 @@ class MainTableViewController: UITableViewController {
         let nowCardInfo = dataRepository.get(cardID: indexPath.section)
         if nil == nowCardInfo {
 //            cell.name.text = "card"
-            cell.info.text = "입력된 정보가 없습니다"
+            cell.info.text = "No information stored for your card."
             cell.barcodeImage.image = nil
             return cell
         }

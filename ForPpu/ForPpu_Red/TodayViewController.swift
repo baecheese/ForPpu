@@ -10,7 +10,7 @@ import UIKit
 import NotificationCenter
 
 struct Message {
-    let empty = "저장된 바코드가 없습니다."
+    let empty = "No barcode number stored."
 }
 
 class TodayViewController: UIViewController, NCWidgetProviding {
