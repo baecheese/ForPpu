@@ -10,7 +10,9 @@ import UIKit
 
 class FullScreenImageViewController: UIViewController {
     
+    @IBOutlet var backView: UIView!
     @IBOutlet var fullImage: UIImageView!
+    @IBOutlet var barcodeNumber: UILabel!
     
     let dataRepository = DataRepository.sharedInstance
 
@@ -21,11 +23,15 @@ class FullScreenImageViewController: UIViewController {
     
     func setFullImage() {
         let barcode = SharedMemoryContext.get(key: Key().barcodeNumber) as? String
-        print(barcode)
-        //        fullImage.image = UIImage(named: "emptyImage.png")
-        fullImage.image = dataRepository.showBarCodeImage(cardNumber: barcode!)
+        if true == barcode?.isEmpty {
+            fullImage.image = UIImage(named: "emptyImage.png")
+        }
+        else {
+            fullImage.image = dataRepository.showBarCodeImage(cardNumber: barcode!)
+        }
         fullImage.contentMode = .scaleAspectFit
-        fullImage.transform = fullImage.transform.rotated(by: CGFloat(M_PI_2))
+        
+        backView.transform = backView.transform.rotated(by: CGFloat(M_PI_2))
     }
     
 
