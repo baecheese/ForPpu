@@ -25,9 +25,11 @@ class FullScreenImageViewController: UIViewController {
         let barcode = SharedMemoryContext.get(key: Key().barcodeNumber) as? String
         if true == barcode?.isEmpty {
             fullImage.image = UIImage(named: "emptyImage.png")
+            barcodeNumber.text = "바코드 넘버가 업습니다."
         }
         else {
             fullImage.image = dataRepository.showBarCodeImage(cardNumber: barcode!)
+            barcodeNumber.text = barcode
         }
         fullImage.contentMode = .scaleAspectFit
         
