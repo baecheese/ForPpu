@@ -150,7 +150,6 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         setCellDetailInfo(cell: cell, indexPath: indexPath)
         if true == haveInfo() {
             if 1 == indexPath.section && 1 == indexPath.row {
-//                barCodeImage.image = dataRepository.getBardCodeImage(cardID: cardID)
                 let barcodeNumber = dataRepository.get(cardID: cardID)?.1
                 barCodeImage.image = dataRepository.showBarCodeImage(cardNumber: barcodeNumber!)
             }
@@ -203,6 +202,18 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
             leatherImage.image = UIImage(named: "leatherBlack.jpg")
             leatherImage.contentMode = .topRight
             cell.addSubview(leatherImage)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // barcode image
+        if 1 == indexPath.section && 1 == indexPath.row {
+            
+        }
+        // leather
+        if indexPath.section == 2 {
+            cardName.endEditing(true)
+            barCodeNumber.endEditing(true)
         }
     }
     
