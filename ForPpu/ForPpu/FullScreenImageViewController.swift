@@ -9,14 +9,25 @@
 import UIKit
 
 class FullScreenImageViewController: UIViewController {
+    
+    @IBOutlet var fullImage: UIImageView!
+    
+    let dataRepository = DataRepository.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        barCodeImage = UIImageView(frame: commonFrame)
-        barCodeImage.image = UIImage(named: "emptyImage.png")
-        cell.addSubview(barCodeImage)
+        setFullImage()
     }
+    
+    func setFullImage() {
+        let barcode = SharedMemoryContext.get(key: Key().barcodeNumber) as? String
+        print(barcode)
+        //        fullImage.image = UIImage(named: "emptyImage.png")
+        fullImage.image = dataRepository.showBarCodeImage(cardNumber: barcode!)
+        fullImage.contentMode = .scaleAspectFit
+        fullImage.transform = fullImage.transform.rotated(by: CGFloat(M_PI_2))
+    }
+    
 
     @IBAction func goBack(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
