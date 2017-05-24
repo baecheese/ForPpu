@@ -8,46 +8,43 @@
 
 import UIKit
 
-/** 사용중인 key : "cardID"(Int) = section */
+/** 사용중인 key : "cardID"(Int) = section, "barcodeNumber"(Int) */
 
 struct Key {
     let cardID = "cardID"
+    let barcodeNumber = "barcodeNumber"
 }
 
 public struct SharedMemoryContext {
     
     private static var context:[String:Any?] = Dictionary()
     
-    public static func getCardID() -> Any? {
-        let cardID = Key().cardID
-        if context[cardID] == nil {
+    public static func get(key:String) -> Any? {
+        if context[key] == nil {
             return nil
         }
-        return context[cardID]!
+        return context[key]!
     }
     
-    public static func setCardID(setValue:Any) {
-        let cardID = Key().cardID
-        if context[cardID] != nil {
-            changeValue(value: setValue)
+    public static func set(key:String, setValue:Any) {
+        if context[key] != nil {
+            changeValue(key: key, value: setValue)
             return;
         }
-        context.updateValue(setValue, forKey: cardID)
+        context.updateValue(setValue, forKey: key)
     }
     
-    public static func setAndGetCardID(setValue:Any) -> Any {
-        let cardID = Key().cardID
-        if context[cardID] != nil {
-            changeValue(value: setValue)
+    public static func setAndGet(key:String, setValue:Any) -> Any {
+        if context[key] != nil {
+            changeValue(key: key, value: setValue)
             return setValue
         }
-        context.updateValue(setValue, forKey: cardID)
+        context.updateValue(setValue, forKey: key)
         return setValue
     }
     
-    private static func changeValue(value:Any) {
-        let cardID = Key().cardID
-        context[cardID] = value
+    private static func changeValue(key:String, value:Any) {
+        context[key] = value
     }
     
 }

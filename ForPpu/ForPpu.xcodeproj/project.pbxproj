@@ -16,6 +16,7 @@
 		032FD9601EC6EDF000F488E9 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD95F1EC6EDF000F488E9 /* MainTableViewController.swift */; };
 		032FD9621EC6F08A00F488E9 /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9611EC6F08A00F488E9 /* AddTableViewController.swift */; };
 		032FD9A21EC6FD2900F488E9 /* SharedMemoryContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */; };
+		034743D51ED531AA0039DABE /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034743D41ED531AA0039DABE /* FullScreenImageViewController.swift */; };
 		036C04951EC94C56006DEBBA /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C04941EC94C56006DEBBA /* ColorManager.swift */; };
 		036C04971EC96293006DEBBA /* headerImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 036C04961EC96293006DEBBA /* headerImage.png */; };
 		036C04C61EC9B40A006DEBBA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032FD9691EC6F69100F488E9 /* NotificationCenter.framework */; };
@@ -151,6 +152,7 @@
 		032FD9611EC6F08A00F488E9 /* AddTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
 		032FD9691EC6F69100F488E9 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedMemoryContext.swift; sourceTree = "<group>"; };
+		034743D41ED531AA0039DABE /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
 		036C04941EC94C56006DEBBA /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		036C04961EC96293006DEBBA /* headerImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headerImage.png; sourceTree = "<group>"; };
 		036C04C51EC9B40A006DEBBA /* ForPpu_Blue.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ForPpu_Blue.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -306,6 +308,7 @@
 				032FD94D1EC6ED6400F488E9 /* AppDelegate.swift */,
 				032FD95F1EC6EDF000F488E9 /* MainTableViewController.swift */,
 				032FD9611EC6F08A00F488E9 /* AddTableViewController.swift */,
+				034743D41ED531AA0039DABE /* FullScreenImageViewController.swift */,
 				0328AB871EC72CE200D2C681 /* DataRepository.swift */,
 				0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */,
 				032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */,
@@ -776,6 +779,7 @@
 				036C04951EC94C56006DEBBA /* ColorManager.swift in Sources */,
 				032FD9A21EC6FD2900F488E9 /* SharedMemoryContext.swift in Sources */,
 				032FD9601EC6EDF000F488E9 /* MainTableViewController.swift in Sources */,
+				034743D51ED531AA0039DABE /* FullScreenImageViewController.swift in Sources */,
 				032FD94E1EC6ED6400F488E9 /* AppDelegate.swift in Sources */,
 				0328AB861EC72CAA00D2C681 /* WedgetDataCenter.swift in Sources */,
 				032FD9621EC6F08A00F488E9 /* AddTableViewController.swift in Sources */,
