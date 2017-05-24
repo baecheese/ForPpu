@@ -7,3 +7,5 @@
 */
 
 "NoCardInfo" = "저장된 카드 정보가 없습니다.";
+"SetCardName" = "카드 이름을 적어주세요";
+"SetCardNumber" = "띄어쓰기 없이 바코드 번호를 적어주세요";

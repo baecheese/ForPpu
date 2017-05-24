@@ -17,7 +17,7 @@
 		032FD9621EC6F08A00F488E9 /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9611EC6F08A00F488E9 /* AddTableViewController.swift */; };
 		032FD9A21EC6FD2900F488E9 /* SharedMemoryContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */; };
 		034743D51ED531AA0039DABE /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034743D41ED531AA0039DABE /* FullScreenImageViewController.swift */; };
-		034743F01ED5724F0039DABE /* Korean.strings in Resources */ = {isa = PBXBuildFile; fileRef = 034743EF1ED5724F0039DABE /* Korean.strings */; };
+		034744161ED579BF0039DABE /* Korean.strings in Resources */ = {isa = PBXBuildFile; fileRef = 034744181ED579BF0039DABE /* Korean.strings */; };
 		036C04951EC94C56006DEBBA /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C04941EC94C56006DEBBA /* ColorManager.swift */; };
 		036C04971EC96293006DEBBA /* headerImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 036C04961EC96293006DEBBA /* headerImage.png */; };
 		036C04C61EC9B40A006DEBBA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032FD9691EC6F69100F488E9 /* NotificationCenter.framework */; };
@@ -171,7 +171,7 @@
 		034743EA1ED56CAC0039DABE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainInterface.strings; sourceTree = "<group>"; };
 		034743EC1ED56CB10039DABE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainInterface.strings; sourceTree = "<group>"; };
 		034743EE1ED56CBA0039DABE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainInterface.strings; sourceTree = "<group>"; };
-		034743EF1ED5724F0039DABE /* Korean.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Korean.strings; sourceTree = "<group>"; };
+		034744171ED579BF0039DABE /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Korean.strings; sourceTree = "<group>"; };
 		036C04941EC94C56006DEBBA /* ColorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		036C04961EC96293006DEBBA /* headerImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headerImage.png; sourceTree = "<group>"; };
 		036C04C51EC9B40A006DEBBA /* ForPpu_Blue.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ForPpu_Blue.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -332,7 +332,7 @@
 				0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */,
 				032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */,
 				036C04941EC94C56006DEBBA /* ColorManager.swift */,
-				034743EF1ED5724F0039DABE /* Korean.strings */,
+				034744181ED579BF0039DABE /* Korean.strings */,
 				032FD9511EC6ED6400F488E9 /* Main.storyboard */,
 				032FD9541EC6ED6400F488E9 /* Assets.xcassets */,
 				032FD9561EC6ED6400F488E9 /* LaunchScreen.storyboard */,
@@ -722,7 +722,7 @@
 				032FD9551EC6ED6400F488E9 /* Assets.xcassets in Resources */,
 				03D3166D1ED0271C0063DA3D /* leatherBlack.jpg in Resources */,
 				032FD9531EC6ED6400F488E9 /* Main.storyboard in Resources */,
-				034743F01ED5724F0039DABE /* Korean.strings in Resources */,
+				034744161ED579BF0039DABE /* Korean.strings in Resources */,
 				036C04971EC96293006DEBBA /* headerImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -929,6 +929,14 @@
 				034743D71ED56BCC0039DABE /* ko */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		034744181ED579BF0039DABE /* Korean.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				034744171ED579BF0039DABE /* ko */,
+			);
+			name = Korean.strings;
 			sourceTree = "<group>";
 		};
 		036C04CA1EC9B40A006DEBBA /* MainInterface.storyboard */ = {

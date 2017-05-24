@@ -14,8 +14,8 @@ struct Menu {
 }
 
 struct Message {
-    let setCardName = "Write your card name."
-    let setCardNumber = "Write barcode number with no spaces."
+    let setCardName = NSLocalizedString("SetCardName", tableName: "Korean", value: "Write your card name.", comment: "카드 이름 쓰라는 설명")
+    let setCardNumber = NSLocalizedString("SetCardNumber", tableName: "Korean", value: "Write barcode number with no spaces.", comment: "바코드 번호 쓰라는 설명")
 }
 
 /** MainTableViewController */
