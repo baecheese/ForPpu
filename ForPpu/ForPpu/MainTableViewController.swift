@@ -99,7 +99,8 @@ class MainTableViewController: UITableViewController {
         let nowCardInfo = dataRepository.get(cardID: indexPath.section)
         if nil == nowCardInfo {
 //            cell.name.text = "card"
-            cell.info.text = "No information stored for your card."
+            let cardInfo = NSLocalizedString("NoCardInfo", tableName: "Korean", value: "No information stored for your card.", comment: "카드 없음 설명")
+            cell.info.text = cardInfo
             cell.barcodeImage.image = nil
             return cell
         }

@@ -208,11 +208,11 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // barcode image
         if 1 == indexPath.section && 1 == indexPath.row {
-            SharedMemoryContext.set(key: Key().barcodeNumber, setValue: barCodeNumber.text as Any)
-            let barcodeFullScreen = self.storyboard?.instantiateViewController(withIdentifier: "FullScreenImageViewController") as! FullScreenImageViewController
-            self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
-            self.modalPresentationStyle = .currentContext
-            self.present(barcodeFullScreen, animated: true, completion: nil)
+//            SharedMemoryContext.set(key: Key().barcodeNumber, setValue: barCodeNumber.text as Any)
+//            let barcodeFullScreen = self.storyboard?.instantiateViewController(withIdentifier: "FullScreenImageViewController") as! FullScreenImageViewController
+//            self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
+//            self.modalPresentationStyle = .currentContext
+//            self.present(barcodeFullScreen, animated: true, completion: nil)
         }
         // leather
         if indexPath.section == 2 {
