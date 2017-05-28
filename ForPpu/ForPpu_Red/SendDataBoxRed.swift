@@ -15,10 +15,10 @@ struct GroupKeys {
     let cardName = "cardName"
     let cardNumber = "cardNumber"
     let image = "barCodeImage"
+    let selectBarCode = "selectBarCode"
 }
 
 class SendDataBoxRed: NSObject {
-    
     
     private override init() {
         super.init()
@@ -67,6 +67,10 @@ class SendDataBoxRed: NSObject {
     
     func getMainColor() -> UIColor {
         return fromRGB(rgbValue: 0xF15A5A)
+    }
+    
+    func setSelectBarcode() {
+        userDefault?.set(getCardInfo()?.1, forKey: GroupKeys().selectBarCode)
     }
 }
 

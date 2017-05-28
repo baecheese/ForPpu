@@ -42,6 +42,7 @@ class MainTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         setNavigationColor()
         tableView.reloadData()
+        showFullScreenBarcode()
     }
 
     override func didReceiveMemoryWarning() {
@@ -138,6 +139,14 @@ class MainTableViewController: UITableViewController {
     func setNavigationColor() {
         navigationController?.navigationBar.barTintColor = colorManager.getMainColor()
         navigationController?.navigationBar.tintColor = colorManager.getTint()
+    }
+    
+    func showFullScreenBarcode() {
+        if nil != dataRepository.getSelectWidgetInfo() {
+            let fullScreenBarcodeImageVC = self.storyboard?.instantiateViewController(withIdentifier: "FullScreenImageViewController") as! FullScreenImageViewController
+            fullScreenBarcodeImageVC.modalPresentationStyle = .overCurrentContext
+            present(fullScreenBarcodeImageVC, animated: true, completion: nil)
+        }
     }
     
 }

@@ -55,5 +55,12 @@ class DataRepository: NSObject {
         wedgetDataCenter.deleteCardInfo(cardID: cardID)
     }
     
+    func getSelectWidgetInfo() -> String? {
+        return wedgetDataCenter.getFullScreenBarcode()
+    }
+    
+    func deleteBeforeSelectCardInfo() {
+        wedgetDataCenter.deleteFullScreenBarcode()
+    }
     
 }

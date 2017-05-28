@@ -8,12 +8,13 @@
 
 import UIKit
 
-/** 위젯에 넘기는 용으로 쓰는 것 */
+/** 위젯과의 데이터 교류 용 */
 struct GroupKeys {
     let suiteName = "group.com.baecheese.app.forppu"
     let cardName = "cardName"
     let cardNumber = "cardNumber"
     let image = "barCodeImage"
+    let selectBarCode = "selectBarCode"
 }
 
 class WedgetDataCenter: NSObject {
@@ -74,5 +75,14 @@ class WedgetDataCenter: NSObject {
         return [cardNameKey, cardNumberKey, barCodeImageKey]
     }
     
+    func getFullScreenBarcode() -> String? {
+        return defaults?.value(forKey: keys.selectBarCode) as? String
+    }
+    
+    func deleteFullScreenBarcode() {
+        if nil != getFullScreenBarcode() {
+            defaults?.set(nil, forKey: keys.selectBarCode)
+        }
+    }
     
 }

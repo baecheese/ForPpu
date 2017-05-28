@@ -26,6 +26,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         view.backgroundColor = .white
         setCardInfo()
         setBarCodeImage()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,6 +79,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     @IBAction func goToAppFromRed(_ sender: UITapGestureRecognizer) {
+        sendDataBox.setSelectBarcode()
         extensionContext?.open(URL(string: "forPpu://")! , completionHandler: nil)
     }
     

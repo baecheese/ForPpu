@@ -19,10 +19,11 @@ class FullScreenImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setFullImage()
+        dataRepository.deleteBeforeSelectCardInfo()
     }
     
     func setFullImage() {
-        let barcode = SharedMemoryContext.get(key: Key().barcodeNumber) as? String
+        let barcode = dataRepository.getSelectWidgetInfo()
         if true == barcode?.isEmpty {
             fullImage.image = UIImage(named: "emptyImage.png")
             barcodeNumber.text = "바코드 넘버가 업습니다."
