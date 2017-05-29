@@ -131,7 +131,8 @@ class MainTableViewController: UITableViewController {
     }
     
     func moveEditPage(section:Int) {
-        SharedMemoryContext.set(key: Key().cardID, setValue: section)
+        let cardId = "\(section)"
+        SharedMemoryContext.set(key: Key().cardID, setValue: cardId)
         let addPage = self.storyboard?.instantiateViewController(withIdentifier: "AddTableViewController") as! AddTableViewController
         self.navigationController?.pushViewController(addPage, animated: true)
     }

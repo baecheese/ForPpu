@@ -12,12 +12,15 @@ class FullScreenImageViewController: UIViewController {
     
     @IBOutlet var backView: UIView!
     @IBOutlet var fullImage: UIImageView!
+    @IBOutlet var cardName: UILabel!
     @IBOutlet var barcodeNumber: UILabel!
     
     let dataRepository = DataRepository.sharedInstance
+    let colorManager = ColorManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = colorManager.getMainColor()
         setFullImage()
     }
     
@@ -35,10 +38,13 @@ class FullScreenImageViewController: UIViewController {
     }
     
     func changeBarcodeImage(cardInfo:(String, String)) {
-        let cardName = cardInfo.0
-        let cardNumber = cardInfo.1
-        fullImage.image = dataRepository.showBarCodeImage(cardNumber: cardNumber)
-        barcodeNumber.text = cardName
+        let selectCardId = (dataRepository.getSelectWidgetCardId() as NSString?)?.integerValue
+        let selectCardName = cardInfo.0
+        let selectCardNumber = cardInfo.1
+        cardName.text = selectCardName
+        cardName.backgroundColor = colorManager.getRainbow(section: selectCardId!)
+        fullImage.image = dataRepository.showBarCodeImage(cardNumber: selectCardNumber)
+        barcodeNumber.text = selectCardNumber
     }
     
     private func setSharedContext() {
@@ -48,7 +54,17 @@ class FullScreenImageViewController: UIViewController {
     @IBAction func goBack(_ sender: UIButton) {
         dataRepository.deleteBeforeSelectCardInfo()
         SharedMemoryContext.set(key: "isFullScreen", setValue: false)
-        self.dismiss(animated: true, completion: nil)
+        dismissAnimation()
+    }
+    
+    private func dismissAnimation() {
+        let transition: CATransition = CATransition()
+        transition.duration = 0.5
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        transition.type = kCATransitionReveal
+        transition.subtype = kCATransitionFromRight
+        self.view.window!.layer.add(transition, forKey: nil)
+        self.dismiss(animated: false, completion: nil)
     }
     
     
