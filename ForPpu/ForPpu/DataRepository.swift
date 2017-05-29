@@ -18,18 +18,18 @@ class DataRepository: NSObject {
     let wedgetDataCenter = WedgetDataCenter()
     let keys = GroupKeys()
     
-    func set(cardID:Int, cardName:String, cardNumber:String) {
+    func set(cardID:String, cardName:String, cardNumber:String) {
         wedgetDataCenter.set(cardID: cardID, cardName: cardName, cardNumber: cardNumber)
     }
     
     /** key: cardID value: (cardName, cardNumber)? */
-    func setAndGet(cardID:Int, cardName:String, cardNumber:String) -> (String, String)? {
+    func setAndGet(cardID:String, cardName:String, cardNumber:String) -> (String, String)? {
         wedgetDataCenter.set(cardID: cardID, cardName: cardName, cardNumber: cardNumber)
         return get(cardID: cardID)
     }
     
     /** key: cardID value: (cardName, cardNumber)? */
-    func get(cardID:Int) -> (String, String)? {
+    func get(cardID:String) -> (String, String)? {
         let data = wedgetDataCenter.get(cardID: cardID)
         let cardName = data?.0
         let cardNumber = data?.1
@@ -51,12 +51,20 @@ class DataRepository: NSObject {
         return UIImage(ciImage: (filter?.outputImage)!)
     }
     
-    func delete(cardID:Int) {
+    func delete(cardID:String) {
         wedgetDataCenter.deleteCardInfo(cardID: cardID)
     }
-    
-    func getSelectWidgetInfo() -> String? {
-        return wedgetDataCenter.getFullScreenBarcode()
+
+    /** key: cardID value: (cardName, cardNumber)? */
+    func getSelectWidgetInfo() -> (String, String)? {
+        let selectCardID = wedgetDataCenter.getFullScreenBarcode()
+        if nil == selectCardID {
+            return nil
+        }
+        let data = wedgetDataCenter.get(cardID: selectCardID!)
+        let cardName = data?.0
+        let cardNumber = data?.1
+        return (cardName!, cardNumber!)
     }
     
     func deleteBeforeSelectCardInfo() {

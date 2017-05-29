@@ -14,7 +14,7 @@ struct GroupKeys {
     let cardName = "cardName"
     let cardNumber = "cardNumber"
     let image = "barCodeImage"
-    let selectBarCode = "selectBarCode"
+    let selectCardId = "selectCardId"
 }
 
 class WedgetDataCenter: NSObject {
@@ -27,7 +27,7 @@ class WedgetDataCenter: NSObject {
     let keys = GroupKeys()
     
     /** let key = "\(keys.cardID)_\(keys.cardName)"*/
-    func set(cardID:Int, cardName:String, cardNumber:String) {
+    func set(cardID:String, cardName:String, cardNumber:String) {
         let keys = getKeys(cardID: cardID)
         let newCardName = cardName
         let newCardNumber = cardNumber
@@ -43,7 +43,7 @@ class WedgetDataCenter: NSObject {
     }
     
     
-    func setAndGet(cardID:Int, cardName:String, cardNumber:String) -> (String, String)?  {
+    func setAndGet(cardID:String, cardName:String, cardNumber:String) -> (String, String)?  {
         let keys = getKeys(cardID: cardID)
         defaults?.set(cardName, forKey: keys[0])
         defaults?.set(cardNumber, forKey: keys[1])
@@ -52,7 +52,7 @@ class WedgetDataCenter: NSObject {
     }
     
     /** (cardName, cardNumber) */
-    func get(cardID:Int) -> (String, String)? {
+    func get(cardID:String) -> (String, String)? {
         let keys = getKeys(cardID: cardID)
         let cardName = defaults?.value(forKey: keys[0])
         let cardNumber = defaults?.value(forKey: keys[1])
@@ -62,13 +62,13 @@ class WedgetDataCenter: NSObject {
         return nil
     }
     
-    func deleteCardInfo(cardID:Int) {
+    func deleteCardInfo(cardID:String) {
         defaults?.removeObject(forKey: getKeys(cardID: cardID)[0])
         defaults?.removeObject(forKey: getKeys(cardID: cardID)[1])
     }
     
     /** 0:이름키, 1:번호키, 2:이미지키 */
-    private func getKeys(cardID:Int) -> [String] {
+    private func getKeys(cardID:String) -> [String] {
         let cardNameKey = "\(cardID)_\(keys.cardName)"
         let cardNumberKey = "\(cardID)_\(keys.cardNumber)"
         let barCodeImageKey = "\(cardID)_\(keys.image)"
@@ -76,12 +76,12 @@ class WedgetDataCenter: NSObject {
     }
     
     func getFullScreenBarcode() -> String? {
-        return defaults?.value(forKey: keys.selectBarCode) as? String
+        return defaults?.value(forKey: keys.selectCardId) as? String
     }
     
     func deleteFullScreenBarcode() {
         if nil != getFullScreenBarcode() {
-            defaults?.set(nil, forKey: keys.selectBarCode)
+            defaults?.set(nil, forKey: keys.selectCardId)
         }
     }
     

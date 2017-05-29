@@ -26,7 +26,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         view.backgroundColor = .white
         setCardInfo()
         setBarCodeImage()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,27 +54,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             redBarCodeImage.contentMode = .scaleToFill
             redBarCodeImage.image = sendDataBox.showBarCode(cardNumber: barCodeNumber!)
         }
-    }
-    
-    // ing 그룹에 저장되있는게 위젯으로 보이는 거랑 같은지 - 같으면 false / 다르면 change(true)
-    func isChangeCardInfo() -> Bool {
-        let widgetCardInfo = (redTitleLabel.text, redNumberLabel.text)
-        let newCardInfo = sendDataBox.getCardInfo()
-        
-        if widgetCardInfo.0 == newCardInfo?.0 || widgetCardInfo.1 == newCardInfo?.1 || true == isEmptyInGroupDefaultAndWidget() {
-            print("dont chnage")
-            return false
-        }
-        print("change")
-        return true
-    }
-    
-    func isEmptyInGroupDefaultAndWidget() -> Bool {
-        let newCardInfo = sendDataBox.getCardInfo()
-        if newCardInfo == nil && (redNumberLabel.text == Message().empty || redNumberLabel.text == "number") {
-            return true
-        }
-        return false
     }
     
     @IBAction func goToAppFromRed(_ sender: UITapGestureRecognizer) {

@@ -15,7 +15,7 @@ struct GroupKeys {
     let cardName = "cardName"
     let cardNumber = "cardNumber"
     let image = "barCodeImage"
-    let selectBarCode = "selectBarCode"
+    let selectCardId = "selectCardId"
 }
 
 class SendDataBoxRed: NSObject {
@@ -70,7 +70,7 @@ class SendDataBoxRed: NSObject {
     }
     
     func setSelectBarcode() {
-        userDefault?.set(getCardInfo()?.1, forKey: GroupKeys().selectBarCode)
+        userDefault?.set(GroupKeys().cardID, forKey: GroupKeys().selectCardId)
     }
 }
 

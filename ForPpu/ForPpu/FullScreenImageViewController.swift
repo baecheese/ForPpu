@@ -15,30 +15,39 @@ class FullScreenImageViewController: UIViewController {
     @IBOutlet var barcodeNumber: UILabel!
     
     let dataRepository = DataRepository.sharedInstance
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setFullImage()
-        dataRepository.deleteBeforeSelectCardInfo()
     }
     
-    func setFullImage() {
-        let barcode = dataRepository.getSelectWidgetInfo()
-        if true == barcode?.isEmpty {
-            fullImage.image = UIImage(named: "emptyImage.png")
-            barcodeNumber.text = "바코드 넘버가 업습니다."
-        }
-        else {
-            fullImage.image = dataRepository.showBarCodeImage(cardNumber: barcode!)
-            barcodeNumber.text = barcode
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        setSharedContext()
+    }
+    
+    private func setFullImage() {
+        let cardInfo = dataRepository.getSelectWidgetInfo()
+        changeBarcodeImage(cardInfo: cardInfo!)
         fullImage.contentMode = .scaleAspectFit
-        
-        backView.transform = backView.transform.rotated(by: CGFloat(M_PI_2))
+        if true != SharedMemoryContext.get(key: "isFullScreen") as? Bool {
+            backView.transform = backView.transform.rotated(by: CGFloat(M_PI_2))
+        }
     }
     
+    func changeBarcodeImage(cardInfo:(String, String)) {
+        let cardName = cardInfo.0
+        let cardNumber = cardInfo.1
+        fullImage.image = dataRepository.showBarCodeImage(cardNumber: cardNumber)
+        barcodeNumber.text = cardName
+    }
+    
+    private func setSharedContext() {
+        SharedMemoryContext.set(key: "isFullScreen", setValue: true)
+    }
 
     @IBAction func goBack(_ sender: UIButton) {
+        dataRepository.deleteBeforeSelectCardInfo()
+        SharedMemoryContext.set(key: "isFullScreen", setValue: false)
         self.dismiss(animated: true, completion: nil)
     }
     

@@ -28,7 +28,7 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     let colorManager = ColorManager.sharedInstance
     let dataRepository = DataRepository.sharedInstance
     var cell = AddTableViewCell()
-    let cardID = SharedMemoryContext.get(key: Key().cardID) as! Int
+    let cardID = SharedMemoryContext.get(key: Key().cardID) as! String
     var cardName = UITextField()
     var barCodeNumber = UITextField()
     var cardInfo = [String]()
@@ -167,7 +167,8 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         let commonFrame = CGRect(x: margen, y: 0, width: textFieldwidth, height: self.cell.infoLabel.frame.height)
         
         if 0 == indexPath.section {
-            cell.backgroundColor = colorManager.getRainbow(section: cardID)
+            let id = Int(cardID)
+            cell.backgroundColor = colorManager.getRainbow(section: id!)
         }
         if 1 == indexPath.section && 0 == indexPath.row {
             cardName.frame = commonFrame

@@ -45,15 +45,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    let dataRepository = DataRepository.sharedInstance
+    // modal로 한 번 올린 후에는 pop 이후에도 계속 재사용 (viewDidLoad 거치지 않음)
+    let fullScreenBarcodeImageVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FullScreenImageViewController") as! FullScreenImageViewController
+    
     func showFullScreenBarcode() {
-        let dataRepository = DataRepository.sharedInstance
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if nil != dataRepository.getSelectWidgetInfo() {
-            let fullScreenBarcodeImageVC = storyboard.instantiateViewController(withIdentifier: "FullScreenImageViewController") as! FullScreenImageViewController
-            fullScreenBarcodeImageVC.modalPresentationStyle = .overCurrentContext
-            self.window?.rootViewController?.present(fullScreenBarcodeImageVC, animated: true, completion: nil)
+            if true != SharedMemoryContext.get(key: "isFullScreen") as? Bool {
+                fullScreenBarcodeImageVC.modalPresentationStyle = .overCurrentContext
+                self.window?.rootViewController?.present(fullScreenBarcodeImageVC, animated: true, completion: nil)
+            }
+            fullScreenBarcodeImageVC.changeBarcodeImage(cardInfo: dataRepository.getSelectWidgetInfo()!)
         }
     }
     
 }
-

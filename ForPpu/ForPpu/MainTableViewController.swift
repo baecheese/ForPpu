@@ -75,7 +75,8 @@ class MainTableViewController: UITableViewController {
         let margenX:CGFloat = 15.0
         let margenY:CGFloat = headerImage.frame.height/2 - TableFrameSize().sectionLabelHeight/2
         let title = UILabel(frame: CGRect(x: margenX, y: margenY, width: tableView.frame.width - margenX*2, height: TableFrameSize().sectionLabelHeight))
-        let nowCardInfo = dataRepository.get(cardID: section)
+        let cardID = String(section)
+        let nowCardInfo = dataRepository.get(cardID: cardID)
         title.text = nowCardInfo?.0
         title.font = UIFont.boldSystemFont(ofSize: 14.0)
         headerImage.addSubview(title)
@@ -96,7 +97,7 @@ class MainTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Card", for: indexPath) as! MainTableViewCell
-        let nowCardInfo = dataRepository.get(cardID: indexPath.section)
+        let nowCardInfo = dataRepository.get(cardID: String(indexPath.section))
         if nil == nowCardInfo {
             let cardInfo = NSLocalizedString("NoCardInfo", tableName: "Korean", value: "No information stored for your card.", comment: "카드 없음 설명")
             cell.info.text = cardInfo
@@ -119,7 +120,7 @@ class MainTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .default, title: "delete") { action, index in
-            self.dataRepository.delete(cardID: indexPath.section)
+            self.dataRepository.delete(cardID: String(indexPath.section))
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
