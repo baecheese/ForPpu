@@ -41,11 +41,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        let navigationController = self.window?.rootViewController as? UINavigationController
-        navigationController?.popToRootViewController(animated: true)
+        showFullScreenBarcode()
         return true
     }
     
+    func showFullScreenBarcode() {
+        let dataRepository = DataRepository.sharedInstance
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if nil != dataRepository.getSelectWidgetInfo() {
+            let fullScreenBarcodeImageVC = storyboard.instantiateViewController(withIdentifier: "FullScreenImageViewController") as! FullScreenImageViewController
+            fullScreenBarcodeImageVC.modalPresentationStyle = .overCurrentContext
+            self.window?.rootViewController?.present(fullScreenBarcodeImageVC, animated: true, completion: nil)
+        }
+    }
     
 }
 
