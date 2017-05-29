@@ -45,6 +45,8 @@ class FullScreenImageViewController: UIViewController {
         cardName.backgroundColor = colorManager.getRainbow(section: selectCardId!)
         fullImage.image = dataRepository.showBarCodeImage(cardNumber: selectCardNumber)
         barcodeNumber.text = selectCardNumber
+        
+        UIScreen.main.brightness = CGFloat(0.5)//기기 테스트 해봐야함 ing
     }
     
     private func setSharedContext() {

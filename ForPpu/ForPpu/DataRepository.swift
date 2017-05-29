@@ -58,12 +58,12 @@ class DataRepository: NSObject {
     /** key: cardID value: (cardName, cardNumber)? */
     func getSelectWidgetInfo() -> (String, String)? {
         let selectCardID = wedgetDataCenter.getFullScreenBarcode()
-        if nil == selectCardID {
-            return nil
-        }
         let data = wedgetDataCenter.get(cardID: selectCardID!)
         let cardName = data?.0
         let cardNumber = data?.1
+        if nil == cardNumber || nil == cardName {
+            return nil
+        }
         return (cardName!, cardNumber!)
     }
     

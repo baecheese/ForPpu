@@ -29,10 +29,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if true == isChangeCardInfo() {
-            setCardInfo()
-            setBarCodeImage()
-        }
     }
     
     func setCardInfo() {
@@ -59,25 +55,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
     }
     
-    func isChangeCardInfo() -> Bool {
-        let widgetCardInfo = (violetTitleLabel.text, violetNumberLabel.text)
-        let newCardInfo = sendDataBox.getCardInfo()
-        
-        if widgetCardInfo.0 == newCardInfo?.0 || widgetCardInfo.1 == newCardInfo?.1 || true == isEmptyInGroupDefaultAndWidget() {
-            return false
-        }
-        return true
-    }
-    
-    func isEmptyInGroupDefaultAndWidget() -> Bool {
-        let newCardInfo = sendDataBox.getCardInfo()
-        if violetNumberLabel.text == Message().empty && newCardInfo == nil {
-            return true
-        }
-        return false
-    }
-    
     @IBAction func goToAppFromViolet(_ sender: UITapGestureRecognizer) {
+        sendDataBox.setSelectBarcode()
         extensionContext?.open(URL(string: "forPpu://")! , completionHandler: nil)
     }
     
