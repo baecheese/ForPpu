@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 struct CardMenu {
     let rainbow = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
@@ -37,6 +38,7 @@ class MainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = colorManager.getMainColor()
+        setNavigationItem()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -140,6 +142,21 @@ class MainTableViewController: UITableViewController {
     func setNavigationColor() {
         navigationController?.navigationBar.barTintColor = colorManager.getMainColor()
         navigationController?.navigationBar.tintColor = colorManager.getTint()
+    }
+    
+    func setNavigationItem() {
+        let info = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+        let infoImage = UIImage(named: "info.png")?.withRenderingMode(.alwaysTemplate)
+        info.setImage(infoImage, for: .normal)
+        info.tintColor = UIColor.white.withAlphaComponent(0.8)
+        info.addTarget(self, action: #selector(MainTableViewController.goInfoPage), for: .touchUpInside)
+        let infoItem = UIBarButtonItem(customView: info)
+        
+        navigationItem.rightBarButtonItem = infoItem
+    }
+    
+    func goInfoPage() {
+        
     }
     
 }
