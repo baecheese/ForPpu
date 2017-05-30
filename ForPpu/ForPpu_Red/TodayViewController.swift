@@ -32,6 +32,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     }
     
+    override func viewDidLayoutSubviews() {
+        setFullScreenButton()
+    }
+    
     func setCardInfo() {
         redTitleLabel.backgroundColor = sendDataBox.getMainColor()
         if nil == sendDataBox.getCardInfo() {
@@ -75,6 +79,13 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // If there's an update, use NCUpdateResult.NewData
         
         completionHandler(NCUpdateResult.newData)
+    }
+    
+    func setFullScreenButton() {
+        let buttonSize:CGFloat = 30
+        let fullScreen = UIButton(frame: CGRect(x: redNumberLabel.frame.width - buttonSize, y: redNumberLabel.frame.height - buttonSize, width: buttonSize, height: buttonSize))
+        fullScreen.setImage(UIImage(named: "fullscreen.png"), for: .normal)
+        redNumberLabel.addSubview(fullScreen)
     }
     
 }
