@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 struct Menu {
     let sectionName = ["empty space", "card Info", "leather"]
@@ -50,12 +51,20 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     }
 
     func makeNavigationItem()  {
+        
+        let cameraBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        cameraBtn.setImage(UIImage(named: "camera.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        cameraBtn.tintColor = colorManager.getTint()
+        cameraBtn.addTarget(self, action: #selector(AddTableViewController.clickCamera), for: .touchUpInside)
+        let cameraItem = UIBarButtonItem(customView: cameraBtn)
+        navigationItem.rightBarButtonItem = cameraItem
+        
         let saveBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 30))
         saveBtn.setTitle("save", for: .normal)
         saveBtn.setTitleColor(colorManager.getTint(), for: .normal)
         saveBtn.addTarget(self, action: #selector(AddTableViewController.clickSaveButton), for: .touchUpInside)
-        let item = UIBarButtonItem(customView: saveBtn)
-        navigationItem.rightBarButtonItem = item
+        let saveAndBackitem = UIBarButtonItem(customView: saveBtn)
+        navigationItem.leftBarButtonItem = saveAndBackitem
     }
     
     func clickSaveButton() {
@@ -68,6 +77,10 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
             self.dataRepository.set(cardID: self.cardID, cardName: self.cardName.text!, cardNumber: self.barCodeNumber.text!)
             self.navigationController?.popViewController(animated: true)
         }, cancelHandler: nil)
+    }
+    
+    func clickCamera() {
+        print("barcode scan")
     }
     
     func isEmpty() -> Bool {
