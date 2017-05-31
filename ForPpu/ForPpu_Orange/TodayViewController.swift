@@ -19,6 +19,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet var orangeBarCodeImage: UIImageView!
     @IBOutlet var orangeNumberLabel: UILabel!
     
+    let doubleTap = UITapGestureRecognizer()
+    
     private let sendDataBox = SendDataBoxOrange.sharedInstance
     
     override func viewDidLoad() {
@@ -26,10 +28,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         view.backgroundColor = .white
         setCardInfo()
         setBarCodeImage()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
+        setDoubleTap()
     }
     
     func setCardInfo() {
@@ -56,10 +55,24 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
     }
     
-    @IBAction func goToAppFromOrange(_ sender: UITapGestureRecognizer) {
+    @IBAction func setOrangeScreenBrightness(_ sender: UITapGestureRecognizer) {
+        UIScreen.main.brightness = CGFloat(1.0)
+    }
+    
+    func setDoubleTap() {
+        doubleTap.numberOfTapsRequired = 2
+        doubleTap.addTarget(self, action: #selector(TodayViewController.goToAppFromOrnage))
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(doubleTap)
+    }
+    
+    func goToAppFromOrnage() {
         sendDataBox.setSelectBarcode()
         extensionContext?.open(URL(string: "forPpu://")! , completionHandler: nil)
     }
+    
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

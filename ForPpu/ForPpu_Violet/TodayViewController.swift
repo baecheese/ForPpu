@@ -19,6 +19,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet var violetBarCodeImage: UIImageView!
     @IBOutlet var violetNumberLabel: UILabel!
     
+    let doubleTap = UITapGestureRecognizer()
+    
     private let sendDataBox = SendDataBoxViolet.sharedInstance
     
     override func viewDidLoad() {
@@ -26,6 +28,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         view.backgroundColor = .white
         setCardInfo()
         setBarCodeImage()
+        setDoubleTap()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,10 +58,22 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
     }
     
-    @IBAction func goToAppFromViolet(_ sender: UITapGestureRecognizer) {
+    @IBAction func setVioletScreenBrightness(_ sender: UITapGestureRecognizer) {
+        UIScreen.main.brightness = CGFloat(1.0)
+    }
+    
+    func setDoubleTap() {
+        doubleTap.numberOfTapsRequired = 2
+        doubleTap.addTarget(self, action: #selector(TodayViewController.goToAppFromViolet))
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(doubleTap)
+    }
+    
+    func goToAppFromViolet() {
         sendDataBox.setSelectBarcode()
         extensionContext?.open(URL(string: "forPpu://")! , completionHandler: nil)
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

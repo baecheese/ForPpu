@@ -19,6 +19,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet var redBarCodeImage: UIImageView!
     @IBOutlet var redNumberLabel: UILabel!
     
+    let doubleTap = UITapGestureRecognizer()
+    
     private let sendDataBox = SendDataBoxRed.sharedInstance
     
     override func viewDidLoad() {
@@ -26,14 +28,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         view.backgroundColor = .white
         setCardInfo()
         setBarCodeImage()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-    
-    }
-    
-    override func viewDidLayoutSubviews() {
-        setFullScreenButton()
+        setDoubleTap()
     }
     
     func setCardInfo() {
@@ -60,12 +55,22 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
     }
     
-    @IBAction func goToAppFromRed(_ sender: UITapGestureRecognizer) {
+    @IBAction func setRedScreenBrightness(_ sender: UITapGestureRecognizer) {
+        UIScreen.main.brightness = CGFloat(1.0)
+    }
+    
+    func setDoubleTap() {
+        doubleTap.numberOfTapsRequired = 2
+        doubleTap.addTarget(self, action: #selector(TodayViewController.goToAppFromRed))
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(doubleTap)
+    }
+    
+    func goToAppFromRed() {
         sendDataBox.setSelectBarcode()
         extensionContext?.open(URL(string: "forPpu://")! , completionHandler: nil)
     }
-    
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -79,13 +84,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // If there's an update, use NCUpdateResult.NewData
         
         completionHandler(NCUpdateResult.newData)
-    }
-    
-    func setFullScreenButton() {
-        let buttonSize:CGFloat = 30
-        let fullScreen = UIButton(frame: CGRect(x: redNumberLabel.frame.width - buttonSize, y: redNumberLabel.frame.height - buttonSize, width: buttonSize, height: buttonSize))
-        fullScreen.setImage(UIImage(named: "fullscreen.png"), for: .normal)
-        redNumberLabel.addSubview(fullScreen)
     }
     
 }

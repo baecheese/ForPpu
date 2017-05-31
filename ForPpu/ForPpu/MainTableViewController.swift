@@ -156,7 +156,7 @@ class MainTableViewController: UITableViewController {
     }
     
     func goInfoPage() {
-        print("go info page")
+        print("info page")
     }
     
 }

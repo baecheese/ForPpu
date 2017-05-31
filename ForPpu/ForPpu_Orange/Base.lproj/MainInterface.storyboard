@@ -75,7 +75,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="y0I-lf-dmL">
                     <connections>
-                        <action selector="goToAppFromOrange:" destination="M4Y-Lb-cyx" id="rAG-si-7u9"/>
+                        <action selector="setOrangeScreenBrightness:" destination="M4Y-Lb-cyx" id="Wht-Ul-eDL"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

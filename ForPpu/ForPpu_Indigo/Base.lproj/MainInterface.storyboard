@@ -75,7 +75,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="JZd-iJ-KbB">
                     <connections>
-                        <action selector="goToAppFromIndigo:" destination="M4Y-Lb-cyx" id="450-h8-EvG"/>
+                        <action selector="setIndigoScreenBrightness:" destination="M4Y-Lb-cyx" id="qCk-l7-FaZ"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

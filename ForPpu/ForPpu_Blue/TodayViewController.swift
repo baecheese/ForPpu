@@ -19,6 +19,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet var blueBarCodeImage: UIImageView!
     @IBOutlet var blueNumberLabel: UILabel!
     
+    let doubleTap = UITapGestureRecognizer()
+    
     private let sendDataBox = SendDataBoxBlue.sharedInstance
     
     override func viewDidLoad() {
@@ -26,6 +28,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         view.backgroundColor = .white
         setCardInfo()
         setBarCodeImage()
+        setDoubleTap()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,7 +77,18 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         return false
     }
     
-    @IBAction func goToAppFromBlue(_ sender: UITapGestureRecognizer) {
+    @IBAction func setBlueScreenBrightness(_ sender: UITapGestureRecognizer) {
+        UIScreen.main.brightness = CGFloat(1.0)
+    }
+    
+    func setDoubleTap() {
+        doubleTap.numberOfTapsRequired = 2
+        doubleTap.addTarget(self, action: #selector(TodayViewController.goToAppFromBlue))
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(doubleTap)
+    }
+    
+    func goToAppFromBlue() {
         sendDataBox.setSelectBarcode()
         extensionContext?.open(URL(string: "forPpu://")! , completionHandler: nil)
     }
