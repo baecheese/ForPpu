@@ -17,6 +17,8 @@ struct Menu {
 struct Message {
     let setCardName = NSLocalizedString("SetCardName", tableName: "Korean", value: "Write your card name.", comment: "카드 이름 쓰라는 설명")
     let setCardNumber = NSLocalizedString("SetCardNumber", tableName: "Korean", value: "Write barcode number with no spaces.", comment: "바코드 번호 쓰라는 설명")
+    let save = NSLocalizedString("Save", tableName: "Korean", value: "Do you want to save changes?", comment: "저장하겠냐는 알럿 메세지")
+    let noBlanks = NSLocalizedString("NoBlanks", tableName: "Korean", value: "Fill in the blanks without omission!", comment: "빈칸 없이 채우라는 알럿 메세지")
 }
 
 /** MainTableViewController */
@@ -71,9 +73,9 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     func clickSaveButton() {
         self.cell.endEditing(true)
         if true == isDiffrent() {
-            showAlert(message: "Do you want to save?", haveCancel: true, doneHandler: { (UIAlertAction) in
-                if true == (self.isEmpty()) {
-                    self.showAlert(message: "Fill in the blanks without omission!", haveCancel: false, doneHandler: nil, cancelHandler: nil)
+            showAlert(message: Message().save, haveCancel: true, doneHandler: { (UIAlertAction) in
+                if true == (self.isEmptyEither()) {
+                    self.showAlert(message: Message().noBlanks, haveCancel: false, doneHandler: nil, cancelHandler: nil)
                     return;
                 }
                 self.dataRepository.set(cardID: self.cardID, cardName: self.cardName.text!, cardNumber: self.barCodeNumber.text!)
@@ -86,10 +88,13 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         
     }
     
-    // save button을 back and save로 변경중
     func isDiffrent() -> Bool {
-        let beforeCardName = dataRepository.get(cardID: cardID)?.0
-        let beforeBarcodeNumber = dataRepository.get(cardID: cardID)?.1
+        let savedCardData = dataRepository.get(cardID: cardID)
+        let beforeCardName = savedCardData?.0
+        let beforeBarcodeNumber = savedCardData?.1
+        if nil == dataRepository.get(cardID: cardID) && true == cardName.text?.isEmpty && true == barCodeNumber.text?.isEmpty {
+            return false
+        }
         if cardName.text == beforeCardName && barCodeNumber.text == beforeBarcodeNumber {
             return false
         }
@@ -102,7 +107,7 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         print("barcode scan")
     }
     
-    func isEmpty() -> Bool {
+    func isEmptyEither() -> Bool {
         if true == cardName.text?.isEmpty || true == barCodeNumber.text?.isEmpty {
             return true
         }
