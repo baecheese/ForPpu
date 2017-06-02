@@ -47,6 +47,10 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         barCodeNumber.addTarget(self, action: #selector(AddTableViewController.textFieldDidChange), for: .editingChanged)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        scanBarcodeNumber(number: SharedMemoryContext.get(key: "scanBarCode"))
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -69,18 +73,19 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         navigationItem.leftBarButtonItem = saveAndBackitem
     }
     
-    // ing
     func clickSaveButton() {
         self.cell.endEditing(true)
         if true == isDiffrent() {
-            showAlert(message: Message().save, haveCancel: true, doneHandler: { (UIAlertAction) in
+            showAlert(message: Message().save, haveCancel: true, doneHandler: { (Bool) in
                 if true == (self.isEmptyEither()) {
                     self.showAlert(message: Message().noBlanks, haveCancel: false, doneHandler: nil, cancelHandler: nil)
                     return;
                 }
                 self.dataRepository.set(cardID: self.cardID, cardName: self.cardName.text!, cardNumber: self.barCodeNumber.text!)
                 self.navigationController?.popViewController(animated: true)
-            }, cancelHandler: nil)
+            }, cancelHandler: {(Bool) in
+                self.navigationController?.popViewController(animated: true)
+            })
         }
         else {
             self.navigationController?.popViewController(animated: true)
@@ -104,7 +109,16 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     func clickCamera() {
-        print("barcode scan")
+        let barcodeReaderVC = BarcodeReaderViewController()
+        self.navigationController?.pushViewController(barcodeReaderVC, animated: true)
+    }
+    
+    func scanBarcodeNumber(number:Any?) {
+        let scanNumber = number as? String
+        if nil != scanNumber && true != scanNumber?.isEmpty {
+            barCodeNumber.text = scanNumber
+            SharedMemoryContext.set(key: "scanBarCode", setValue: "")
+        }
     }
     
     func isEmptyEither() -> Bool {
@@ -118,9 +132,9 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     {
         let alertController = UIAlertController(title: "Notice", message:
             message, preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default,handler: doneHandler))
+        alertController.addAction(UIAlertAction(title: "yes", style: UIAlertActionStyle.default,handler: doneHandler))
         if haveCancel {
-            alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default,handler: cancelHandler))
+            alertController.addAction(UIAlertAction(title: "no", style: UIAlertActionStyle.default,handler: cancelHandler))
         }
         self.present(alertController, animated: true, completion: nil)
     }

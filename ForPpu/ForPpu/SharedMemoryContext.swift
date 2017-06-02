@@ -8,7 +8,7 @@
 
 import UIKit
 
-/** 사용중인 key : "cardID"(Int) = section, "barcodeNumber"(Int), isFullScreen (Bool) */
+/** 사용중인 key : "cardID"(Int) = section, "barcodeNumber"(Int), isFullScreen (Bool), "scanBarCode"(String) */
 
 struct Key {
     let cardID = "cardID"
