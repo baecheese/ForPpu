@@ -59,24 +59,43 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         let cameraItem = UIBarButtonItem(customView: cameraBtn)
         navigationItem.rightBarButtonItem = cameraItem
         
-        let saveBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 30))
-        saveBtn.setTitle("save", for: .normal)
-        saveBtn.setTitleColor(colorManager.getTint(), for: .normal)
+        let saveBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        saveBtn.setImage(UIImage(named: "before.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        saveBtn.tintColor = colorManager.getTint()
         saveBtn.addTarget(self, action: #selector(AddTableViewController.clickSaveButton), for: .touchUpInside)
         let saveAndBackitem = UIBarButtonItem(customView: saveBtn)
         navigationItem.leftBarButtonItem = saveAndBackitem
     }
     
+    // ing
     func clickSaveButton() {
         self.cell.endEditing(true)
-        showAlert(message: "Do you want to save?", haveCancel: true, doneHandler: { (UIAlertAction) in
-            if true == (self.isEmpty()) {
-                self.showAlert(message: "Fill in the blanks without omission!", haveCancel: false, doneHandler: nil, cancelHandler: nil)
-                return;
-            }
-            self.dataRepository.set(cardID: self.cardID, cardName: self.cardName.text!, cardNumber: self.barCodeNumber.text!)
+        if true == isDiffrent() {
+            showAlert(message: "Do you want to save?", haveCancel: true, doneHandler: { (UIAlertAction) in
+                if true == (self.isEmpty()) {
+                    self.showAlert(message: "Fill in the blanks without omission!", haveCancel: false, doneHandler: nil, cancelHandler: nil)
+                    return;
+                }
+                self.dataRepository.set(cardID: self.cardID, cardName: self.cardName.text!, cardNumber: self.barCodeNumber.text!)
+                self.navigationController?.popViewController(animated: true)
+            }, cancelHandler: nil)
+        }
+        else {
             self.navigationController?.popViewController(animated: true)
-        }, cancelHandler: nil)
+        }
+        
+    }
+    
+    // save button을 back and save로 변경중
+    func isDiffrent() -> Bool {
+        let beforeCardName = dataRepository.get(cardID: cardID)?.0
+        let beforeBarcodeNumber = dataRepository.get(cardID: cardID)?.1
+        if cardName.text == beforeCardName && barCodeNumber.text == beforeBarcodeNumber {
+            return false
+        }
+        else {
+            return true
+        }
     }
     
     func clickCamera() {

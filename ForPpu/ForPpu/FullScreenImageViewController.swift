@@ -46,7 +46,7 @@ class FullScreenImageViewController: UIViewController {
         fullImage.image = dataRepository.showBarCodeImage(cardNumber: selectCardNumber)
         barcodeNumber.text = selectCardNumber
         
-        UIScreen.main.brightness = CGFloat(0.5)//기기 테스트 해봐야함 ing
+        UIScreen.main.brightness = CGFloat(1.0)
     }
     
     private func setSharedContext() {

@@ -68,6 +68,7 @@
 		0391B8FF1ECC0A5E000CBC58 /* emptyImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0391B8F71ECC0A5E000CBC58 /* emptyImage.png */; };
 		03D3166D1ED0271C0063DA3D /* leatherBlack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03D3166C1ED0271C0063DA3D /* leatherBlack.jpg */; };
 		03E46D291EDC20D9003D7F25 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 03E46D281EDC20D9003D7F25 /* close.png */; };
+		03FE0DEE1EE02E0300060F29 /* before.png in Resources */ = {isa = PBXBuildFile; fileRef = 03FE0DED1EE02E0300060F29 /* before.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,6 +226,7 @@
 		0391B8F71ECC0A5E000CBC58 /* emptyImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyImage.png; sourceTree = "<group>"; };
 		03D3166C1ED0271C0063DA3D /* leatherBlack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = leatherBlack.jpg; sourceTree = "<group>"; };
 		03E46D281EDC20D9003D7F25 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		03FE0DED1EE02E0300060F29 /* before.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = before.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -449,6 +451,7 @@
 				0352A03C1EDD24F000C7C97E /* info.png */,
 				0352A0461EDE9A2000C7C97E /* camera.png */,
 				03E46D281EDC20D9003D7F25 /* close.png */,
+				03FE0DED1EE02E0300060F29 /* before.png */,
 			);
 			name = resource;
 			sourceTree = "<group>";
@@ -731,6 +734,7 @@
 				037C81501ECEF62200D37ACD /* leather_patten.png in Resources */,
 				032FD9551EC6ED6400F488E9 /* Assets.xcassets in Resources */,
 				03D3166D1ED0271C0063DA3D /* leatherBlack.jpg in Resources */,
+				03FE0DEE1EE02E0300060F29 /* before.png in Resources */,
 				03E46D291EDC20D9003D7F25 /* close.png in Resources */,
 				0352A0471EDE9A2000C7C97E /* camera.png in Resources */,
 				032FD9531EC6ED6400F488E9 /* Main.storyboard in Resources */,
