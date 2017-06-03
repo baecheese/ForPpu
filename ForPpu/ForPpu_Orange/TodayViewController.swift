@@ -55,10 +55,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
     }
     
-    @IBAction func setOrangeScreenBrightness(_ sender: UITapGestureRecognizer) {
-        UIScreen.main.brightness = CGFloat(1.0)
-    }
-    
     func setDoubleTap() {
         doubleTap.numberOfTapsRequired = 2
         doubleTap.addTarget(self, action: #selector(TodayViewController.goToAppFromOrnage))

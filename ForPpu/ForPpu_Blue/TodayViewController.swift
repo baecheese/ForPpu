@@ -77,10 +77,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         return false
     }
     
-    @IBAction func setBlueScreenBrightness(_ sender: UITapGestureRecognizer) {
-        UIScreen.main.brightness = CGFloat(1.0)
-    }
-    
     func setDoubleTap() {
         doubleTap.numberOfTapsRequired = 2
         doubleTap.addTarget(self, action: #selector(TodayViewController.goToAppFromBlue))

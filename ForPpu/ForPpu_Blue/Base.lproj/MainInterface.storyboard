@@ -56,9 +56,6 @@
                             <constraint firstItem="ef6-RC-qoa" firstAttribute="top" secondItem="C35-bb-M9U" secondAttribute="bottom" id="jF3-Qa-uAe"/>
                             <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="JYa-No-kf9" secondAttribute="bottom" id="sJT-DN-oJ8"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="TVK-eT-qWz" appends="YES" id="hpe-DO-nr9"/>
-                        </connections>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -73,11 +70,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="TVK-eT-qWz">
-                    <connections>
-                        <action selector="setBlueScreenBrightness:" destination="M4Y-Lb-cyx" id="U7O-ul-3U4"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="116.8" y="123.23838080959521"/>
         </scene>
