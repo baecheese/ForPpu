@@ -36,14 +36,12 @@ class WedgetDataCenter: NSObject {
         let newCardName = cardName
         let newCardNumber = cardNumber
         
-        if 1 <= newCardName.characters.count {
-            defaults?.set(newCardName, forKey: keys[0])
-        }
-        if 1 <= newCardNumber.characters.count {
-            defaults?.set(newCardNumber, forKey: keys[1])
-        }
+        defaults?.set(newCardName, forKey: keys[0])
+        defaults?.set(newCardNumber, forKey: keys[1])
         
-//        defaults?.set(getImageData(cardNumber: cardNumber), forKey: keys[2])
+        if true == cardName.isEmpty && true == cardNumber.isEmpty {
+            deleteCardInfo(cardID: cardID)
+        }
     }
     
     

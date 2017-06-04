@@ -37,18 +37,23 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     func setCardInfo() {
         greenTitleLabel.backgroundColor = sendDataBox.getMainColor()
+        let cardInfo = sendDataBox.getCardInfo()
         if nil == sendDataBox.getCardInfo() {
             greenTitleLabel.text = ""
             greenNumberLabel.text = Message().empty
-            return;
         }
-        greenTitleLabel.text = sendDataBox.getCardInfo()?.0
-        greenNumberLabel.text = sendDataBox.getCardInfo()?.1
+        else {
+            greenTitleLabel.text = cardInfo?.0
+            greenNumberLabel.text = cardInfo?.1
+            if true == cardInfo?.1.isEmpty {
+                greenNumberLabel.text = Message().empty
+            }
+        }
     }
     
     func setBarCodeImage() {
         let barCodeNumber = sendDataBox.getCardInfo()?.1
-        if barCodeNumber == nil {
+        if true == barCodeNumber?.isEmpty || nil == barCodeNumber {
             greenBarCodeImage.backgroundColor = .white
             greenBarCodeImage.contentMode = .scaleAspectFit
             greenBarCodeImage.image = UIImage(named: "emptyImage.png")

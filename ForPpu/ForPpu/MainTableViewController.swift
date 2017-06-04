@@ -100,7 +100,7 @@ class MainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Card", for: indexPath) as! MainTableViewCell
         let nowCardInfo = dataRepository.get(cardID: String(indexPath.section))
-        if nil == nowCardInfo {
+        if nil == nowCardInfo || true == nowCardInfo?.1.isEmpty {
             let cardInfo = NSLocalizedString("NoCardInfo", tableName: "Korean", value: "No information stored for your card.", comment: "카드 없음 설명")
             cell.info.text = cardInfo
             cell.barcodeImage.image = nil

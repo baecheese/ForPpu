@@ -75,37 +75,9 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     
     func clickSaveButton() {
         self.cell.endEditing(true)
-        if true == isDiffrent() {
-            showAlert(message: Message().save, haveCancel: true, doneHandler: { (Bool) in
-                if true == (self.isEmptyEither()) {
-                    self.showAlert(message: Message().noBlanks, haveCancel: false, doneHandler: nil, cancelHandler: nil)
-                    return;
-                }
-                self.dataRepository.set(cardID: self.cardID, cardName: self.cardName.text!, cardNumber: self.barCodeNumber.text!)
-                self.navigationController?.popViewController(animated: true)
-            }, cancelHandler: {(Bool) in
-                self.navigationController?.popViewController(animated: true)
-            })
-        }
-        else {
-            self.navigationController?.popViewController(animated: true)
-        }
+        self.dataRepository.set(cardID: self.cardID, cardName: self.cardName.text!, cardNumber: self.barCodeNumber.text!)
+        self.navigationController?.popViewController(animated: true)
         
-    }
-    
-    func isDiffrent() -> Bool {
-        let savedCardData = dataRepository.get(cardID: cardID)
-        let beforeCardName = savedCardData?.0
-        let beforeBarcodeNumber = savedCardData?.1
-        if nil == dataRepository.get(cardID: cardID) && true == cardName.text?.isEmpty && true == barCodeNumber.text?.isEmpty {
-            return false
-        }
-        if cardName.text == beforeCardName && barCodeNumber.text == beforeBarcodeNumber {
-            return false
-        }
-        else {
-            return true
-        }
     }
     
     func clickCamera() {
@@ -119,24 +91,6 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
             barCodeNumber.text = scanNumber
             SharedMemoryContext.set(key: "scanBarCode", setValue: "")
         }
-    }
-    
-    func isEmptyEither() -> Bool {
-        if true == cardName.text?.isEmpty || true == barCodeNumber.text?.isEmpty {
-            return true
-        }
-        return false
-    }
-    
-    func showAlert(message:String, haveCancel:Bool, doneHandler:((UIAlertAction) -> Swift.Void)?, cancelHandler:((UIAlertAction) -> Swift.Void)?)
-    {
-        let alertController = UIAlertController(title: "Notice", message:
-            message, preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "yes", style: UIAlertActionStyle.default,handler: doneHandler))
-        if haveCancel {
-            alertController.addAction(UIAlertAction(title: "no", style: UIAlertActionStyle.default,handler: cancelHandler))
-        }
-        self.present(alertController, animated: true, completion: nil)
     }
     
     // MARK: - Table view data source
@@ -200,8 +154,8 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         cell.selectionStyle = .none
         setCellDetailInfo(cell: cell, indexPath: indexPath)
         if true == haveInfo() {
-            if 1 == indexPath.section && 1 == indexPath.row {
-                let barcodeNumber = dataRepository.get(cardID: cardID)?.1
+            let barcodeNumber = dataRepository.get(cardID: cardID)?.1
+            if 1 == indexPath.section && 1 == indexPath.row && false == barcodeNumber?.isEmpty {
                 barCodeImage.image = dataRepository.showBarCodeImage(cardNumber: barcodeNumber!)
             }
             else {
@@ -258,7 +212,7 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // barcode image
+        // barcode image (fullscreen)
         if 1 == indexPath.section && 1 == indexPath.row {
 //            SharedMemoryContext.set(key: Key().barcodeNumber, setValue: barCodeNumber.text as Any)
 //            let barcodeFullScreen = self.storyboard?.instantiateViewController(withIdentifier: "FullScreenImageViewController") as! FullScreenImageViewController

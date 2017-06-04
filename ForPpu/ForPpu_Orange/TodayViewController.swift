@@ -33,18 +33,23 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     func setCardInfo() {
         orangeTitleLabel.backgroundColor = sendDataBox.getMainColor()
-        if nil == sendDataBox.getCardInfo() {
+        let cardInfo = sendDataBox.getCardInfo()
+        if nil == cardInfo {
             orangeTitleLabel.text = ""
             orangeNumberLabel.text = Message().empty
-            return;
         }
-        orangeTitleLabel.text = sendDataBox.getCardInfo()?.0
-        orangeNumberLabel.text = sendDataBox.getCardInfo()?.1
+        else {
+            orangeTitleLabel.text = cardInfo?.0
+            orangeNumberLabel.text = cardInfo?.1
+            if true == cardInfo?.1.isEmpty {
+                orangeNumberLabel.text = Message().empty
+            }
+        }
     }
     
     func setBarCodeImage() {
         let barCodeNumber = sendDataBox.getCardInfo()?.1
-        if barCodeNumber == nil {
+        if true == barCodeNumber?.isEmpty || nil == barCodeNumber {
             orangeBarCodeImage.backgroundColor = .white
             orangeBarCodeImage.contentMode = .scaleAspectFit
             orangeBarCodeImage.image = UIImage(named: "emptyImage.png")
@@ -66,9 +71,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         sendDataBox.setSelectBarcode()
         extensionContext?.open(URL(string: "forPpu://")! , completionHandler: nil)
     }
-    
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
