@@ -8,12 +8,14 @@
 
 import UIKit
 
-/** 사용중인 key : "cardID"(Int) = section, "barcodeNumber"(Int), isFullScreen (Bool), "scanBarCode"(String) */
+/** 사용중인 key : "cardID"(Int) = section, "barcodeNumber"(Int), isFullScreen (Bool), "scanBarCode"(String), "screenBrightness"(CGFloat) */
 
 struct Key {
     let cardID = "cardID"
     let barcodeNumber = "barcodeNumber"
     let isFullScreen = "isFullScreen"
+    let scanBarCode = "scanBarCode"
+    let screenBrightness = "screenBrightness"
 }
 
 public struct SharedMemoryContext {

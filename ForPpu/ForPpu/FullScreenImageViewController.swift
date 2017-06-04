@@ -14,7 +14,6 @@ class FullScreenImageViewController: UIViewController {
     @IBOutlet var fullImage: UIImageView!
     @IBOutlet var cardName: UILabel!
     @IBOutlet var barcodeNumber: UILabel!
-    private var beforeBrightness:CGFloat = 0.5
     
     let dataRepository = DataRepository.sharedInstance
     let colorManager = ColorManager.sharedInstance
@@ -46,19 +45,16 @@ class FullScreenImageViewController: UIViewController {
         cardName.backgroundColor = colorManager.getRainbow(section: selectCardId!)
         fullImage.image = dataRepository.showBarCodeImage(cardNumber: selectCardNumber)
         barcodeNumber.text = selectCardNumber
-        
-        beforeBrightness = UIScreen.main.brightness
-        UIScreen.main.brightness = CGFloat(1.0)
     }
     
     private func setSharedContext() {
         SharedMemoryContext.set(key: "isFullScreen", setValue: true)
     }
-
+    
     @IBAction func goBack(_ sender: UIButton) {
         dataRepository.deleteBeforeSelectCardInfo()
         SharedMemoryContext.set(key: "isFullScreen", setValue: false)
-        UIScreen.main.brightness = beforeBrightness
+        ScreenBrightnessManager.sharedInstance.goBackBeforeBrightness()
         dismissAnimation()
     }
     

@@ -89,7 +89,7 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         let scanNumber = number as? String
         if nil != scanNumber && true != scanNumber?.isEmpty {
             barCodeNumber.text = scanNumber
-            SharedMemoryContext.set(key: "scanBarCode", setValue: "")
+            SharedMemoryContext.set(key:Key().scanBarCode, setValue: "")
         }
     }
     
