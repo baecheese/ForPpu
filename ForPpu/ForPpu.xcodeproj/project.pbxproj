@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		031E9E381EE3FAD1009E7966 /* ScreenBrightnessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E9E371EE3FAD1009E7966 /* ScreenBrightnessManager.swift */; };
+		031E9E3C1EE456AD009E7966 /* InfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E9E3B1EE456AD009E7966 /* InfoManager.swift */; };
+		031E9E401EE527D8009E7966 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E9E3F1EE527D8009E7966 /* InfoTableViewController.swift */; };
+		031E9E421EE53BE4009E7966 /* InfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E9E411EE53BE4009E7966 /* InfoDetailViewController.swift */; };
 		0328AB861EC72CAA00D2C681 /* WedgetDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */; };
 		0328AB881EC72CE200D2C681 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328AB871EC72CE200D2C681 /* DataRepository.swift */; };
 		032FD94E1EC6ED6400F488E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD94D1EC6ED6400F488E9 /* AppDelegate.swift */; };
@@ -147,6 +150,9 @@
 
 /* Begin PBXFileReference section */
 		031E9E371EE3FAD1009E7966 /* ScreenBrightnessManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenBrightnessManager.swift; sourceTree = "<group>"; };
+		031E9E3B1EE456AD009E7966 /* InfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoManager.swift; sourceTree = "<group>"; };
+		031E9E3F1EE527D8009E7966 /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
+		031E9E411EE53BE4009E7966 /* InfoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoDetailViewController.swift; sourceTree = "<group>"; };
 		0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WedgetDataCenter.swift; sourceTree = "<group>"; };
 		0328AB871EC72CE200D2C681 /* DataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 		0328AB8A1EC72F6F00D2C681 /* ForPpu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForPpu.entitlements; sourceTree = "<group>"; };
@@ -373,6 +379,8 @@
 				032FD9611EC6F08A00F488E9 /* AddTableViewController.swift */,
 				033EACBB1EE13C4900D180B7 /* BarcodeReaderViewController.swift */,
 				034743D41ED531AA0039DABE /* FullScreenImageViewController.swift */,
+				031E9E3F1EE527D8009E7966 /* InfoTableViewController.swift */,
+				031E9E411EE53BE4009E7966 /* InfoDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -391,6 +399,7 @@
 				032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */,
 				036C04941EC94C56006DEBBA /* ColorManager.swift */,
 				031E9E371EE3FAD1009E7966 /* ScreenBrightnessManager.swift */,
+				031E9E3B1EE456AD009E7966 /* InfoManager.swift */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -858,9 +867,12 @@
 				032FD94E1EC6ED6400F488E9 /* AppDelegate.swift in Sources */,
 				033EACBC1EE13C4900D180B7 /* BarcodeReaderViewController.swift in Sources */,
 				031E9E381EE3FAD1009E7966 /* ScreenBrightnessManager.swift in Sources */,
+				031E9E421EE53BE4009E7966 /* InfoDetailViewController.swift in Sources */,
 				0328AB861EC72CAA00D2C681 /* WedgetDataCenter.swift in Sources */,
 				032FD9621EC6F08A00F488E9 /* AddTableViewController.swift in Sources */,
+				031E9E401EE527D8009E7966 /* InfoTableViewController.swift in Sources */,
 				0328AB881EC72CE200D2C681 /* DataRepository.swift in Sources */,
+				031E9E3C1EE456AD009E7966 /* InfoManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

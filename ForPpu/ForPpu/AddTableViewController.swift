@@ -39,7 +39,7 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = colorManager.getMainColor()
+        tableView.backgroundColor = colorManager.getMainBackImage()
         tableView.separatorStyle = .none
         makeNavigationItem()
         cardName.delegate = self

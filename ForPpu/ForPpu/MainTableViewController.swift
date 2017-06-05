@@ -37,7 +37,7 @@ class MainTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = colorManager.getMainColor()
+        tableView.backgroundColor = colorManager.getMainBackImage()
         setNavigationItem()
     }
     
@@ -140,7 +140,7 @@ class MainTableViewController: UITableViewController {
     }
     
     func setNavigationColor() {
-        navigationController?.navigationBar.barTintColor = colorManager.getMainColor()
+        navigationController?.navigationBar.barTintColor = colorManager.getMainBackImage()
         navigationController?.navigationBar.tintColor = colorManager.getTint()
     }
     
@@ -156,7 +156,8 @@ class MainTableViewController: UITableViewController {
     }
     
     func goInfoPage() {
-        print("info page")
+        let infoPage = self.storyboard?.instantiateViewController(withIdentifier: "infoTableViewController") as? InfoTableViewController
+        self.navigationController?.pushViewController(infoPage!, animated: true)
     }
     
 }

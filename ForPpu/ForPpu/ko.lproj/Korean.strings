@@ -11,3 +11,5 @@
 "SetCardNumber" = "띄어쓰기 없이 바코드 번호를 적어주세요";
 "Save" = "변경사항을 저장하시겠습니까?";
 "NoBlanks" = "카드 이름 또는 바코드 번호가 비어있습니다.";
+"saveAndDelete" = "저장과 삭제";
+"showFullSize" = "바코드 전체화면으로 보기";

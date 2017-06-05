@@ -16,7 +16,7 @@ class ColorManager: NSObject {
     
     static let sharedInstance:ColorManager = ColorManager()
     
-    func getMainColor() -> UIColor {
+    func getMainBackImage() -> UIColor {
 //        return fromRGB(rgbValue: 0x26140C)
         return UIColor(patternImage: UIImage(named: "leather_patten")!)
     }
@@ -48,6 +48,16 @@ class ColorManager: NSObject {
             return fromRGB(rgbValue: 0x955BA5)
         }
         return .clear
+    }
+    
+    func getInfoColor(menu:Int) -> UIColor {
+        if menu == 0 {
+            return fromRGB(rgbValue: 0xFF6F69)
+        }
+        if menu == 1 {
+            return fromRGB(rgbValue: 0xFFCC5C)
+        }
+        return .white
     }
     
     func fromRGB(rgbValue: UInt) -> UIColor {

@@ -20,7 +20,7 @@ class FullScreenImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = colorManager.getMainColor()
+        view.backgroundColor = colorManager.getMainBackImage()
         setFullImage()
     }
     
