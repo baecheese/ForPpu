@@ -144,6 +144,7 @@ class MainTableViewController: UITableViewController {
     }
     
     func setNavigationColor() {
+        navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.barTintColor = colorManager.getMainBackImage()
         navigationController?.navigationBar.tintColor = colorManager.getTint()
     }
@@ -167,8 +168,7 @@ class MainTableViewController: UITableViewController {
     func showUpdateInfo() {
         SharedMemoryContext.set(key: Key().info, setValue: InfoManager.sharedInstance.updateInfo)
         let infoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InfoDetailViewController") as! InfoDetailViewController
-        infoVC.modalPresentationStyle = .overCurrentContext
-        self.present(infoVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(infoVC, animated: true)
     }
     
 }

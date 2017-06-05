@@ -10,6 +10,7 @@ import UIKit
 
 class InfoDetailViewController: UIViewController, UIScrollViewDelegate {
     
+    @IBOutlet var backView: UIView!
     @IBOutlet var background: UIScrollView!
     
     let infoManager = InfoManager.sharedInstance
@@ -17,43 +18,47 @@ class InfoDetailViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         background.delegate = self
+        setNavigationBar(info: SharedMemoryContext.get(key: Key().info) as! Int)
     }
     
     override func viewWillLayoutSubviews() {
         setInfoDetailImage(info: SharedMemoryContext.get(key: Key().info) as! Int)
         setCloseButton()
-        
+    }
+    
+    func setNavigationBar(info:Int) {
+        if infoManager.updateInfo == info {
+            self.navigationController?.navigationBar.isHidden = true
+        }
     }
     
     func setInfoDetailImage(info:Int) {
+        
+        self.automaticallyAdjustsScrollViewInsets = false
+        background.contentInset = .zero
+        background.scrollIndicatorInsets = .zero
+        
         let imageList = infoManager.getInfoImageList(info: info)
         let imageCount = imageList.count
         setContentsSize(imageCount: imageCount)
         var offsetX:CGFloat = 0.0
-        for image in imageList {
-            let infoImage = UIImageView(frame: CGRect(x: offsetX, y: 0, width: view.frame.width, height: background.frame.height))
-            infoImage.image = image
-            infoImage.contentMode = .scaleAspectFit
-            infoImage.backgroundColor = .red
-            background.addSubview(infoImage)
+        for infoImage in imageList {
+            setInfoImage(info: info, image: infoImage, offsetX: offsetX)
             offsetX += self.view.frame.width
-            
-            
-            let view1 = UIView(frame: CGRect(x: 20, y: 0, width: 30, height: background.frame.height))
-            view1.backgroundColor = .green
-            infoImage.addSubview(view1)
         }
-        
-        
+    }
+    
+    func setInfoImage(info:Int, image:UIImage, offsetX:CGFloat) {
+        let infoImage = UIImageView(frame: CGRect(x: offsetX, y: 0, width: backView.frame.width, height: backView.frame.height))
+        infoImage.image = image
+        infoImage.contentMode = .scaleAspectFit
+        infoImage.backgroundColor = .red
+        background.addSubview(infoImage)
     }
     
     private func setContentsSize(imageCount:Int) {
-        self.automaticallyAdjustsScrollViewInsets = false
-        background.contentInset = .zero
-        background.scrollIndicatorInsets = .zero
-        background.contentOffset = CGPoint(x: 0, y: 0)
         background.isPagingEnabled = true
-        background.contentSize = CGSize(width: view.frame.width * CGFloat(imageCount), height: background.frame.height)
+        background.contentSize = CGSize(width: backView.frame.width * CGFloat(imageCount), height: backView.frame.height)
     }
     
     private func setCloseButton() {
@@ -69,9 +74,8 @@ class InfoDetailViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func clickClose() {
-        self.dismiss(animated: true) { 
-            VersoinManager.sharedInstance.setCheckUpdate()
-        }
+        VersoinManager.sharedInstance.setCheckUpdate()
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func didReceiveMemoryWarning() {

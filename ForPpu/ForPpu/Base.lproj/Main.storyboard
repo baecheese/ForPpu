@@ -257,27 +257,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61Q-y2-p7f">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vfk-ig-i86">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61Q-y2-p7f">
+                                        <rect key="frame" x="0.5" y="0.5" width="375" height="603"/>
+                                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="61Q-y2-p7f" firstAttribute="width" secondItem="Vfk-ig-i86" secondAttribute="width" id="46W-Pj-Vna"/>
+                                    <constraint firstItem="61Q-y2-p7f" firstAttribute="height" secondItem="Vfk-ig-i86" secondAttribute="height" id="He6-Kq-332"/>
+                                    <constraint firstItem="61Q-y2-p7f" firstAttribute="centerY" secondItem="Vfk-ig-i86" secondAttribute="centerY" id="cM6-h2-cy3"/>
+                                    <constraint firstItem="61Q-y2-p7f" firstAttribute="centerX" secondItem="Vfk-ig-i86" secondAttribute="centerX" id="gac-hp-YMZ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="61Q-y2-p7f" firstAttribute="top" secondItem="pRg-Dn-n1V" secondAttribute="bottom" id="HGi-YR-Q3i"/>
-                            <constraint firstItem="61Q-y2-p7f" firstAttribute="leading" secondItem="j4F-Oq-Mwx" secondAttribute="leading" id="Yrt-Hg-2bz"/>
-                            <constraint firstItem="G7x-Bu-d37" firstAttribute="top" secondItem="61Q-y2-p7f" secondAttribute="bottom" id="p09-do-PoH"/>
-                            <constraint firstAttribute="trailing" secondItem="61Q-y2-p7f" secondAttribute="trailing" id="rmJ-Gt-b8l"/>
+                            <constraint firstItem="Vfk-ig-i86" firstAttribute="leading" secondItem="j4F-Oq-Mwx" secondAttribute="leading" id="Vyx-V9-tU7"/>
+                            <constraint firstItem="G7x-Bu-d37" firstAttribute="top" secondItem="Vfk-ig-i86" secondAttribute="bottom" id="b8X-oB-XKC"/>
+                            <constraint firstAttribute="trailing" secondItem="Vfk-ig-i86" secondAttribute="trailing" id="eiQ-Ys-XhP"/>
+                            <constraint firstItem="Vfk-ig-i86" firstAttribute="top" secondItem="pRg-Dn-n1V" secondAttribute="bottom" id="iWj-Mx-VdX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="n6q-Gf-L1K"/>
                     <connections>
+                        <outlet property="backView" destination="Vfk-ig-i86" id="TVV-t0-Kac"/>
                         <outlet property="background" destination="61Q-y2-p7f" id="ZQE-oy-EAz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgj-eu-aPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3671.1999999999998" y="924.28785607196414"/>
+            <point key="canvasLocation" x="4610.3999999999996" y="924.28785607196414"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rql-z0-naU">
@@ -296,6 +309,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCU-Pk-mZ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="120.8" y="90.404797601199405"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pB8-L3-q2A">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hNS-Z3-ATs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JCF-h4-zm6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="99I-cf-hg4" kind="relationship" relationship="rootViewController" id="5sF-ic-iQ7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wd7-XR-aQO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3671.1999999999998" y="924.28785607196414"/>
         </scene>
     </scenes>
     <resources>
