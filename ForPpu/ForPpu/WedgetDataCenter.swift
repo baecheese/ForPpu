@@ -17,10 +17,6 @@ struct GroupKeys {
     let selectCardId = "selectCardId"
 }
 
-struct InfoKey {
-    let updateInfo = "1.2.0"
-}
-
 class WedgetDataCenter: NSObject {
     
     override init() {

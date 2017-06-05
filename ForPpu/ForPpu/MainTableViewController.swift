@@ -39,6 +39,10 @@ class MainTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.backgroundColor = colorManager.getMainBackImage()
         setNavigationItem()
+        
+        if false == VersoinManager.sharedInstance.checkUpdate() {
+            showUpdateInfo()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -158,6 +162,13 @@ class MainTableViewController: UITableViewController {
     func goInfoPage() {
         let infoPage = self.storyboard?.instantiateViewController(withIdentifier: "infoTableViewController") as? InfoTableViewController
         self.navigationController?.pushViewController(infoPage!, animated: true)
+    }
+    
+    func showUpdateInfo() {
+        SharedMemoryContext.set(key: Key().info, setValue: InfoManager.sharedInstance.updateInfo)
+        let infoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "InfoDetailViewController") as! InfoDetailViewController
+        infoVC.modalPresentationStyle = .overCurrentContext
+        self.present(infoVC, animated: true, completion: nil)
     }
     
 }

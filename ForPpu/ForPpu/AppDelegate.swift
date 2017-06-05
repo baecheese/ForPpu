@@ -45,8 +45,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        saveNowBrightness()
-        showFullScreenBarcode()
+        if true == VersoinManager.sharedInstance.checkUpdate() {
+            saveNowBrightness()
+            showFullScreenBarcode()
+        }
         return true
     }
     

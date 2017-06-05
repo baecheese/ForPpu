@@ -11,6 +11,16 @@
 		031E9E3C1EE456AD009E7966 /* InfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E9E3B1EE456AD009E7966 /* InfoManager.swift */; };
 		031E9E401EE527D8009E7966 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E9E3F1EE527D8009E7966 /* InfoTableViewController.swift */; };
 		031E9E421EE53BE4009E7966 /* InfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E9E411EE53BE4009E7966 /* InfoDetailViewController.swift */; };
+		031E9E4D1EE56218009E7966 /* cover_open.png in Resources */ = {isa = PBXBuildFile; fileRef = 031E9E441EE56218009E7966 /* cover_open.png */; };
+		031E9E4E1EE56218009E7966 /* update_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 031E9E451EE56218009E7966 /* update_1.png */; };
+		031E9E4F1EE56218009E7966 /* update_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 031E9E461EE56218009E7966 /* update_2.png */; };
+		031E9E501EE56218009E7966 /* update_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 031E9E471EE56218009E7966 /* update_3.png */; };
+		031E9E511EE56218009E7966 /* saveInfo_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 031E9E481EE56218009E7966 /* saveInfo_1.png */; };
+		031E9E521EE56218009E7966 /* saveInfo_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 031E9E491EE56218009E7966 /* saveInfo_2.png */; };
+		031E9E531EE56218009E7966 /* saveInfo_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 031E9E4A1EE56218009E7966 /* saveInfo_3.png */; };
+		031E9E541EE56218009E7966 /* saveInfo_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 031E9E4B1EE56218009E7966 /* saveInfo_4.png */; };
+		031E9E561EE566AE009E7966 /* VersoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E9E551EE566AE009E7966 /* VersoinManager.swift */; };
+		031E9E581EE56CE1009E7966 /* cover_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 031E9E571EE56CE1009E7966 /* cover_close.png */; };
 		0328AB861EC72CAA00D2C681 /* WedgetDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */; };
 		0328AB881EC72CE200D2C681 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328AB871EC72CE200D2C681 /* DataRepository.swift */; };
 		032FD94E1EC6ED6400F488E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD94D1EC6ED6400F488E9 /* AppDelegate.swift */; };
@@ -153,6 +163,16 @@
 		031E9E3B1EE456AD009E7966 /* InfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoManager.swift; sourceTree = "<group>"; };
 		031E9E3F1EE527D8009E7966 /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
 		031E9E411EE53BE4009E7966 /* InfoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoDetailViewController.swift; sourceTree = "<group>"; };
+		031E9E441EE56218009E7966 /* cover_open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover_open.png; sourceTree = "<group>"; };
+		031E9E451EE56218009E7966 /* update_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = update_1.png; sourceTree = "<group>"; };
+		031E9E461EE56218009E7966 /* update_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = update_2.png; sourceTree = "<group>"; };
+		031E9E471EE56218009E7966 /* update_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = update_3.png; sourceTree = "<group>"; };
+		031E9E481EE56218009E7966 /* saveInfo_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveInfo_1.png; sourceTree = "<group>"; };
+		031E9E491EE56218009E7966 /* saveInfo_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveInfo_2.png; sourceTree = "<group>"; };
+		031E9E4A1EE56218009E7966 /* saveInfo_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveInfo_3.png; sourceTree = "<group>"; };
+		031E9E4B1EE56218009E7966 /* saveInfo_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveInfo_4.png; sourceTree = "<group>"; };
+		031E9E551EE566AE009E7966 /* VersoinManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersoinManager.swift; sourceTree = "<group>"; };
+		031E9E571EE56CE1009E7966 /* cover_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover_close.png; sourceTree = "<group>"; };
 		0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WedgetDataCenter.swift; sourceTree = "<group>"; };
 		0328AB871EC72CE200D2C681 /* DataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 		0328AB8A1EC72F6F00D2C681 /* ForPpu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForPpu.entitlements; sourceTree = "<group>"; };
@@ -400,6 +420,7 @@
 				036C04941EC94C56006DEBBA /* ColorManager.swift */,
 				031E9E371EE3FAD1009E7966 /* ScreenBrightnessManager.swift */,
 				031E9E3B1EE456AD009E7966 /* InfoManager.swift */,
+				031E9E551EE566AE009E7966 /* VersoinManager.swift */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -499,6 +520,15 @@
 				0352A0461EDE9A2000C7C97E /* camera.png */,
 				03E46D281EDC20D9003D7F25 /* close.png */,
 				03FE0DED1EE02E0300060F29 /* before.png */,
+				031E9E571EE56CE1009E7966 /* cover_close.png */,
+				031E9E441EE56218009E7966 /* cover_open.png */,
+				031E9E451EE56218009E7966 /* update_1.png */,
+				031E9E461EE56218009E7966 /* update_2.png */,
+				031E9E471EE56218009E7966 /* update_3.png */,
+				031E9E481EE56218009E7966 /* saveInfo_1.png */,
+				031E9E491EE56218009E7966 /* saveInfo_2.png */,
+				031E9E4A1EE56218009E7966 /* saveInfo_3.png */,
+				031E9E4B1EE56218009E7966 /* saveInfo_4.png */,
 			);
 			name = resource;
 			sourceTree = "<group>";
@@ -778,15 +808,24 @@
 				0391B8F81ECC0A5E000CBC58 /* emptyImage.png in Resources */,
 				0352A03D1EDD24F000C7C97E /* info.png in Resources */,
 				032FD9581EC6ED6400F488E9 /* LaunchScreen.storyboard in Resources */,
+				031E9E501EE56218009E7966 /* update_3.png in Resources */,
+				031E9E511EE56218009E7966 /* saveInfo_1.png in Resources */,
 				037C81501ECEF62200D37ACD /* leather_patten.png in Resources */,
 				032FD9551EC6ED6400F488E9 /* Assets.xcassets in Resources */,
+				031E9E4E1EE56218009E7966 /* update_1.png in Resources */,
 				03D3166D1ED0271C0063DA3D /* leatherBlack.jpg in Resources */,
 				03FE0DEE1EE02E0300060F29 /* before.png in Resources */,
 				03E46D291EDC20D9003D7F25 /* close.png in Resources */,
+				031E9E581EE56CE1009E7966 /* cover_close.png in Resources */,
 				0352A0471EDE9A2000C7C97E /* camera.png in Resources */,
+				031E9E4F1EE56218009E7966 /* update_2.png in Resources */,
+				031E9E4D1EE56218009E7966 /* cover_open.png in Resources */,
+				031E9E531EE56218009E7966 /* saveInfo_3.png in Resources */,
 				032FD9531EC6ED6400F488E9 /* Main.storyboard in Resources */,
+				031E9E541EE56218009E7966 /* saveInfo_4.png in Resources */,
 				034744161ED579BF0039DABE /* Korean.strings in Resources */,
 				036C04971EC96293006DEBBA /* headerImage.png in Resources */,
+				031E9E521EE56218009E7966 /* saveInfo_2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -860,6 +899,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				031E9E561EE566AE009E7966 /* VersoinManager.swift in Sources */,
 				036C04951EC94C56006DEBBA /* ColorManager.swift in Sources */,
 				032FD9A21EC6FD2900F488E9 /* SharedMemoryContext.swift in Sources */,
 				032FD9601EC6EDF000F488E9 /* MainTableViewController.swift in Sources */,

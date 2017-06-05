@@ -23,6 +23,7 @@ class InfoManager: NSObject {
     
     let saveAndDelete = 0
     let fullScreenMode = 1
+    let updateInfo = 1990
     
     func getInfoMenu() -> [String] {
         let infoMenu = InfoMenu()
@@ -31,9 +32,12 @@ class InfoManager: NSObject {
     
     func getInfoImageList(info:Int) -> [UIImage] {
         if 0 == info {
-            return [UIImage(named: "info.png")!, UIImage(named: "info.png")!]
+            return [UIImage(named: "saveInfo_1.png")!, UIImage(named: "saveInfo_2.png")!, UIImage(named: "saveInfo_3.png")!, UIImage(named: "saveInfo_4.png")!]
         }
-        return [UIImage(named: "info.png")!, UIImage(named: "info.png")!, UIImage(named: "info.png")!]
+        if 1 == info {
+            return [UIImage(named: "update_1.png")!, UIImage(named: "update_2.png")!]
+        }
+        return [UIImage(named: "cover_open.png")!, UIImage(named: "update_1.png")!, UIImage(named: "update_2.png")!, UIImage(named: "update_3.png")!, UIImage(named: "cover_close.png")!]
     }
     
 }
