@@ -16,16 +16,15 @@ class VersoinManager: NSObject {
     
     static let sharedInstance:VersoinManager = VersoinManager()
     
-    func checkUpdate() -> Bool {
-//        let defaults = UserDefaults()
-//        let savedUpdateVersion = defaults.value(forKey: "update") as? String
-//        if savedUpdateVersion == getVersion() {
-//            return true
-//        }
-//        else {
-//            return false
-//        }
-        return false
+    func checkUpdate() -> Bool {        
+        let defaults = UserDefaults()
+        let savedUpdateVersion = defaults.value(forKey: "update") as? String
+        if savedUpdateVersion == getVersion() {
+            return true
+        }
+        else {
+            return false
+        }
     }
     
     func setCheckUpdate() {

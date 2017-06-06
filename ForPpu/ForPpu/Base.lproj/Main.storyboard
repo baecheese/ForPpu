@@ -257,35 +257,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vfk-ig-i86">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61Q-y2-p7f">
-                                        <rect key="frame" x="0.5" y="0.5" width="375" height="603"/>
-                                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </scrollView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="61Q-y2-p7f" firstAttribute="width" secondItem="Vfk-ig-i86" secondAttribute="width" id="46W-Pj-Vna"/>
-                                    <constraint firstItem="61Q-y2-p7f" firstAttribute="height" secondItem="Vfk-ig-i86" secondAttribute="height" id="He6-Kq-332"/>
-                                    <constraint firstItem="61Q-y2-p7f" firstAttribute="centerY" secondItem="Vfk-ig-i86" secondAttribute="centerY" id="cM6-h2-cy3"/>
-                                    <constraint firstItem="61Q-y2-p7f" firstAttribute="centerX" secondItem="Vfk-ig-i86" secondAttribute="centerX" id="gac-hp-YMZ"/>
-                                </constraints>
-                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61Q-y2-p7f">
+                                <rect key="frame" x="0.0" y="66.5" width="375" height="534"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNN-GD-mc4">
+                                <rect key="frame" x="16" y="610.5" width="343" height="46.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Vfk-ig-i86" firstAttribute="leading" secondItem="j4F-Oq-Mwx" secondAttribute="leading" id="Vyx-V9-tU7"/>
-                            <constraint firstItem="G7x-Bu-d37" firstAttribute="top" secondItem="Vfk-ig-i86" secondAttribute="bottom" id="b8X-oB-XKC"/>
-                            <constraint firstAttribute="trailing" secondItem="Vfk-ig-i86" secondAttribute="trailing" id="eiQ-Ys-XhP"/>
-                            <constraint firstItem="Vfk-ig-i86" firstAttribute="top" secondItem="pRg-Dn-n1V" secondAttribute="bottom" id="iWj-Mx-VdX"/>
+                            <constraint firstItem="61Q-y2-p7f" firstAttribute="centerX" secondItem="j4F-Oq-Mwx" secondAttribute="centerX" id="4qh-5P-MgD"/>
+                            <constraint firstItem="61Q-y2-p7f" firstAttribute="height" secondItem="j4F-Oq-Mwx" secondAttribute="height" multiplier="8:10" id="OBI-Kd-evl"/>
+                            <constraint firstItem="nNN-GD-mc4" firstAttribute="top" secondItem="61Q-y2-p7f" secondAttribute="bottom" constant="10" id="U5t-Dc-J71"/>
+                            <constraint firstItem="nNN-GD-mc4" firstAttribute="leading" secondItem="j4F-Oq-Mwx" secondAttribute="leadingMargin" id="XLM-ie-PAA"/>
+                            <constraint firstItem="61Q-y2-p7f" firstAttribute="width" secondItem="j4F-Oq-Mwx" secondAttribute="width" id="o90-ke-ODK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nNN-GD-mc4" secondAttribute="trailing" id="oh6-Ue-6Ll"/>
+                            <constraint firstItem="61Q-y2-p7f" firstAttribute="centerY" secondItem="j4F-Oq-Mwx" secondAttribute="centerY" id="qGY-76-zi6"/>
+                            <constraint firstItem="G7x-Bu-d37" firstAttribute="top" secondItem="nNN-GD-mc4" secondAttribute="bottom" constant="10" id="tKc-UA-unm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="n6q-Gf-L1K"/>
                     <connections>
-                        <outlet property="backView" destination="Vfk-ig-i86" id="TVV-t0-Kac"/>
                         <outlet property="background" destination="61Q-y2-p7f" id="ZQE-oy-EAz"/>
+                        <outlet property="page" destination="nNN-GD-mc4" id="duJ-W3-NcU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgj-eu-aPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -309,24 +306,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCU-Pk-mZ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="120.8" y="90.404797601199405"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="pB8-L3-q2A">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hNS-Z3-ATs" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JCF-h4-zm6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="99I-cf-hg4" kind="relationship" relationship="rootViewController" id="5sF-ic-iQ7"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wd7-XR-aQO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3671.1999999999998" y="924.28785607196414"/>
         </scene>
     </scenes>
     <resources>

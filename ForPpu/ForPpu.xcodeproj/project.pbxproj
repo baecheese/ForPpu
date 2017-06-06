@@ -368,8 +368,8 @@
 				033EACB71EE13AA100D180B7 /* Model */,
 				034744181ED579BF0039DABE /* Korean.strings */,
 				032FD9511EC6ED6400F488E9 /* Main.storyboard */,
-				032FD9541EC6ED6400F488E9 /* Assets.xcassets */,
 				032FD9561EC6ED6400F488E9 /* LaunchScreen.storyboard */,
+				032FD9541EC6ED6400F488E9 /* Assets.xcassets */,
 				032FD9591EC6ED6400F488E9 /* Info.plist */,
 			);
 			path = ForPpu;

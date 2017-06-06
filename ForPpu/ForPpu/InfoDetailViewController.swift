@@ -10,20 +10,30 @@ import UIKit
 
 class InfoDetailViewController: UIViewController, UIScrollViewDelegate {
     
-    @IBOutlet var backView: UIView!
     @IBOutlet var background: UIScrollView!
     
+    @IBOutlet var page: UILabel!
+    private var totalPage = ""
     let infoManager = InfoManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
         background.delegate = self
+        setScrollMargen()
         setNavigationBar(info: SharedMemoryContext.get(key: Key().info) as! Int)
+        setPageText(info: SharedMemoryContext.get(key: Key().info) as! Int)
     }
     
     override func viewWillLayoutSubviews() {
         setInfoDetailImage(info: SharedMemoryContext.get(key: Key().info) as! Int)
         setCloseButton()
+    }
+    
+    func setScrollMargen() {
+        self.automaticallyAdjustsScrollViewInsets = false
+        background.contentInset = .zero
+        background.scrollIndicatorInsets = .zero
+        background.contentOffset = CGPoint(x: 0, y: 0)
     }
     
     func setNavigationBar(info:Int) {
@@ -33,11 +43,6 @@ class InfoDetailViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func setInfoDetailImage(info:Int) {
-        
-        self.automaticallyAdjustsScrollViewInsets = false
-        background.contentInset = .zero
-        background.scrollIndicatorInsets = .zero
-        
         let imageList = infoManager.getInfoImageList(info: info)
         let imageCount = imageList.count
         setContentsSize(imageCount: imageCount)
@@ -48,17 +53,20 @@ class InfoDetailViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    
+    
     func setInfoImage(info:Int, image:UIImage, offsetX:CGFloat) {
-        let infoImage = UIImageView(frame: CGRect(x: offsetX, y: 0, width: backView.frame.width, height: backView.frame.height))
+        let imageHeight = view.frame.height * 0.8
+        let infoImage = UIImageView(frame: CGRect(x: offsetX, y: 0, width: view.frame.width, height: imageHeight))
         infoImage.image = image
         infoImage.contentMode = .scaleAspectFit
-        infoImage.backgroundColor = .red
         background.addSubview(infoImage)
     }
     
     private func setContentsSize(imageCount:Int) {
         background.isPagingEnabled = true
-        background.contentSize = CGSize(width: backView.frame.width * CGFloat(imageCount), height: backView.frame.height)
+        let imageHeight = view.frame.height * 0.8
+        background.contentSize = CGSize(width: view.frame.width * CGFloat(imageCount), height: imageHeight)
     }
     
     private func setCloseButton() {
@@ -67,7 +75,7 @@ class InfoDetailViewController: UIViewController, UIScrollViewDelegate {
             let close = UIButton()
             close.frame.size = view.frame.size
             close.frame.origin = CGPoint(x: offsetX, y: 0)
-            close.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+//            close.backgroundColor = UIColor.black.withAlphaComponent(0.5)
             close.addTarget(self, action: #selector(InfoDetailViewController.clickClose), for: .touchUpInside)
             background.addSubview(close)
         }
@@ -76,6 +84,28 @@ class InfoDetailViewController: UIViewController, UIScrollViewDelegate {
     func clickClose() {
         VersoinManager.sharedInstance.setCheckUpdate()
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func setPageText(info:Int) {
+        totalPage = "\(infoManager.getInfoImageList(info: info).count)"
+        page.text = "1 / \(totalPage)"
+    }
+    
+    var beforePage = 0
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let currentX = scrollView.contentOffset.x
+        let width = view.frame.width
+        let nowPage = Int(currentX / width)
+        print("\(nowPage) / \(totalPage)")
+        if beforePage != nowPage {
+            beforePage = nowPage
+            changePageNumber(nowPage: nowPage)
+        }
+    }
+    
+    func changePageNumber(nowPage:Int) {
+        page.text = "\(nowPage + 1) / \(totalPage)"
     }
     
     override func didReceiveMemoryWarning() {
