@@ -67,7 +67,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         view.addGestureRecognizer(doubleTap)
     }
     
-    func goToAppFromOrnage() {
+    @objc func goToAppFromOrnage() {
         sendDataBox.setSelectBarcode()
         extensionContext?.open(URL(string: "forPpu://")! , completionHandler: nil)
     }

@@ -23,7 +23,7 @@ class InfoManager: NSObject {
     
     let saveAndDelete = 0
     let fullScreenMode = 1
-    let updateInfo = 1990
+    let updateInfo = 1990//업데이트 공지 있을 시 사용
     
     func getInfoMenu() -> [String] {
         let infoMenu = InfoMenu()

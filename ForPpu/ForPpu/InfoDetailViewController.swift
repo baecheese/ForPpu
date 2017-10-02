@@ -38,6 +38,8 @@ class InfoDetailViewController: UIViewController, UIScrollViewDelegate {
     
     func setNavigationBar(info:Int) {
         if infoManager.updateInfo == info {
+            let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: navigationController, action: nil)
+            navigationItem.leftBarButtonItem = backButton
             self.navigationController?.navigationBar.isHidden = true
         }
     }
@@ -71,18 +73,28 @@ class InfoDetailViewController: UIViewController, UIScrollViewDelegate {
     
     private func setCloseButton() {
         if infoManager.updateInfo == SharedMemoryContext.get(key: Key().info) as! Int {
-            let offsetX = view.frame.width * CGFloat(infoManager.getInfoImageList(info: infoManager.updateInfo).count-1)
-            let close = UIButton()
-            close.frame.size = view.frame.size
-            close.frame.origin = CGPoint(x: offsetX, y: 0)
-//            close.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+            
+            let viewWidth = view.frame.width
+            let count = CGFloat((infoManager.getInfoImageList(info: infoManager.updateInfo).count))
+            let imageHeight = view.frame.height * 0.8
+            
+            let margen:CGFloat = 30.0
+            let buttonWidth:CGFloat = 100.0
+            let buttonHeight:CGFloat = 40.0
+            
+            let offsetX = viewWidth*count - (viewWidth/2) - (buttonWidth/2)
+            let offsetY = imageHeight - buttonHeight - margen
+            let close = UIButton(frame: CGRect(x: offsetX, y: offsetY, width: buttonWidth, height: buttonHeight))
+            close.setImage(UIImage(named: "close_icon.png"), for: .normal)
             close.addTarget(self, action: #selector(InfoDetailViewController.clickClose), for: .touchUpInside)
             background.addSubview(close)
         }
     }
     
-    func clickClose() {
+    @objc func clickClose() {
         VersoinManager.sharedInstance.setCheckUpdate()
+        
+        self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -91,21 +103,20 @@ class InfoDetailViewController: UIViewController, UIScrollViewDelegate {
         page.text = "1 / \(totalPage)"
     }
     
-    var beforePage = 0
+    var beforeIndex = 0
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let currentX = scrollView.contentOffset.x
         let width = view.frame.width
-        let nowPage = Int(currentX / width)
-        print("\(nowPage) / \(totalPage)")
-        if beforePage != nowPage {
-            beforePage = nowPage
-            changePageNumber(nowPage: nowPage)
+        let nowIndex = Int(currentX / width)
+        if beforeIndex != nowIndex {
+            beforeIndex = nowIndex
+            changePageNumber(nowPage: nowIndex + 1)
         }
     }
     
     func changePageNumber(nowPage:Int) {
-        page.text = "\(nowPage + 1) / \(totalPage)"
+        page.text = "\(nowPage) / \(totalPage)"
     }
     
     override func didReceiveMemoryWarning() {

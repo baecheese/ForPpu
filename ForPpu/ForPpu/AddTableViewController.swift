@@ -73,14 +73,14 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         navigationItem.leftBarButtonItem = saveAndBackitem
     }
     
-    func clickSaveButton() {
+    @objc func clickSaveButton() {
         self.cell.endEditing(true)
         self.dataRepository.set(cardID: self.cardID, cardName: self.cardName.text!, cardNumber: self.barCodeNumber.text!)
         self.navigationController?.popViewController(animated: true)
         
     }
     
-    func clickCamera() {
+    @objc func clickCamera() {
         let barcodeReaderVC = BarcodeReaderViewController()
         self.navigationController?.pushViewController(barcodeReaderVC, animated: true)
     }
@@ -179,8 +179,8 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
             cardName.frame = commonFrame
             cardName.font = UIFont.boldSystemFont(ofSize: 23.0)
             let attributes = [
-                NSForegroundColorAttributeName: UIColor.lightGray,
-                NSFontAttributeName : UIFont.systemFont(ofSize: 15.0)
+                NSAttributedStringKey.foregroundColor: UIColor.lightGray,
+                NSAttributedStringKey.font : UIFont.systemFont(ofSize: 15.0)
             ]
             cardName.attributedPlaceholder = NSAttributedString(string: Message().setCardName, attributes:attributes)
             cardName.textAlignment = .center
@@ -196,8 +196,8 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
             barCodeNumber.textAlignment = .center
             barCodeNumber.font = UIFont.systemFont(ofSize: 18.0)
             let attributes = [
-                NSForegroundColorAttributeName: UIColor.lightGray,
-                NSFontAttributeName : UIFont.systemFont(ofSize: 12.0)
+                NSAttributedStringKey.foregroundColor: UIColor.lightGray,
+                NSAttributedStringKey.font : UIFont.systemFont(ofSize: 12.0)
             ]
             barCodeNumber.attributedPlaceholder = NSAttributedString(string: Message().setCardNumber, attributes:attributes)
             barCodeNumber.keyboardType = .numberPad
@@ -227,7 +227,7 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
-    func textFieldDidChange() {
+    @objc func textFieldDidChange() {
         barCodeImage.image = dataRepository.showBarCodeImage(cardNumber: barCodeNumber.text!)
         if true == barCodeNumber.text?.isEmpty {
             barCodeImage.image = UIImage(named: "emptyImage.png")

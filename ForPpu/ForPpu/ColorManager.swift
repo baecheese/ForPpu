@@ -52,10 +52,10 @@ class ColorManager: NSObject {
     
     func getInfoColor(menu:Int) -> UIColor {
         if menu == 0 {
-            return fromRGB(rgbValue: 0xFF6F69)
+            return fromRGB(rgbValue: 0xB64926)
         }
         if menu == 1 {
-            return fromRGB(rgbValue: 0xFFCC5C)
+            return fromRGB(rgbValue: 0x468966)
         }
         return .white
     }

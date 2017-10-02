@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "0900"
    wasCreatedForAppExtension = "YES"
    version = "2.0">
    <BuildAction
@@ -15,7 +15,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "036C049B1EC96FF0006DEBBA"
+               BlueprintIdentifier = "036C04DA1EC9B610006DEBBA"
                BuildableName = "ForPpu_Green.appex"
                BlueprintName = "ForPpu_Green"
                ReferencedContainer = "container:ForPpu.xcodeproj">
@@ -41,13 +41,14 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "036C049B1EC96FF0006DEBBA"
+            BlueprintIdentifier = "036C04DA1EC9B610006DEBBA"
             BuildableName = "ForPpu_Green.appex"
             BlueprintName = "ForPpu_Green"
             ReferencedContainer = "container:ForPpu.xcodeproj">
@@ -60,6 +61,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = ""
       selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"

@@ -144,7 +144,6 @@ class MainTableViewController: UITableViewController {
     }
     
     func setNavigationColor() {
-        navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.barTintColor = colorManager.getMainBackImage()
         navigationController?.navigationBar.tintColor = colorManager.getTint()
     }
@@ -160,7 +159,7 @@ class MainTableViewController: UITableViewController {
         navigationItem.rightBarButtonItem = infoItem
     }
     
-    func goInfoPage() {
+    @objc func goInfoPage() {
         let infoPage = self.storyboard?.instantiateViewController(withIdentifier: "infoTableViewController") as? InfoTableViewController
         self.navigationController?.pushViewController(infoPage!, animated: true)
     }
