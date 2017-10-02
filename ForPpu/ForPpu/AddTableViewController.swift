@@ -205,8 +205,8 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         }
         if 2 == indexPath.section {
             let leatherImage = UIImageView(frame: cell.bounds)
-            leatherImage.image = UIImage(named: "leatherBlack.jpg")
-            leatherImage.contentMode = .topRight
+            leatherImage.image = UIImage(named: "leatherBlack_1000.jpg")
+            leatherImage.contentMode = .scaleAspectFit
             cell.addSubview(leatherImage)
         }
     }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="STB-5e-b7k">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="STB-5e-b7k">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -222,9 +222,8 @@
                                         <constraint firstItem="TI0-lv-OX5" firstAttribute="leading" secondItem="A7K-jN-to6" secondAttribute="leading" id="B89-Ri-m09"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="7kf-ls-QWU" secondAttribute="trailing" id="Fbn-9Q-vqz"/>
                                         <constraint firstItem="TI0-lv-OX5" firstAttribute="top" secondItem="A7K-jN-to6" secondAttribute="top" id="Hd3-p9-dMW"/>
-                                        <constraint firstItem="7kf-ls-QWU" firstAttribute="centerY" secondItem="TI0-lv-OX5" secondAttribute="centerY" id="hZD-Uh-xQ1"/>
-                                        <constraint firstItem="7kf-ls-QWU" firstAttribute="height" secondItem="TI0-lv-OX5" secondAttribute="height" id="jgo-so-8Ap"/>
-                                        <constraint firstItem="7kf-ls-QWU" firstAttribute="centerX" secondItem="TI0-lv-OX5" secondAttribute="centerX" id="klq-KP-JNf"/>
+                                        <constraint firstItem="7kf-ls-QWU" firstAttribute="top" secondItem="A7K-jN-to6" secondAttribute="top" id="XSb-pJ-20c"/>
+                                        <constraint firstAttribute="bottom" secondItem="7kf-ls-QWU" secondAttribute="bottom" id="lBH-Ru-CEP"/>
                                         <constraint firstAttribute="trailing" secondItem="TI0-lv-OX5" secondAttribute="trailing" id="tsq-SP-VNO"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -295,7 +294,7 @@
                 <navigationController storyboardIdentifier="MainNavigation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="STB-5e-b7k" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="T4f-Gu-3eE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

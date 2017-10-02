@@ -150,12 +150,10 @@ class MainTableViewController: UITableViewController {
     
     func setNavigationItem() {
         let info = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
-        let infoImage = UIImage(named: "info.png")?.withRenderingMode(.alwaysTemplate)
-        info.setImage(infoImage, for: .normal)
+        info.setImage(UIImage(named: "info")?.withRenderingMode(.alwaysOriginal), for: .normal)
         info.tintColor = UIColor.white.withAlphaComponent(0.8)
         info.addTarget(self, action: #selector(MainTableViewController.goInfoPage), for: .touchUpInside)
         let infoItem = UIBarButtonItem(customView: info)
-        
         navigationItem.rightBarButtonItem = infoItem
     }
     

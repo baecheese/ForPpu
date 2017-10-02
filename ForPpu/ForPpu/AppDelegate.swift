@@ -63,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if nil != dataRepository.getSelectWidgetInfo() {
             if true != SharedMemoryContext.get(key: Key().isFullScreen) as? Bool {
                 fullScreenBarcodeImageVC.modalPresentationStyle = .overCurrentContext
-                self.window?.rootViewController?.present(fullScreenBarcodeImageVC, animated: true, completion: { (Bool) in
+                self.window?.rootViewController?.present(fullScreenBarcodeImageVC, animated: true, completion: { () in
                     self.brightnessManager.setFullScreenMode()
                 })
             }
