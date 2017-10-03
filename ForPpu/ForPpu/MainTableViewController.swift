@@ -37,9 +37,9 @@ class MainTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.separatorStyle = .none
         tableView.backgroundColor = colorManager.getMainBackImage()
         setNavigationItem()
-        
         if false == VersoinManager.sharedInstance.checkUpdate() {
             showUpdateInfo()
         }

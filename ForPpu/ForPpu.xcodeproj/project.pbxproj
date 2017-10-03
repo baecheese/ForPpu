@@ -76,6 +76,7 @@
 		03E6620E1F3F198300630331 /* Answers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E662001F3F198300630331 /* Answers.framework */; };
 		03E6620F1F3F198300630331 /* Answers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E662001F3F198300630331 /* Answers.framework */; };
 		03E662101F3F198300630331 /* Answers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E662001F3F198300630331 /* Answers.framework */; };
+		03EC5D7B1F83612200A2ABA0 /* AddBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EC5D7A1F83612200A2ABA0 /* AddBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,6 +235,7 @@
 		036C055C1ECACAF5006DEBBA /* SendDataBoxViolet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataBoxViolet.swift; sourceTree = "<group>"; };
 		03E661FF1F3F198300630331 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		03E662001F3F198300630331 /* Answers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Answers.framework; sourceTree = "<group>"; };
+		03EC5D7A1F83612200A2ABA0 /* AddBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +413,7 @@
 			isa = PBXGroup;
 			children = (
 				032FD94D1EC6ED6400F488E9 /* AppDelegate.swift */,
+				03EC5D7A1F83612200A2ABA0 /* AddBackground.swift */,
 				032FD9A11EC6FD2800F488E9 /* SharedMemoryContext.swift */,
 				036C04941EC94C56006DEBBA /* ColorManager.swift */,
 				031E9E371EE3FAD1009E7966 /* ScreenBrightnessManager.swift */,
@@ -883,6 +886,7 @@
 				032FD9A21EC6FD2900F488E9 /* SharedMemoryContext.swift in Sources */,
 				032FD9601EC6EDF000F488E9 /* MainTableViewController.swift in Sources */,
 				034743D51ED531AA0039DABE /* FullScreenImageViewController.swift in Sources */,
+				03EC5D7B1F83612200A2ABA0 /* AddBackground.swift in Sources */,
 				032FD94E1EC6ED6400F488E9 /* AppDelegate.swift in Sources */,
 				033EACBC1EE13C4900D180B7 /* BarcodeReaderViewController.swift in Sources */,
 				031E9E381EE3FAD1009E7966 /* ScreenBrightnessManager.swift in Sources */,

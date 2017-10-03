@@ -75,7 +75,7 @@ class InfoTableViewController: UITableViewController {
     
     func setLastCell(cell:InfoTableViewCell) {
         cell.backImage.image = UIImage(named: "leatherBlack.jpg")
-        cell.backImage.contentMode = .topRight
+        cell.backImage.contentMode = .scaleToFill
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -18,7 +18,7 @@ class ColorManager: NSObject {
     
     func getMainBackImage() -> UIColor {
 //        return fromRGB(rgbValue: 0x26140C)
-        return UIColor(patternImage: UIImage(named: "leather_patten")!)
+        return UIColor(patternImage: UIImage(named: "leather_patten2")!)
     }
     
     func getTint() -> UIColor {

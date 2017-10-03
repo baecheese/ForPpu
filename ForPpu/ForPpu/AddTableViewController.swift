@@ -59,14 +59,14 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
     func makeNavigationItem()  {
         
         let cameraBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        cameraBtn.setImage(UIImage(named: "camera.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        cameraBtn.setImage(UIImage(named: "camera")?.withRenderingMode(.alwaysTemplate), for: .normal)
         cameraBtn.tintColor = colorManager.getTint()
         cameraBtn.addTarget(self, action: #selector(AddTableViewController.clickCamera), for: .touchUpInside)
         let cameraItem = UIBarButtonItem(customView: cameraBtn)
         navigationItem.rightBarButtonItem = cameraItem
         
-        let saveBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-        saveBtn.setImage(UIImage(named: "before.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        let saveBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 20))
+        saveBtn.setImage(UIImage(named: "before")?.withRenderingMode(.alwaysTemplate), for: .normal)
         saveBtn.tintColor = colorManager.getTint()
         saveBtn.addTarget(self, action: #selector(AddTableViewController.clickSaveButton), for: .touchUpInside)
         let saveAndBackitem = UIBarButtonItem(customView: saveBtn)
@@ -77,7 +77,6 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         self.cell.endEditing(true)
         self.dataRepository.set(cardID: self.cardID, cardName: self.cardName.text!, cardNumber: self.barCodeNumber.text!)
         self.navigationController?.popViewController(animated: true)
-        
     }
     
     @objc func clickCamera() {
@@ -205,8 +204,8 @@ class AddTableViewController: UITableViewController, UITextFieldDelegate {
         }
         if 2 == indexPath.section {
             let leatherImage = UIImageView(frame: cell.bounds)
-            leatherImage.image = UIImage(named: "leatherBlack_1000.jpg")
-            leatherImage.contentMode = .scaleAspectFit
+            leatherImage.image = UIImage(named: "leatherBlack.jpg")
+            leatherImage.contentMode = .scaleToFill
             cell.addSubview(leatherImage)
         }
     }
