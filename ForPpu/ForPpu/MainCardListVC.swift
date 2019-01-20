@@ -44,7 +44,6 @@ class MainCardListVC: UIViewController {
         let cardId = "\(section)"
         SharedMemoryContext.set(key: Key().cardID, setValue: cardId)
         let addPageVC = self.storyboard?.instantiateViewController(withIdentifier: AddCardVC.className) as! AddCardVC
-//        self.navigationController?.pushViewController(addPageVC, animated: true)
         present(addPageVC, animated: true, completion: nil)
     }
 

@@ -27,15 +27,9 @@ class InfoTableViewController: UITableViewController {
         self.tableView.separatorStyle = .none
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
@@ -60,7 +54,6 @@ class InfoTableViewController: UITableViewController {
         else {
             setInfoCard(cell: cell, row: indexPath.row)
         }
-        
         return cell
     }
     
@@ -79,10 +72,9 @@ class InfoTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if 2 != indexPath.row {
+        if 2 != indexPath.row, let infoDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "InfoDetailViewController") as? InfoDetailViewController {
             SharedMemoryContext.set(key: Key().info, setValue: indexPath.row)
-            let infoDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "InfoDetailViewController") as? InfoDetailViewController
-            self.navigationController?.pushViewController(infoDetailVC!, animated: true)
+            present(infoDetailVC, animated: true, completion: nil)
         }
     }
 }

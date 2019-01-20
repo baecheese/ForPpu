@@ -27,7 +27,7 @@ class AddCardVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-//        tableView.backgroundColor = colorManager.getMainBackImage()
+        tableView.backgroundColor = colorManager.getMainBackImage()
         tableView.separatorStyle = .none
         setImageViewTintColor()
         cardName.delegate = self
@@ -51,7 +51,6 @@ class AddCardVC: UIViewController, UITextFieldDelegate {
     @IBAction func onTouchBack(_ sender: UIButton) {
         view.endEditing(true)
         self.dataRepository.set(cardID: self.cardID, cardName: self.cardName.text!, cardNumber: self.barCodeNumber.text!)
-//        self.navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
 

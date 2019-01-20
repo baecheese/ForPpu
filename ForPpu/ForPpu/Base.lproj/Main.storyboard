@@ -548,12 +548,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Eh-iR-qyS">
+                                <rect key="frame" x="315" y="41.333333333333336" width="40" height="40.000000000000007"/>
+                                <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="OsS-2R-N8l"/>
+                                    <constraint firstAttribute="height" constant="40" id="w2s-RD-3uh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTouchClose:" destination="99I-cf-hg4" eventType="touchUpInside" id="H0F-fb-oR5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="61Q-y2-p7f" firstAttribute="centerX" secondItem="j4F-Oq-Mwx" secondAttribute="centerX" id="4qh-5P-MgD"/>
+                            <constraint firstAttribute="trailing" secondItem="9Eh-iR-qyS" secondAttribute="trailing" constant="20" id="5M9-SI-4ov"/>
                             <constraint firstItem="61Q-y2-p7f" firstAttribute="height" secondItem="j4F-Oq-Mwx" secondAttribute="height" multiplier="8:10" id="OBI-Kd-evl"/>
                             <constraint firstItem="nNN-GD-mc4" firstAttribute="top" secondItem="61Q-y2-p7f" secondAttribute="bottom" constant="10" id="U5t-Dc-J71"/>
+                            <constraint firstItem="61Q-y2-p7f" firstAttribute="top" secondItem="9Eh-iR-qyS" secondAttribute="bottom" id="WQd-XE-a4d"/>
                             <constraint firstItem="nNN-GD-mc4" firstAttribute="leading" secondItem="j4F-Oq-Mwx" secondAttribute="leadingMargin" id="XLM-ie-PAA"/>
                             <constraint firstItem="61Q-y2-p7f" firstAttribute="width" secondItem="j4F-Oq-Mwx" secondAttribute="width" id="o90-ke-ODK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nNN-GD-mc4" secondAttribute="trailing" id="oh6-Ue-6Ll"/>
@@ -569,7 +586,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgj-eu-aPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4610.3999999999996" y="924.28785607196414"/>
+            <point key="canvasLocation" x="4610.3999999999996" y="923.64532019704438"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rql-z0-naU">

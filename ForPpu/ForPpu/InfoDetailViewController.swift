@@ -29,6 +29,10 @@ class InfoDetailViewController: UIViewController, UIScrollViewDelegate {
         setCloseButton()
     }
     
+    @IBAction func onTouchClose(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     func setScrollMargen() {
         self.automaticallyAdjustsScrollViewInsets = false
         background.contentInset = .zero
@@ -118,21 +122,5 @@ class InfoDetailViewController: UIViewController, UIScrollViewDelegate {
     func changePageNumber(nowPage:Int) {
         page.text = "\(nowPage) / \(totalPage)"
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
