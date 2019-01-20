@@ -13,6 +13,8 @@
 		031E9E421EE53BE4009E7966 /* InfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E9E411EE53BE4009E7966 /* InfoDetailViewController.swift */; };
 		031E9E561EE566AE009E7966 /* VersoinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E9E551EE566AE009E7966 /* VersoinManager.swift */; };
 		0323784321F486B300D22635 /* MainCardListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0323784221F486B300D22635 /* MainCardListVC.swift */; };
+		0323784521F48EFA00D22635 /* AddCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0323784421F48EFA00D22635 /* AddCardVC.swift */; };
+		0323784C21F4939700D22635 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0323784B21F4939700D22635 /* UIViewController.swift */; };
 		0328AB861EC72CAA00D2C681 /* WedgetDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */; };
 		0328AB881EC72CE200D2C681 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328AB871EC72CE200D2C681 /* DataRepository.swift */; };
 		032FD94E1EC6ED6400F488E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032FD94D1EC6ED6400F488E9 /* AppDelegate.swift */; };
@@ -159,6 +161,8 @@
 		031E9E411EE53BE4009E7966 /* InfoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoDetailViewController.swift; sourceTree = "<group>"; };
 		031E9E551EE566AE009E7966 /* VersoinManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersoinManager.swift; sourceTree = "<group>"; };
 		0323784221F486B300D22635 /* MainCardListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardListVC.swift; sourceTree = "<group>"; };
+		0323784421F48EFA00D22635 /* AddCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardVC.swift; sourceTree = "<group>"; };
+		0323784B21F4939700D22635 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		0328AB851EC72CAA00D2C681 /* WedgetDataCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WedgetDataCenter.swift; sourceTree = "<group>"; };
 		0328AB871EC72CE200D2C681 /* DataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 		0328AB8A1EC72F6F00D2C681 /* ForPpu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForPpu.entitlements; sourceTree = "<group>"; };
@@ -323,6 +327,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0323784621F4931600D22635 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0323784B21F4939700D22635 /* UIViewController.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		032FD9411EC6ED6400F488E9 = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +372,7 @@
 				03E661FF1F3F198300630331 /* Fabric.framework */,
 				03E662001F3F198300630331 /* Answers.framework */,
 				0328AB8A1EC72F6F00D2C681 /* ForPpu.entitlements */,
+				0323784621F4931600D22635 /* Extension */,
 				033EACBA1EE13AD700D180B7 /* Support */,
 				033EACB91EE13AB500D180B7 /* View */,
 				033EACB81EE13AAC00D180B7 /* Controller */,
@@ -396,6 +409,7 @@
 				032FD95F1EC6EDF000F488E9 /* MainTableViewController.swift */,
 				0323784221F486B300D22635 /* MainCardListVC.swift */,
 				032FD9611EC6F08A00F488E9 /* AddTableViewController.swift */,
+				0323784421F48EFA00D22635 /* AddCardVC.swift */,
 				033EACBB1EE13C4900D180B7 /* BarcodeReaderViewController.swift */,
 				034743D41ED531AA0039DABE /* FullScreenImageViewController.swift */,
 				031E9E3F1EE527D8009E7966 /* InfoTableViewController.swift */,
@@ -878,7 +892,9 @@
 			files = (
 				031E9E561EE566AE009E7966 /* VersoinManager.swift in Sources */,
 				036C04951EC94C56006DEBBA /* ColorManager.swift in Sources */,
+				0323784C21F4939700D22635 /* UIViewController.swift in Sources */,
 				032FD9A21EC6FD2900F488E9 /* SharedMemoryContext.swift in Sources */,
+				0323784521F48EFA00D22635 /* AddCardVC.swift in Sources */,
 				0323784321F486B300D22635 /* MainCardListVC.swift in Sources */,
 				032FD9601EC6EDF000F488E9 /* MainTableViewController.swift in Sources */,
 				034743D51ED531AA0039DABE /* FullScreenImageViewController.swift in Sources */,

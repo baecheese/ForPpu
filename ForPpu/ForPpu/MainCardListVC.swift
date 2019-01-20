@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainCardListVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MainCardListVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var infoImageView: UIImageView!
@@ -24,7 +24,6 @@ class MainCardListVC: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.delegate = self
         tableView.separatorStyle = .none
         tableView.backgroundColor = colorManager.getMainBackImage()
-        setNavigationItem()
         setImageViewTintColor()
         if false == VersoinManager.sharedInstance.checkUpdate() {
             showUpdateInfo()
@@ -32,7 +31,6 @@ class MainCardListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        setNavigationColor()
         tableView.reloadData()
     }
 
@@ -45,13 +43,9 @@ class MainCardListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     func moveEditPage(section:Int) {
         let cardId = "\(section)"
         SharedMemoryContext.set(key: Key().cardID, setValue: cardId)
-        let addPage = self.storyboard?.instantiateViewController(withIdentifier: "AddTableViewController") as! AddTableViewController
-        self.navigationController?.pushViewController(addPage, animated: true)
-    }
-
-    func setNavigationColor() {
-        navigationController?.navigationBar.barTintColor = colorManager.getMainBackImage()
-        navigationController?.navigationBar.tintColor = colorManager.getTint()
+        let addPageVC = self.storyboard?.instantiateViewController(withIdentifier: AddCardVC.className) as! AddCardVC
+//        self.navigationController?.pushViewController(addPageVC, animated: true)
+        present(addPageVC, animated: true, completion: nil)
     }
 
     @IBAction func onTouchInfoPageButton(sender: UIButton) {
